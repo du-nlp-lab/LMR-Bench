@@ -1,0 +1,22 @@
+{
+    "instance_id": 30,
+    "paper_name": "ERGO: Event Relational Graph Transformer for Document-level Event Causality Identification",
+    "folder_name": "30-ERGO",
+    "paper_url": "https://aclanthology.org/2022.coling-1.185.pdf",
+    "year": 2022,
+    "repo_url": "https://github.com/chenmeiqii/ERGO",
+    "repo_folder_name": "ERGO",
+    "implementations": [
+        {
+            "instruction": "Implement the loss function in the focal_loss class in model.py based on the final adaptive focal loss mentioned in the paper and the code repository. Justify whether summing or averaging the loss based on the `self.size_average` value.",
+            "index": 1,
+            "category": "Training Objectives & Optimization Techniques",
+            "goal_file": "model.py",
+            "goal_function": "forward",
+            "class_name": "focal_loss",
+            "golden_file": "golden_files/model_golden.py",
+            "retrieval_context": [],
+            "unit_test_file": "unit_test/unit_test_1.py"
+        }
+    ]
+}

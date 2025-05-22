@@ -1,0 +1,20 @@
+{
+    "instance_id": 28,
+    "paper_name": "Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models",
+    "folder_name": "28-SPIN",
+    "paper_url": "https://arxiv.org/abs/2401.01335",
+    "year": 2024,
+    "repo_url": "https://github.com/uclaml/SPIN",
+    "repo_folder_name": "SPIN",
+    "implementations": [{
+        "instruction": "Implement the `spin_loss` method of `SPINTrainer` class in `.spin/alignment/trainer.py` based on the loss function of SPIN algorithm mentioned in the paper.pdf.",
+        "index": 1,
+        "category": "loss function",
+        "goal_file": "spin/alignment/trainer.py",
+        "goal_function": "spin_loss",
+        "class_name": "SPINTrainer",
+        "golden_file": "golden_files/trainer_golden.py",
+        "retrieval_content": [],
+        "unit_test_file": "unit_test/unit_test_1.py"
+    }]
+}

@@ -1,0 +1,19 @@
+{
+    "instance_id": 24,
+    "folder_name": "24-DeViEnt",
+    "repo_folder_name": "DeViEnt-main",
+    "paper_name": "Defeasible Visual Entailment: Benchmark, Evaluator, and Reward-Driven Optimization",
+    "paper_url": "https://arxiv.org/pdf/2412.16232",
+    "year": 2025,
+    "repo_url": "https://github.com/skywalkerzhang/Defeasible_Visual_Entailment/tree/main",
+    "implementations": [
+        {
+            "instruction": "Implement a weighted sum of the classification loss and the pairwise contrastive loss, based on the method described in the paper and the repository.",
+            "index": 1,
+            "goal_file": "visual_text_training.py",
+            "golden_file": "golden_files/visual_text_training_golden.py",
+            "retrieval_context": [],
+            "unit_test_file": "unit_test/unit_test.py"
+        }
+    ]
+}

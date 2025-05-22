@@ -1,0 +1,22 @@
+{
+    "instance_id": 23,
+    "folder_name": "23-SimCLR",
+    "repo_folder_name": "SimCLR-main",
+    "paper_name": "A Simple Framework for Contrastive Learning of Visual Representations",
+    "paper_url": "https://arxiv.org/pdf/2002.05709",
+    "year": 2020,
+    "repo_url": "https://github.com/skywalkerzhang/SimCLR/tree/master",
+    "implementations": [
+        {
+            "instruction": "Implement the `info_nce_loss` method of `SimCLR` class in simclr.py that computes the InfoNCE loss for a batch of features, based on the method described in the paper.pdf and the repository.",
+            "index": 1,
+            "category": "Training Objectives & Optimization Techniques",
+            "goal_file": "simclr.py",
+            "goal_function": "info_nce_loss",
+            "class_name": "SimCLR",
+            "golden_file": "golden_files/simclr_golden.py",
+            "retrieval_context": [],
+            "unit_test_file": "unit_test/unit_test_1.py"
+        }
+    ]
+}

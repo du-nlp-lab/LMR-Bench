@@ -1,0 +1,19 @@
+{
+    "instance_id": 27,
+    "paper_name": "Symbolic Discovery of Optimization Algorithms",
+    "folder_name": "27-Lion",
+    "paper_url": "https://arxiv.org/abs/2302.06675",
+    "year": 2023,
+    "repo_url": "https://github.com/google/automl/tree/master/lion",
+    "repo_folder_name": "Lion",
+    "implementations": [
+        {
+            "instruction": "Implement the Lion class including function __init__ and step() in the unit_test/test_lion_init.py and unit_test/test_lion_step.py based on Algorithm 2 in Appendix A and pass the test by running the two files",
+            "index": 1,
+            "goal_file": ["unit_test/test_lion_init.py", "unit_test/test_lion_step.py"],
+            "golden_file": "lion_pytorch_golden.py",
+            "retrieval_context": [],
+            "unit_test_file": ["unit_test/test_lion_init.py", "unit_test/test_lion_step.py"]
+        }
+    ]
+}

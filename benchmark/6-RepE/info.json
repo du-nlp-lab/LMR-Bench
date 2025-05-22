@@ -1,0 +1,22 @@
+{ 
+    "instance_id": 6,
+    "paper_name": "Representation Engineering: A Top-Down Approach to AI Transparency",
+    "folder_name": "6-RepE",
+    "paper_url": "https://arxiv.org/abs/2310.01405",
+    "year": 2023,
+    "repo_url": "https://github.com/andyzoujm/representation-engineering",
+    "repo_folder_name": "representation-engineering-main",
+    "implementations": [
+        {
+            "instruction": "Implement the function get_rep_directions_agent in the unit_test/unit_test_1.py and pass the test by running unit_test/unit_test_1.py file",
+            "index": 1,
+            "category": "Feature Learning & Representation",
+            "goal_file": "unit_test/unit_test_1.py",
+            "goal_function": "get_rep_directions_agent",
+            "class_name": "",
+            "golden_file": "golden_files/unit_test_1_golden.py",
+            "retrieval_context": [],
+            "unit_test_file": "unit_test/unit_test_1.py"
+        }
+    ]
+}

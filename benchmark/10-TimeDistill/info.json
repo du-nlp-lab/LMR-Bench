@@ -1,0 +1,19 @@
+{
+    "instance_id": 10,
+    "paper_name": "TimeDistill: Efficient Long-Term Time Series Forecasting with MLPs via Cross-Architecture Distillation",
+    "folder_name": "10-TimeDistill",
+    "paper_url": "https://arxiv.org/abs/2502.15016",
+    "year": 2025,
+    "repo_url": "https://github.com/LingFengGold/TimeDistill",
+    "repo_folder_name": "TimeDistill-main",
+    "implementations": [
+        {
+            "instruction": "Implement the forward function in class multi_scale_process_inputs in exp_long_term_forecasting.py based on the downsampling method for Multi-Scale Distillation mentioned in the paper and the code repository.",
+            "index": 1,
+            "goal_file": "exp/exp_long_term_forecasting.py",
+            "golden_file": "golden_files/exp_long_term_forecasting_golden.py",
+            "retrieval_context": [],
+            "unit_test_file": "unit_test/unit_test_1.py"
+        }
+    ]
+}

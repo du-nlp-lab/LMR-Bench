@@ -1,0 +1,6 @@
+nltk
+openai==0.28
+numpy==2.2.3
+tenacity
+torch
+transformers

@@ -1,0 +1,4 @@
+Training Epoch 1:   0%|                                                                                                                                | 0/2909 [00:00<?, ?it/s]/home/yxz230014/Defeasible_Visual_Entailment_agent_test/Evaluator/visual_text_training_golden.py:303: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  update_types = torch.tensor(update_types, dtype=torch.float32).clone().detach().to(device)
+✅ Saved test data to test_data_seed42.pt
+Training Epoch 1:   0%|                                                                                                                                | 0/2909 [00:02<?, ?it/s]

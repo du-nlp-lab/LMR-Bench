@@ -1,0 +1,11 @@
+# do TDPO preference-based training
+name: tdpo
+if_tdpo2: false
+
+# the temperature parameter for TDPO; lower values mean we care less about
+#   the reference model
+alpha: 0.5
+beta: 0.1
+
+# if true, use a uniform (maximum entropy) reference model
+reference_free: false

@@ -1,0 +1,31 @@
+subject,rel_lemma,object,rel_p_id,query
+Newport County A.F.C.,is-headquarter,Newport,P159,Newport County A.F.C. is headquartered in
+Norway,capital-city-of,Oslo,P1376,"Norway's capital city,"
+WWE,is-headquarter,Stamford,P159,WWE is headquartered in
+Princeton University Press,is-headquarter,Princeton,P159,Princeton University Press is headquartered in
+Internet censorship,is-subclass,censorship,P279,Internet censorship is a subclass of
+McMurdo Station,part-of-continent,Antarctica,P30,McMurdo Station is a part of the continent of
+Windows Update,product-manufacture-by,Microsoft,P178,"Windows Update, a product manufactured by"
+Nintendo,located-in,Kyoto,P159,The headquarter of Nintendo is located in
+Microsoft Windows SDK,product-manufacture-by,Microsoft,P178,"Microsoft Windows SDK, a product manufactured by"
+Harare,capital-of,Zimbabwe,P1376,"Harare, the capital of"
+Wii U system software,product-manufacture-by,Nintendo,P178,"Wii U system software, a product manufactured by"
+Bermuda,the-official-language,English,P37,The official language of Bermuda is
+Centers for Disease Control and Prevention,is-headquarter,Atlanta,P159,Centers for Disease Control and Prevention is headquartered in
+Turkey,capital-of,Ankara,P1376,"Turkey's capital,"
+Baku,capital-city-of,Azerbaijan,P1376,Baku is the capital city of
+Gambia River,part-of-continent,Africa,P30,Gambia River is a part of the continent of
+Kingdom of Afghanistan,capital-of,Kabul,P1376,"Kingdom of Afghanistan's capital,"
+Kingdom of Hungary,capital-of,Budapest,P1376,"Kingdom of Hungary's capital,"
+Indian Antarctic Program,part-of-continent,Antarctica,P30,Indian Antarctic Program is a part of the continent of
+Kingdom of Libya,capital-of,Tripoli,P1376,"Kingdom of Libya's capital,"
+King Chulalongkorn Memorial Hospital,headquarters-in,Bangkok,P159,King Chulalongkorn Memorial Hospital's headquarters are in
+Nairobi,capital-city-of,Kenya,P1376,Nairobi is the capital city of
+University of Oklahoma,is-headquarter,Norman,P159,University of Oklahoma is headquartered in
+Congo basin,part-of-continent,Africa,P30,Congo basin is a part of the continent of
+Adobe Photoshop Elements,develop-by,Adobe,P178,Adobe Photoshop Elements is developed by
+Sweden,capital-of,Stockholm,P1376,"Sweden's capital,"
+Kingdom of Scotland,capital-of,Edinburgh,P1376,"Kingdom of Scotland's capital,"
+Kingdom of Greece,capital-of,Athens,P1376,"Kingdom of Greece's capital,"
+Microsoft Exchange Server,product-manufacture-by,Microsoft,P178,"Microsoft Exchange Server, a product manufactured by"
+Adobe Photoshop Lightroom,develop-by,Adobe,P178,Adobe Photoshop Lightroom is developed by

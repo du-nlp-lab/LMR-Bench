@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+spin/alignment/__init__.py
+spin/alignment/configs.py
+spin/alignment/data.py
+spin/alignment/model_utils.py
+spin/alignment/release.py
+spin/alignment/trainer.py
+spin/alignment/utils.py
+spin/spin.egg-info/PKG-INFO
+spin/spin.egg-info/SOURCES.txt
+spin/spin.egg-info/dependency_links.txt
+spin/spin.egg-info/not-zip-safe
+spin/spin.egg-info/requires.txt
+spin/spin.egg-info/top_level.txt

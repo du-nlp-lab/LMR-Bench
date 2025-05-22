@@ -1,0 +1,20 @@
+{
+    "instance_id": 26,
+    "paper_name": "Hyena Hierarchy: Towards Larger Convolutional Language Models",
+    "folder_name": "26-Hyena",
+    "paper_url": "https://arxiv.org/abs/2302.10866",
+    "year": 2023,
+    "repo_url": "https://github.com/HazyResearch/safari",
+    "repo_folder_name": "Hyena",
+    "implementations": [
+        {
+            "instruction": "Implement the HyenaOperator class including function __init__ and forward() in the unit_test/unit_test_1.py based on the paper and pass the test.",
+            "index": 1,
+            "category": "Neural Network Architectures & Modules",
+            "goal_file": "unit_test/unit_test_1.py",
+            "golden_file": "golden_files/standalone_hyena_golden.py",
+            "retrieval_context": [],
+            "unit_test_file": "unit_test/unit_test_1.py"
+        }
+    ]
+}
