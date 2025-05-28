@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-export OPENAI_API_KEY="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"
+export OPENAI_API_KEY="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"
+export OPENAI_API_BASE="https://api.anthropic.com/v1/"
 
 INPUT_DIR="$1"
 OUTPUT_DIR="$2"

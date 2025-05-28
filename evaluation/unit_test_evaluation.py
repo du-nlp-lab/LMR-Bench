@@ -9,6 +9,14 @@ import os
 user_id = os.getuid()
 group_id = os.getgid()
 
+
+def try_pull(tag: str) -> bool:
+    return subprocess.run(
+        ["docker", "pull", tag],
+        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+    ).returncode == 0
+
+
 def main():
     parser = argparse.ArgumentParser(description="批量运行 Docker 容器并执行单元测试")
     parser.add_argument('--evaluation_dir', required=True, help="评估文件夹的根路径")
@@ -17,6 +25,7 @@ def main():
 
     eval_root = Path(args.evaluation_dir)
     output_root = Path(args.evaluation_output_dir)
+    user="shinyy1997"
 
     # 1. 检查评估目录
     if not eval_root.is_dir():
@@ -48,17 +57,24 @@ def main():
         dockerfile = subfolder / 'Dockerfile'
         image_tag = f"eval_{subfolder.name.lower()}"
 
-        # 4. Docker build
-        print(f"[INFO] create docker image {image_tag} ...")
-        subprocess.run([
-            'docker', 'build',
-            '--build-arg', f"UID={user_id}",
-            '--build-arg', f"GID={group_id}",
-            '--build-arg', f"DIR={repo_name}",
-            '-t', image_tag,
-            '-f', str(dockerfile),
-            '.'
-        ], cwd=subfolder, check=True)
+        # hub_repo   = "yourhubusername/benchmark"
+        # image_tag  = f"{hub_repo}:{subfolder.name.lower()}"
+        image_tag = f"{user}/{subfolder.name.lower()}:latest"
+
+        print(f"[INFO] try to pull docker image {image_tag} from Docker Hub …")
+        if try_pull(image_tag):
+            print(f"[INFO] pulled existing image {image_tag}")
+        else:
+            print(f"[INFO] pull failed, building docker image {image_tag} …")
+            subprocess.run([
+                'docker', 'build',
+                '--build-arg', f"UID={user_id}",
+                '--build-arg', f"GID={group_id}",
+                '--build-arg', f"DIR={repo_name}",
+                '-t', image_tag,
+                '-f', str(dockerfile),
+                '.'
+            ], cwd=subfolder, check=True)
 
         # 5. Docker run
         print(f"[INFO] run the container {image_tag}")
@@ -103,7 +119,8 @@ def main():
             test_files = sorted(test_dir.glob('unit_test_*.py'))
             for idx, _ in enumerate(test_files, start=1):
                 log_file = logs_dir / f"unit_test_{idx}.log"
-                log_file.write_text("Test Failed", encoding='utf-8')
+                if not log_file.exists() or log_file.stat().st_size == 0:
+                    log_file.write_text("Test Failed", encoding='utf-8')
 
             # Skip to the next project
             continue

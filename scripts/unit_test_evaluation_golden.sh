@@ -5,7 +5,7 @@ export TMPDIR=/home/sxy240002/tmp
 export TMP=/home/sxy240002/tmp
 export TEMPDIR=/home/sxy240002/tmp
 export TRANSFORMERS_CACHE=/home/sxy240002/transformers_cache
-export HUGGINGFACE_HUB_TOKEN=
+export HUGGINGFACE_HUB_TOKEN=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
 
 
 if [ $# -ne 1 ]; then
