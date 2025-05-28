@@ -1,0 +1,23 @@
+{
+  "instance_id": 11,
+  "paper_name": "MoverScore: Text Generation Evaluating with Contextualized Embeddings and Earth Mover Distance",
+  "folder_name": "11-moverscore",
+  "paper_url":"https://aclanthology.org/D19-1053.pdf",
+  "year": 2019,
+  "repo_url":"https://github.com/AIPHES/emnlp19-moverscore" ,
+  "repo_folder_name": "moverscore",
+  "implementations": 
+  [
+    {
+      "instruction": "You need to implement the word_mover_score function in movescore.py based on paper.pdf, which calculates a similarity score between two sentences by using BERT embeddings and by calculating calculating the value of 1-Word Mover's Distance metric", 
+      "index": 1,
+      "category": "Evaluation Metrics & Benchmarking",
+      "goal_file": "movescore.py",
+      "goal_function": "word_mover_score",
+      "class_name": "",
+      "golden_file": "golden_files/movescore_golden.py",
+      "retrieval_content": [],
+      "unit_test_file": "unit_test/unit_test_1.py"
+    }
+    ]
+}

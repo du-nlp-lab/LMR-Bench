@@ -1,0 +1,64 @@
+{
+    "instance_id": 16,
+    "folder_name": "16-KnowProb",
+    "repo_folder_name": "KnowProb-main",
+    "paper_name": "Probing Language Models on Their Knowledge Source",
+    "paper_url": "https://aclanthology.org/2024.blackboxnlp-1.35.pdf",
+    "year": 2024,
+    "repo_url": "https://github.com/Zineddine-Tighidet/knowledge-probing-framework",
+    "implementations": [{
+        "instruction": "Implement `perform_classification_by_relation_group` function in src/classification/classifier.py based on paper.pdf and the repository. This function performs classification over the saved activations, the classification can be module-wise and token-wise (i.e. vertical).",
+        "index": 1,
+        "category": "Interpretability & Explainability",
+        "goal_file": "src/classification/classifier.py",
+        "goal_function": "perform_classification_by_relation_group",
+        "class_name": "", 
+        "golden_file": "golden_files/classifier_golden.py",
+        "retrieval_content": [],
+        "unit_test_file": "unit_test/unit_test_1.py"
+    },
+    {
+        "instruction": "Implement `remove_object_subject_overlap` function in src/data.py based on paper.pdf and the repository. This function deletes the examples where the subject and the parametric object are similar using a Jaro-Winkler string similarity.",
+        "index": 2,
+        "category": "Data Augmentation & Generation",
+        "goal_file": "src/data.py",
+        "goal_function": "remove_object_subject_overlap",
+        "class_name": "", 
+        "golden_file": "golden_files/data_golden.py",
+        "retrieval_content": [],
+        "unit_test_file": "unit_test/unit_test_2.py"
+    },
+    {
+        "instruction": "Implement `is_parametric_object_not_in_the_prompt` function in src/parametric_knowledge.py based on paper.pdf and the repository. This function checks whether the parametric_object is included in the one-shot examples that were used to guide the LLM during parametric knowledge building as it would mean that it's biased by the prompt.",
+        "index": 3,
+        "category": "Information Extraction & Knowledge Integration",
+        "goal_file": "src/parametric_knowledge.py",
+        "goal_function": "is_parametric_object_not_in_the_prompt",
+        "class_name": "", 
+        "golden_file": "golden_files/parametric_knowledge_golden.py",
+        "retrieval_content": [],
+        "unit_test_file": "unit_test/unit_test_3.py"
+    },
+    {
+        "instruction": "Implement `return_entity_overlap_between_relation_groups` function in src/data.py based on paper.pdf and the repository. This function returns a dict of dicts representing a kind of matrix of shape (nb_relation_groups, nb_relation_groups), where each value is the number of examples in a relation group that have the same subject or object in another relation group.",
+        "index": 4,
+        "category": "Information Extraction & Knowledge Integration",
+        "goal_file": "src/data.py",
+        "goal_function": "return_entity_overlap_between_relation_groups",
+        "class_name": "", 
+        "golden_file": "golden_files/data_golden.py",
+        "retrieval_content": [],
+        "unit_test_file": "unit_test/unit_test_4.py"
+    },
+    {
+        "instruction": "Implement `generate_counter_parametric_knowledge_dataset` function in src/data.py based on paper.pdf and the repository. This function generates the counter-parametric knowledge using the parametric knowledge.",
+        "index": 5,
+        "category": "Data Augmentation & Generation",
+        "goal_file": "src/data.py",
+        "goal_function": "generate_counter_parametric_knowledge_dataset",
+        "class_name": "", 
+        "golden_file": "golden_files/data_golden.py",
+        "retrieval_content": [],
+        "unit_test_file": "unit_test/unit_test_5.py"
+    }]
+}

@@ -1,0 +1,1 @@
+{"id": 168, "timestamp": "2025-05-16T23:14:21.446121", "source": "environment", "message": "", "observation": "agent_state_changed", "content": "", "extras": {"agent_state": "error", "reason": "RuntimeError: Agent reached maximum iteration in headless mode. Current iteration: 50, max iteration: 50"}}

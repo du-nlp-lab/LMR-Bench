@@ -1,0 +1,22 @@
+{
+    "instance_id": 2,
+    "paper_name": "Language Models as Hierarchy Encoders",
+    "folder_name": "2-HITs",
+    "paper_url": "https://arxiv.org/pdf/2401.11374",
+    "year": 2024,
+    "repo_url": "https://github.com/KRR-Oxford/HierarchyTransformers",
+    "repo_folder_name": "HierarchyTransformers",
+    "implementations": [
+      {
+        "instruction": "Implement the forward function of calulating the Hyperbolic Loss in src/hierarchy_transformers/losses/hit_loss.py based on paper.pdf.",
+        "index": 1,
+        "category": "Training Objectives & Optimization Techniques",
+        "goal_file": "src/hierarchy_transformers/losses/hit_loss.py",
+        "goal_function": "forward",
+        "class_name": "HierarchyTransformerLoss",
+        "golden_file": "golden_files/hit_loss_golden.py",
+        "retrieval_context": ["src/hierarchy_transformers/models/hierarchy_transformer/hit.py", "src/hierarchy_transformers/models/hierarchy_transformer/hyperbolic.py"],
+        "unit_test_file": "unit_test/unit_test_1.py"
+      }
+    ]
+  }
