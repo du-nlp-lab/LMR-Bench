@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export LLM_API_KEY=""
+export LLM_API_KEY="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"
 export LLM_MODEL="openai/o3-mini"
 
 EVALUATION_DIR=$1

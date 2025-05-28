@@ -42,7 +42,8 @@ def main():
         for sub in sorted(eval_dir.iterdir()):
             info_file = sub / 'info.json'
             if not info_file.is_file():
-                print(f"[WARN] skip {sub.name} due to lack of info.json")
+                out.write(f"[WARN] skip {sub.name} due to lack of info.json")
+                total_files += 1
                 continue
             # 提取子目录名，用于前缀文件名
             folder_name = sub.name
@@ -51,10 +52,13 @@ def main():
             repo_name = info.get('repo_folder_name')
             repo_res = eval_dir / sub.name / repo_name / 'unit_test' / 'logs'
             if not repo_res.is_dir():
+                out.write(f"{repo_res} is not a directory\n")
+                total_files += 1
                 continue
 
             for fname in sorted(os.listdir(repo_res)):
                 if not fname.endswith('.log'):
+                    out.write(f"{fname} is not a log file\n")
                     continue
                 total_files += 1
                 fpath = repo_res / fname
@@ -62,7 +66,7 @@ def main():
                 is_passed, fail_count = analyze_log(fpath)
                 # 在文件名前加入子目录名
                 if is_passed:
-                    out.write(f"{folder_name}/{fname}: PASS\n")
+                    out.write(f"{folder_name}/{fname}: PASS fail_count: {fail_count}\n")
                     passed_files += 1
                 else:
                     out.write(f"{folder_name}/{fname}: FAIL (found {fail_count} failure lines)\n")
