@@ -1,0 +1,20 @@
+{
+    "instance_id": 18, 
+    "folder_name": "18-MassActiv",
+    "repo_folder_name": "MassActiv-main",
+    "paper_name": "Massive Activations in Large Language Models",
+    "paper_url": "https://arxiv.org/abs/2402.17762",
+    "year": 2024,
+    "repo_url": "https://github.com/locuslab/massive-activations",
+    "implementations": [{
+        "instruction": "Implement run_exp1 function in main_vit.py. Run 3D feature visualization for a specific layer in a Vision Transformer (ViT) model. This function extracts the absolute feature activations from a specified transformer layer, visualizes them in 3D, and saves both the input parameters and feature activations as serialized pickle files for reproducibility and analysis.",
+        "index": 1,
+        "category": "Interpretability & Explainability",
+        "goal_file": "main_vit.py",
+        "goal_function": "run_exp1",
+        "class_name": "",
+        "golden_file": "golden_files/main_vit_golden.py",
+        "retrieval_content": [],
+        "unit_test_file": "unit_test/unit_test.py"
+    }]
+}

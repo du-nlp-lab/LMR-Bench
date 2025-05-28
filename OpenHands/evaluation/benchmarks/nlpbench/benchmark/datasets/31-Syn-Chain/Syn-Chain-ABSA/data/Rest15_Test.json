@@ -1,0 +1,3254 @@
+[
+    {
+        "id": 0,
+        "sentence": "love al di la",
+        "aspect": "al di la",
+        "label": "positive"
+    },
+    {
+        "id": 1,
+        "sentence": "i recommend this place to everyone .",
+        "aspect": "place",
+        "label": "positive"
+    },
+    {
+        "id": 2,
+        "sentence": "great food .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 3,
+        "sentence": "the pastas are incredible , the risottos ( particularly the sepia ) are fantastic and the braised rabbit is amazing .",
+        "aspect": "pastas",
+        "label": "positive"
+    },
+    {
+        "id": 3,
+        "sentence": "the pastas are incredible , the risottos ( particularly the sepia ) are fantastic and the braised rabbit is amazing .",
+        "aspect": "risottos",
+        "label": "positive"
+    },
+    {
+        "id": 3,
+        "sentence": "the pastas are incredible , the risottos ( particularly the sepia ) are fantastic and the braised rabbit is amazing .",
+        "aspect": "sepia",
+        "label": "positive"
+    },
+    {
+        "id": 3,
+        "sentence": "the pastas are incredible , the risottos ( particularly the sepia ) are fantastic and the braised rabbit is amazing .",
+        "aspect": "braised rabbit",
+        "label": "positive"
+    },
+    {
+        "id": 4,
+        "sentence": "the food here was mediocre at best .",
+        "aspect": "food",
+        "label": "negative"
+    },
+    {
+        "id": 5,
+        "sentence": "it was totally overpriced- fish and chips was about $ 15 ....",
+        "aspect": "fish and chips",
+        "label": "negative"
+    },
+    {
+        "id": 6,
+        "sentence": "tasty dog !",
+        "aspect": "dog",
+        "label": "positive"
+    },
+    {
+        "id": 7,
+        "sentence": "an awesome organic dog , and a conscious eco friendly establishment .",
+        "aspect": "dog",
+        "label": "positive"
+    },
+    {
+        "id": 7,
+        "sentence": "an awesome organic dog , and a conscious eco friendly establishment .",
+        "aspect": "establishment",
+        "label": "positive"
+    },
+    {
+        "id": 8,
+        "sentence": "the cypriot restaurant has a lot going for it .",
+        "aspect": "cypriot restaurant",
+        "label": "positive"
+    },
+    {
+        "id": 9,
+        "sentence": "but the best pork souvlaki i ever had is the main thing .",
+        "aspect": "pork souvlaki",
+        "label": "positive"
+    },
+    {
+        "id": 10,
+        "sentence": "super yummy pizza !",
+        "aspect": "pizza",
+        "label": "positive"
+    },
+    {
+        "id": 11,
+        "sentence": "i was visiting new york city with a friend and we discovered this really warm and inviting restaurant .",
+        "aspect": "restaurant",
+        "label": "positive"
+    },
+    {
+        "id": 12,
+        "sentence": "i looove their eggplant pizza , as well as their pastas !",
+        "aspect": "eggplant pizza",
+        "label": "positive"
+    },
+    {
+        "id": 12,
+        "sentence": "i looove their eggplant pizza , as well as their pastas !",
+        "aspect": "pastas",
+        "label": "positive"
+    },
+    {
+        "id": 13,
+        "sentence": "we had half / half pizza , mine was eggplant and my friend had the buffalo and it was sooo huge for a small size pizza !",
+        "aspect": "half / half pizza",
+        "label": "positive"
+    },
+    {
+        "id": 14,
+        "sentence": "excellent food , although the interior could use some help .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 14,
+        "sentence": "excellent food , although the interior could use some help .",
+        "aspect": "interior",
+        "label": "negative"
+    },
+    {
+        "id": 15,
+        "sentence": "the space kind of feels like an alice in wonderland setting , without it trying to be that .",
+        "aspect": "space",
+        "label": "negative"
+    },
+    {
+        "id": 16,
+        "sentence": "i paid just about $ 60 for a good meal , though :)",
+        "aspect": "meal",
+        "label": "positive"
+    },
+    {
+        "id": 17,
+        "sentence": "great sake !",
+        "aspect": "sake",
+        "label": "positive"
+    },
+    {
+        "id": 18,
+        "sentence": "reliable , fresh sushi",
+        "aspect": "sushi",
+        "label": "positive"
+    },
+    {
+        "id": 19,
+        "sentence": "the sashimi is always fresh and the rolls are innovative and delicious .",
+        "aspect": "sashimi",
+        "label": "positive"
+    },
+    {
+        "id": 19,
+        "sentence": "the sashimi is always fresh and the rolls are innovative and delicious .",
+        "aspect": "rolls",
+        "label": "positive"
+    },
+    {
+        "id": 20,
+        "sentence": "have never had a problem with service save a missing rice once .",
+        "aspect": "service",
+        "label": "positive"
+    },
+    {
+        "id": 21,
+        "sentence": "delivery can be spot on or lacking depending on the weather and the day of the week .",
+        "aspect": "delivery",
+        "label": "negative"
+    },
+    {
+        "id": 22,
+        "sentence": "delivery guy sometimes get upset if you do n't tip more than 10 % .",
+        "aspect": "delivery guy",
+        "label": "negative"
+    },
+    {
+        "id": 23,
+        "sentence": "best . sushi . ever .",
+        "aspect": "sushi",
+        "label": "positive"
+    },
+    {
+        "id": 24,
+        "sentence": "this place has ruined me for neighborhood sushi .",
+        "aspect": "sushi",
+        "label": "positive"
+    },
+    {
+        "id": 25,
+        "sentence": "excellent sashimi , and the millennium roll is beyond delicious .",
+        "aspect": "sashimi",
+        "label": "positive"
+    },
+    {
+        "id": 25,
+        "sentence": "excellent sashimi , and the millennium roll is beyond delicious .",
+        "aspect": "millennium roll",
+        "label": "positive"
+    },
+    {
+        "id": 26,
+        "sentence": "the place is a bit hidden away , but once you get there , it 's all worth it .",
+        "aspect": "place",
+        "label": "neutral"
+    },
+    {
+        "id": 27,
+        "sentence": "not only is the food",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 28,
+        "sentence": "the waiter was attentive , the food was delicious and the views of the city were great .",
+        "aspect": "waiter",
+        "label": "positive"
+    },
+    {
+        "id": 28,
+        "sentence": "the waiter was attentive , the food was delicious and the views of the city were great .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 28,
+        "sentence": "the waiter was attentive , the food was delicious and the views of the city were great .",
+        "aspect": "views of the city",
+        "label": "positive"
+    },
+    {
+        "id": 29,
+        "sentence": "great place to relax and enjoy your dinner",
+        "aspect": "place",
+        "label": "positive"
+    },
+    {
+        "id": 30,
+        "sentence": "there is something about their atmosphere that makes me come back nearly every week .",
+        "aspect": "atmosphere",
+        "label": "positive"
+    },
+    {
+        "id": 31,
+        "sentence": "place is open till late , no dress code .",
+        "aspect": "place",
+        "label": "positive"
+    },
+    {
+        "id": 32,
+        "sentence": "good food : my favorite is the sea$t$ spaghetti .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 33,
+        "sentence": "good food : my favorite is the seafood spaghetti .",
+        "aspect": "seafood spaghetti",
+        "label": "positive"
+    },
+    {
+        "id": 34,
+        "sentence": "excellent food for great prices",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 35,
+        "sentence": "the wait staff is very courteous and accomodating .",
+        "aspect": "wait staff",
+        "label": "positive"
+    },
+    {
+        "id": 36,
+        "sentence": "the space is limited so be prepared to wait up to 45 minutes - 1 hour , but be richly rewarded when you savor the delicious indo - chinese food .",
+        "aspect": "space",
+        "label": "neutral"
+    },
+    {
+        "id": 36,
+        "sentence": "the space is limited so be prepared to wait up to 45 minutes - 1 hour , but be richly rewarded when you savor the delicious indo - chinese food .",
+        "aspect": "indo - chinese food",
+        "label": "positive"
+    },
+    {
+        "id": 37,
+        "sentence": "my favorite place lol",
+        "aspect": "place",
+        "label": "positive"
+    },
+    {
+        "id": 38,
+        "sentence": "i love their chicken pasta ca nt remember the name but is sooo good",
+        "aspect": "chicken pasta",
+        "label": "positive"
+    },
+    {
+        "id": 39,
+        "sentence": "i m not necessarily fanatical about this place , but it was a fun time for low pirces .",
+        "aspect": "place",
+        "label": "positive"
+    },
+    {
+        "id": 40,
+        "sentence": "lobster was good , nothing spectacular .",
+        "aspect": "lobster",
+        "label": "neutral"
+    },
+    {
+        "id": 41,
+        "sentence": "its just a fun place to go , not a five star restaraunt .",
+        "aspect": "restaraunt",
+        "label": "neutral"
+    },
+    {
+        "id": 42,
+        "sentence": "i think the pizza is so overrated and was under cooked .",
+        "aspect": "pizza",
+        "label": "negative"
+    },
+    {
+        "id": 43,
+        "sentence": "had no flavor and the staff is rude and not attentive .",
+        "aspect": "staff",
+        "label": "negative"
+    },
+    {
+        "id": 44,
+        "sentence": "i love this place",
+        "aspect": "place",
+        "label": "positive"
+    },
+    {
+        "id": 45,
+        "sentence": "the service was quick and friendly .",
+        "aspect": "service",
+        "label": "positive"
+    },
+    {
+        "id": 46,
+        "sentence": "i thought the restaurant was nice and clean .",
+        "aspect": "restaurant",
+        "label": "positive"
+    },
+    {
+        "id": 47,
+        "sentence": "i ordered the vitello alla marsala and i was pretty impressed .",
+        "aspect": "vitello alla marsala",
+        "label": "positive"
+    },
+    {
+        "id": 48,
+        "sentence": "the veal and the mushrooms were cooked perfectly .",
+        "aspect": "veal",
+        "label": "positive"
+    },
+    {
+        "id": 48,
+        "sentence": "the veal and the mushrooms were cooked perfectly .",
+        "aspect": "mushrooms",
+        "label": "positive"
+    },
+    {
+        "id": 49,
+        "sentence": "the potato balls were not dry at all ... in fact it was buttery .",
+        "aspect": "potato balls",
+        "label": "positive"
+    },
+    {
+        "id": 50,
+        "sentence": "worst place on smith street in brooklyn",
+        "aspect": "place",
+        "label": "negative"
+    },
+    {
+        "id": 51,
+        "sentence": "very immature bartender , did nt know how to make specific drinks , service was so slowwwww , the food was not fresh or warm , waitresses were busy flirting with men at the bar and were nt very attentive to all the customers .",
+        "aspect": "bartender",
+        "label": "negative"
+    },
+    {
+        "id": 51,
+        "sentence": "very immature bartender , did nt know how to make specific drinks , service was so slowwwww , the food was not fresh or warm , waitresses were busy flirting with men at the bar and were nt very attentive to all the customers .",
+        "aspect": "service",
+        "label": "negative"
+    },
+    {
+        "id": 51,
+        "sentence": "very immature bartender , did nt know how to make specific drinks , service was so slowwwww , the food was not fresh or warm , waitresses were busy flirting with men at the bar and were nt very attentive to all the customers .",
+        "aspect": "food",
+        "label": "negative"
+    },
+    {
+        "id": 51,
+        "sentence": "very immature bartender , did nt know how to make specific drinks , service was so slowwwww , the food was not fresh or warm , waitresses were busy flirting with men at the bar and were nt very attentive to all the customers .",
+        "aspect": "waitresses",
+        "label": "negative"
+    },
+    {
+        "id": 52,
+        "sentence": "i would never recommend this place to anybody even for a casual dinner .",
+        "aspect": "place",
+        "label": "negative"
+    },
+    {
+        "id": 53,
+        "sentence": "the food is always fresh ...",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 54,
+        "sentence": "overpriced japanese food with mediocre service",
+        "aspect": "japanese food",
+        "label": "negative"
+    },
+    {
+        "id": 54,
+        "sentence": "overpriced japanese food with mediocre service",
+        "aspect": "service",
+        "label": "neutral"
+    },
+    {
+        "id": 55,
+        "sentence": "chicken teriyaki had tomato or pimentos on top ? ?",
+        "aspect": "chicken teriyaki",
+        "label": "negative"
+    },
+    {
+        "id": 56,
+        "sentence": "food was luke warm .",
+        "aspect": "food",
+        "label": "negative"
+    },
+    {
+        "id": 57,
+        "sentence": "the waitress was not attentive at all .",
+        "aspect": "waitress",
+        "label": "negative"
+    },
+    {
+        "id": 58,
+        "sentence": "i was looking for banana tempura for dessert and they do nt have .",
+        "aspect": "dessert",
+        "label": "negative"
+    },
+    {
+        "id": 59,
+        "sentence": "not because you are \" the four seasons \" ... \u2013 you are allowed to charge an arm and a leg for a romatic dinner .",
+        "aspect": "the four seasons",
+        "label": "negative"
+    },
+    {
+        "id": 60,
+        "sentence": "the food was excellent as well as service , however , i left the four seasons very dissappointed .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 60,
+        "sentence": "the food was excellent as well as service , however , i left the four seasons very dissappointed .",
+        "aspect": "service",
+        "label": "positive"
+    },
+    {
+        "id": 60,
+        "sentence": "the food was excellent as well as service , however , i left the four seasons very dissappointed .",
+        "aspect": "the four seasons",
+        "label": "negative"
+    },
+    {
+        "id": 61,
+        "sentence": "i do not think dinner in manhattan should cost $ 400.00 where i am not swept off my feet .",
+        "aspect": "dinner",
+        "label": "negative"
+    },
+    {
+        "id": 62,
+        "sentence": "red dragon roll - my favorite thing to eat , of any food group - hands down",
+        "aspect": "red dragon roll",
+        "label": "positive"
+    },
+    {
+        "id": 63,
+        "sentence": "just go to yamato and order the red dragon roll .",
+        "aspect": "yamato",
+        "label": "positive"
+    },
+    {
+        "id": 63,
+        "sentence": "just go to yamato and order the red dragon roll .",
+        "aspect": "red dragon roll",
+        "label": "positive"
+    },
+    {
+        "id": 64,
+        "sentence": "the seafood dynamite is also otherworldly .",
+        "aspect": "seafood dynamite",
+        "label": "positive"
+    },
+    {
+        "id": 65,
+        "sentence": "favorite sushi in nyc",
+        "aspect": "sushi",
+        "label": "positive"
+    },
+    {
+        "id": 66,
+        "sentence": "an unpretentious spot in park slope , the sushi is consistently good , the service is pleasant , effective and unassuming .",
+        "aspect": "spot",
+        "label": "positive"
+    },
+    {
+        "id": 66,
+        "sentence": "an unpretentious spot in park slope , the sushi is consistently good , the service is pleasant , effective and unassuming .",
+        "aspect": "sushi",
+        "label": "positive"
+    },
+    {
+        "id": 66,
+        "sentence": "an unpretentious spot in park slope , the sushi is consistently good , the service is pleasant , effective and unassuming .",
+        "aspect": "service",
+        "label": "positive"
+    },
+    {
+        "id": 67,
+        "sentence": "in the summer months , the back garden area is really nice .",
+        "aspect": "back garden area",
+        "label": "positive"
+    },
+    {
+        "id": 68,
+        "sentence": "the rolls are creative and i have yet to find another sushi place that serves up more inventive yet delicious japanese food .",
+        "aspect": "rolls",
+        "label": "positive"
+    },
+    {
+        "id": 68,
+        "sentence": "the rolls are creative and i have yet to find another sushi place that serves up more inventive yet delicious japanese food .",
+        "aspect": "japanese food",
+        "label": "positive"
+    },
+    {
+        "id": 69,
+        "sentence": "the dancing , white river and millenium rolls are musts .",
+        "aspect": "dancing , white river and millenium rolls",
+        "label": "positive"
+    },
+    {
+        "id": 70,
+        "sentence": "i can eat here every day of the week really lol love this place ... )",
+        "aspect": "place",
+        "label": "positive"
+    },
+    {
+        "id": 71,
+        "sentence": "gross food \u2013 wow-",
+        "aspect": "food",
+        "label": "negative"
+    },
+    {
+        "id": 72,
+        "sentence": "i ca n't remember the last time i had such gross food in new york .",
+        "aspect": "food",
+        "label": "negative"
+    },
+    {
+        "id": 73,
+        "sentence": "my quesadilla tasted like it had been made by a three - year old with no sense of proportion or flavor .",
+        "aspect": "quesadilla",
+        "label": "negative"
+    },
+    {
+        "id": 74,
+        "sentence": "and $ 11 for a plate of bland guacamole ?",
+        "aspect": "guacamole",
+        "label": "negative"
+    },
+    {
+        "id": 75,
+        "sentence": "do n't get me started on the margaritas , either .",
+        "aspect": "margaritas",
+        "label": "negative"
+    },
+    {
+        "id": 76,
+        "sentence": "oh , and i never write reviews -- i just was so moved by how bad this place was , i felt it was my duty to spread the word .",
+        "aspect": "place",
+        "label": "negative"
+    },
+    {
+        "id": 77,
+        "sentence": "great indian food !",
+        "aspect": "indian food",
+        "label": "positive"
+    },
+    {
+        "id": 78,
+        "sentence": "the food was good , the place was clean and affordable .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 78,
+        "sentence": "the food was good , the place was clean and affordable .",
+        "aspect": "place",
+        "label": "positive"
+    },
+    {
+        "id": 79,
+        "sentence": "i noticed alot of indian people eatting there which is a great sign for an indian place !",
+        "aspect": "indian place",
+        "label": "positive"
+    },
+    {
+        "id": 80,
+        "sentence": "this is one of my favorite spot , very relaxing the food is great all the times , celebrated my engagement and my wedding here , it was very well organized .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 81,
+        "sentence": "the staff is very good .",
+        "aspect": "staff",
+        "label": "positive"
+    },
+    {
+        "id": 82,
+        "sentence": "love their drink menu .",
+        "aspect": "drink menu",
+        "label": "positive"
+    },
+    {
+        "id": 83,
+        "sentence": "i highly recommend this beautiful place .",
+        "aspect": "place",
+        "label": "positive"
+    },
+    {
+        "id": 84,
+        "sentence": "we were offered water for the table but were not told the voss bottles of water were $ 8 a piece .",
+        "aspect": "voss bottles of water",
+        "label": "negative"
+    },
+    {
+        "id": 85,
+        "sentence": "food was ok .",
+        "aspect": "food",
+        "label": "neutral"
+    },
+    {
+        "id": 86,
+        "sentence": "nice view of river and nyc .",
+        "aspect": "view of river and nyc",
+        "label": "positive"
+    },
+    {
+        "id": 87,
+        "sentence": "great survice",
+        "aspect": "survice",
+        "label": "positive"
+    },
+    {
+        "id": 88,
+        "sentence": "a beautifully designed dreamy egyptian restaurant that gets sceney at night .",
+        "aspect": "egyptian restaurant",
+        "label": "positive"
+    },
+    {
+        "id": 89,
+        "sentence": "watch the talented belly dancers as you enjoy delicious baba ganoush that 's more lemony than smoky .",
+        "aspect": "baba ganoush",
+        "label": "positive"
+    },
+    {
+        "id": 89,
+        "sentence": "watch the talented belly dancers as you enjoy delicious baba ganoush that 's more lemony than smoky .",
+        "aspect": "belly dancers",
+        "label": "positive"
+    },
+    {
+        "id": 90,
+        "sentence": "oh , and there 's hookah .",
+        "aspect": "hookah",
+        "label": "positive"
+    },
+    {
+        "id": 91,
+        "sentence": "raymond the bartender rocks !",
+        "aspect": "raymond",
+        "label": "positive"
+    },
+    {
+        "id": 92,
+        "sentence": "pacifico is a great place to casually hang out .",
+        "aspect": "pacifico",
+        "label": "positive"
+    },
+    {
+        "id": 93,
+        "sentence": "the drinks are great , especially when made by raymond .",
+        "aspect": "drinks",
+        "label": "positive"
+    },
+    {
+        "id": 93,
+        "sentence": "the drinks are great , especially when made by raymond .",
+        "aspect": "raymond",
+        "label": "positive"
+    },
+    {
+        "id": 94,
+        "sentence": "the omlette for brunch is great ...",
+        "aspect": "omlette for brunch",
+        "label": "positive"
+    },
+    {
+        "id": 95,
+        "sentence": "the spinach is fresh , definately not frozen ...",
+        "aspect": "spinach",
+        "label": "positive"
+    },
+    {
+        "id": 96,
+        "sentence": "quacamole at pacifico is yummy , as are the wings with chimmichuri .",
+        "aspect": "quacamole",
+        "label": "positive"
+    },
+    {
+        "id": 96,
+        "sentence": "quacamole at pacifico is yummy , as are the wings with chimmichuri .",
+        "aspect": "wings with chimmichuri",
+        "label": "positive"
+    },
+    {
+        "id": 97,
+        "sentence": "a weakness is the chicken in the salads .",
+        "aspect": "chicken in the salads",
+        "label": "negative"
+    },
+    {
+        "id": 98,
+        "sentence": "also , i personally was n't a fan of the portobello and asparagus mole .",
+        "aspect": "portobello and asparagus mole",
+        "label": "negative"
+    },
+    {
+        "id": 99,
+        "sentence": "overall , decent food at a good price , with friendly people .",
+        "aspect": "food",
+        "label": "neutral"
+    },
+    {
+        "id": 99,
+        "sentence": "overall , decent food at a good price , with friendly people .",
+        "aspect": "people",
+        "label": "positive"
+    },
+    {
+        "id": 100,
+        "sentence": "best indian restaurant in the city",
+        "aspect": "indian restaurant",
+        "label": "positive"
+    },
+    {
+        "id": 101,
+        "sentence": "decor needs to be upgraded but the food is amazing !",
+        "aspect": "decor",
+        "label": "negative"
+    },
+    {
+        "id": 101,
+        "sentence": "decor needs to be upgraded but the food is amazing !",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 102,
+        "sentence": "this small astoria souvlaki spot makes what many consider the best gyros in new york .",
+        "aspect": "gyros",
+        "label": "positive"
+    },
+    {
+        "id": 103,
+        "sentence": "what really makes it shine is the food , which is aggressively seasoned with cyrpriot spices , and all made in - house ( even the gyro meat and sausages ) , and made of much higher quality ingredients that might otherwise be expected .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 103,
+        "sentence": "what really makes it shine is the food , which is aggressively seasoned with cyrpriot spices , and all made in - house ( even the gyro meat and sausages ) , and made of much higher quality ingredients that might otherwise be expected .",
+        "aspect": "gyro meat",
+        "label": "positive"
+    },
+    {
+        "id": 103,
+        "sentence": "what really makes it shine is the food , which is aggressively seasoned with cyrpriot spices , and all made in - house ( even the gyro meat and sausages ) , and made of much higher quality ingredients that might otherwise be expected .",
+        "aspect": "sausages",
+        "label": "positive"
+    },
+    {
+        "id": 103,
+        "sentence": "what really makes it shine is the food , which is aggressively seasoned with cyrpriot spices , and all made in - house ( even the gyro meat and sausages ) , and made of much higher quality ingredients that might otherwise be expected .",
+        "aspect": "ingredients",
+        "label": "positive"
+    },
+    {
+        "id": 104,
+        "sentence": "all the various greek and cypriot dishes are excellent , but the gyro is the reason to come -- if you do n't eat one your trip was wasted .",
+        "aspect": "greek and cypriot dishes",
+        "label": "positive"
+    },
+    {
+        "id": 104,
+        "sentence": "all the various greek and cypriot dishes are excellent , but the gyro is the reason to come -- if you do n't eat one your trip was wasted .",
+        "aspect": "gyro",
+        "label": "positive"
+    },
+    {
+        "id": 105,
+        "sentence": "best restaurant in brooklyn",
+        "aspect": "restaurant",
+        "label": "positive"
+    },
+    {
+        "id": 106,
+        "sentence": "great food , amazing service , this place is a class act .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 106,
+        "sentence": "great food , amazing service , this place is a class act .",
+        "aspect": "service",
+        "label": "positive"
+    },
+    {
+        "id": 106,
+        "sentence": "great food , amazing service , this place is a class act .",
+        "aspect": "place",
+        "label": "positive"
+    },
+    {
+        "id": 107,
+        "sentence": "the veal was incredible last night .",
+        "aspect": "veal",
+        "label": "positive"
+    },
+    {
+        "id": 108,
+        "sentence": "this place is a must visit !",
+        "aspect": "place",
+        "label": "positive"
+    },
+    {
+        "id": 109,
+        "sentence": "most of the booths allow you to sit next to eachother without looking like ' that ' couple .",
+        "aspect": "booths",
+        "label": "positive"
+    },
+    {
+        "id": 110,
+        "sentence": "the food is all shared so we get to order together and eat together .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 111,
+        "sentence": "i 've enjoyed 99 % of the dishes we 've ordered with the only exceptions being the occasional too - authentic - for - me dish ( i 'm a daring eater but not that daring ) .",
+        "aspect": "dishes",
+        "label": "positive"
+    },
+    {
+        "id": 112,
+        "sentence": "i 've enjoyed 99 % of the dish es we 've ordered with the only exceptions being the occasional too - authentic - for - me $ t$ ( i 'm a daring eater but not that daring ) .",
+        "aspect": "dish",
+        "label": "negative"
+    },
+    {
+        "id": 113,
+        "sentence": "my daughter 's wedding reception at water 's edge received the highest compliments from our guests .",
+        "aspect": "water 's edge",
+        "label": "positive"
+    },
+    {
+        "id": 114,
+        "sentence": "everyone raved about the atmosphere ( elegant rooms and absolutely incomparable views ) and the fabulous food !",
+        "aspect": "atmosphere",
+        "label": "positive"
+    },
+    {
+        "id": 114,
+        "sentence": "everyone raved about the atmosphere ( elegant rooms and absolutely incomparable views ) and the fabulous food !",
+        "aspect": "rooms",
+        "label": "positive"
+    },
+    {
+        "id": 114,
+        "sentence": "everyone raved about the atmosphere ( elegant rooms and absolutely incomparable views ) and the fabulous food !",
+        "aspect": "views",
+        "label": "positive"
+    },
+    {
+        "id": 114,
+        "sentence": "everyone raved about the atmosphere ( elegant rooms and absolutely incomparable views ) and the fabulous food !",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 115,
+        "sentence": "service was wonderful ;",
+        "aspect": "service",
+        "label": "positive"
+    },
+    {
+        "id": 116,
+        "sentence": "paul , the maitre d ' , was totally professional and always on top of things .",
+        "aspect": "paul",
+        "label": "positive"
+    },
+    {
+        "id": 117,
+        "sentence": "thank you everyone at water 's edge .",
+        "aspect": "water 's edge",
+        "label": "positive"
+    },
+    {
+        "id": 118,
+        "sentence": "service ok but unfriendly , filthy bathroom .",
+        "aspect": "service",
+        "label": "negative"
+    },
+    {
+        "id": 118,
+        "sentence": "service ok but unfriendly , filthy bathroom .",
+        "aspect": "bathroom",
+        "label": "negative"
+    },
+    {
+        "id": 119,
+        "sentence": "the high prices you 're going to pay is for the view not for the food .",
+        "aspect": "view",
+        "label": "neutral"
+    },
+    {
+        "id": 119,
+        "sentence": "the high prices you 're going to pay is for the view not for the food .",
+        "aspect": "food",
+        "label": "negative"
+    },
+    {
+        "id": 120,
+        "sentence": "the bar drinks were eh , ok to say the least .",
+        "aspect": "bar drinks",
+        "label": "negative"
+    },
+    {
+        "id": 121,
+        "sentence": "the stuff tilapia was horrid ... tasted like cardboard .",
+        "aspect": "stuff tilapia",
+        "label": "negative"
+    },
+    {
+        "id": 122,
+        "sentence": "we thought the dessert would be better , wrong !",
+        "aspect": "dessert",
+        "label": "negative"
+    },
+    {
+        "id": 123,
+        "sentence": "oh speaking of bathroom , the mens bathroom was disgusting .",
+        "aspect": "mens bathroom",
+        "label": "negative"
+    },
+    {
+        "id": 124,
+        "sentence": "the wine list was extensive - though the staff did not seem knowledgeable about wine pairings .",
+        "aspect": "wine list",
+        "label": "positive"
+    },
+    {
+        "id": 124,
+        "sentence": "the wine list was extensive - though the staff did not seem knowledgeable about wine pairings .",
+        "aspect": "staff",
+        "label": "negative"
+    },
+    {
+        "id": 125,
+        "sentence": "the bread we received was horrible - rock hard and cold - and the \" free \" appetizer of olives was disappointing .",
+        "aspect": "bread",
+        "label": "negative"
+    },
+    {
+        "id": 125,
+        "sentence": "the bread we received was horrible - rock hard and cold - and the \" free \" appetizer of olives was disappointing .",
+        "aspect": "appetizer of olives",
+        "label": "negative"
+    },
+    {
+        "id": 126,
+        "sentence": "however , our main course was wonderful .",
+        "aspect": "main course",
+        "label": "positive"
+    },
+    {
+        "id": 127,
+        "sentence": "i had fish and my husband had the filet - both of which exceeded our expectations .",
+        "aspect": "fish",
+        "label": "positive"
+    },
+    {
+        "id": 127,
+        "sentence": "i had fish and my husband had the filet - both of which exceeded our expectations .",
+        "aspect": "filet",
+        "label": "positive"
+    },
+    {
+        "id": 128,
+        "sentence": "the dessert ( we had a pear torte ) was good - but , once again , the staff was unable to provide appropriate drink suggestions .",
+        "aspect": "pear torte",
+        "label": "positive"
+    },
+    {
+        "id": 128,
+        "sentence": "the dessert ( we had a pear torte ) was good - but , once again , the staff was unable to provide appropriate drink suggestions .",
+        "aspect": "staff",
+        "label": "negative"
+    },
+    {
+        "id": 129,
+        "sentence": "when we inquired about ports - the waitress listed off several but did not know taste variations or cost .",
+        "aspect": "waitress",
+        "label": "negative"
+    },
+    {
+        "id": 130,
+        "sentence": "not what i would expect for the price and prestige of this location .",
+        "aspect": "location",
+        "label": "neutral"
+    },
+    {
+        "id": 131,
+        "sentence": "all in all , i would return - as it was a beautiful restaurant - but i hope the staff pays more attention to the little details in the future .",
+        "aspect": "restaurant",
+        "label": "positive"
+    },
+    {
+        "id": 131,
+        "sentence": "all in all , i would return - as it was a beautiful restaurant - but i hope the staff pays more attention to the little details in the future .",
+        "aspect": "staff",
+        "label": "negative"
+    },
+    {
+        "id": 132,
+        "sentence": "short and sweet \u2013 seating is great : it 's romantic , cozy and private .",
+        "aspect": "seating",
+        "label": "positive"
+    },
+    {
+        "id": 133,
+        "sentence": "the boths are not as small as some of the reviews make them out to look they 're perfect for 2 people .",
+        "aspect": "boths",
+        "label": "positive"
+    },
+    {
+        "id": 134,
+        "sentence": "the service was extremely fast and attentive(thanks to the $ t$ button on your table ) but i barely understood 1 word when the waiter took our order .",
+        "aspect": "service",
+        "label": "positive"
+    },
+    {
+        "id": 135,
+        "sentence": "the service was extremely fast and attentive(thanks to the service button on your table ) but i barely understood 1 word when the waiter took our order .",
+        "aspect": "service button",
+        "label": "positive"
+    },
+    {
+        "id": 135,
+        "sentence": "the service was extremely fast and attentive(thanks to the service button on your table ) but i barely understood 1 word when the waiter took our order .",
+        "aspect": "waiter",
+        "label": "negative"
+    },
+    {
+        "id": 136,
+        "sentence": "the food was ok and fair nothing to go crazy .",
+        "aspect": "food",
+        "label": "neutral"
+    },
+    {
+        "id": 137,
+        "sentence": "over all the looks of the place exceeds the actual meals .",
+        "aspect": "looks",
+        "label": "positive"
+    },
+    {
+        "id": 137,
+        "sentence": "over all the looks of the place exceeds the actual meals .",
+        "aspect": "meals",
+        "label": "negative"
+    },
+    {
+        "id": 138,
+        "sentence": "so what you really end up paying for is the restaurant not the food .",
+        "aspect": "restaurant",
+        "label": "negative"
+    },
+    {
+        "id": 138,
+        "sentence": "so what you really end up paying for is the restaurant not the food .",
+        "aspect": "food",
+        "label": "negative"
+    },
+    {
+        "id": 139,
+        "sentence": "subtle food and service",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 139,
+        "sentence": "subtle food and service",
+        "aspect": "service",
+        "label": "positive"
+    },
+    {
+        "id": 140,
+        "sentence": "noodle pudding is exactly the type of service and food i enjoy .",
+        "aspect": "service",
+        "label": "positive"
+    },
+    {
+        "id": 140,
+        "sentence": "noodle pudding is exactly the type of service and food i enjoy .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 141,
+        "sentence": "servers are all different , greg is my favorite .",
+        "aspect": "greg",
+        "label": "positive"
+    },
+    {
+        "id": 142,
+        "sentence": "sometimes tables do n't understand his sense of humor but it 's refreshing to have a server who has personality , professionalism , and respects the privacy of your dinner .",
+        "aspect": "server",
+        "label": "positive"
+    },
+    {
+        "id": 143,
+        "sentence": "this is the first place i 've been that a runner remembers my order ... hope he likes his job because i have half a mind to steal him for my restaurant .",
+        "aspect": "runner",
+        "label": "positive"
+    },
+    {
+        "id": 144,
+        "sentence": "prices are fair across the board for both food and bev .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 144,
+        "sentence": "prices are fair across the board for both food and bev .",
+        "aspect": "bev",
+        "label": "positive"
+    },
+    {
+        "id": 145,
+        "sentence": "i go out to eat and like my courses , servers are patient and never rush courses or force another drink .",
+        "aspect": "servers",
+        "label": "positive"
+    },
+    {
+        "id": 146,
+        "sentence": "amazing fresh dogs but best of all endless toppings ! ! !",
+        "aspect": "dogs",
+        "label": "positive"
+    },
+    {
+        "id": 146,
+        "sentence": "amazing fresh dogs but best of all endless toppings ! ! !",
+        "aspect": "toppings",
+        "label": "positive"
+    },
+    {
+        "id": 147,
+        "sentence": "this place had all the trimmings and i mean all .",
+        "aspect": "trimmings",
+        "label": "positive"
+    },
+    {
+        "id": 148,
+        "sentence": "amazing fun for hot dog lovers of all ages please do yourself a favor and check this place out ! ! ! !",
+        "aspect": "place",
+        "label": "positive"
+    },
+    {
+        "id": 148,
+        "sentence": "amazing fun for hot dog lovers of all ages please do yourself a favor and check this place out ! ! ! !",
+        "aspect": "hot dog",
+        "label": "positive"
+    },
+    {
+        "id": 149,
+        "sentence": "stepping into casa la femme last night was a true experience unlike any other in new york !",
+        "aspect": "casa la femme",
+        "label": "positive"
+    },
+    {
+        "id": 150,
+        "sentence": "highly impressed from the decor to the food to the hospitality to the great night i had !",
+        "aspect": "decor",
+        "label": "positive"
+    },
+    {
+        "id": 150,
+        "sentence": "highly impressed from the decor to the food to the hospitality to the great night i had !",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 151,
+        "sentence": "the have a great cocktail with citrus vodka and lemon and lime juice and mint leaves that is to die for !",
+        "aspect": "cocktail with citrus vodka and lemon and lime juice and mint leaves",
+        "label": "positive"
+    },
+    {
+        "id": 152,
+        "sentence": "food took some time to prepare , all worth waiting for .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 153,
+        "sentence": "we were drawn into the belly dancing show that captivated the crowd .",
+        "aspect": "belly dancing show",
+        "label": "positive"
+    },
+    {
+        "id": 154,
+        "sentence": "i never write on these sites but this restaurant is def worth commending !",
+        "aspect": "restaurant",
+        "label": "positive"
+    },
+    {
+        "id": 155,
+        "sentence": "maggot in the food !",
+        "aspect": "food",
+        "label": "negative"
+    },
+    {
+        "id": 156,
+        "sentence": "the menu looked great , and the waiter was very nice , but when the food came , it was average .",
+        "aspect": "menu",
+        "label": "positive"
+    },
+    {
+        "id": 156,
+        "sentence": "the menu looked great , and the waiter was very nice , but when the food came , it was average .",
+        "aspect": "waiter",
+        "label": "positive"
+    },
+    {
+        "id": 156,
+        "sentence": "the menu looked great , and the waiter was very nice , but when the food came , it was average .",
+        "aspect": "food",
+        "label": "neutral"
+    },
+    {
+        "id": 157,
+        "sentence": "nevertheless , i finished my plate , and that 's when i found a maggot in mushroom sauce at the bottom .",
+        "aspect": "mushroom sauce",
+        "label": "negative"
+    },
+    {
+        "id": 158,
+        "sentence": "i showed it to the manager , and he smilingly apologized and brought us two free desserts ( but did not ask us what we wanted and so brought the last two desserts we would have asked for ) .",
+        "aspect": "manager",
+        "label": "positive"
+    },
+    {
+        "id": 159,
+        "sentence": "the manager finally said he would comp the two glasses of wine ( which cost less than the food ) , and made it seem like a big concession .",
+        "aspect": "manager",
+        "label": "negative"
+    },
+    {
+        "id": 160,
+        "sentence": "i have worked in restaurants and cook a lot , and there is no way a maggot should be able to get into well prepared food .",
+        "aspect": "food",
+        "label": "negative"
+    },
+    {
+        "id": 161,
+        "sentence": "for a restaurant with such a good reputation and that is usually so packed , there was no reason for such a lack of intelligent customer service .",
+        "aspect": "restaurant",
+        "label": "positive"
+    },
+    {
+        "id": 161,
+        "sentence": "for a restaurant with such a good reputation and that is usually so packed , there was no reason for such a lack of intelligent customer service .",
+        "aspect": "customer service",
+        "label": "negative"
+    },
+    {
+        "id": 162,
+        "sentence": "i got hair in my food 2 times of then !",
+        "aspect": "food",
+        "label": "negative"
+    },
+    {
+        "id": 163,
+        "sentence": "great place , great value .",
+        "aspect": "place",
+        "label": "positive"
+    },
+    {
+        "id": 164,
+        "sentence": "the food is flavorful , plentiful and reasonably priced .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 165,
+        "sentence": "the atmosphere is relaxed and casual .",
+        "aspect": "atmosphere",
+        "label": "positive"
+    },
+    {
+        "id": 166,
+        "sentence": "it 's a great place to order from or sit - in .",
+        "aspect": "place",
+        "label": "positive"
+    },
+    {
+        "id": 167,
+        "sentence": "sushi experience was unbelievable with my fiance .",
+        "aspect": "sushi",
+        "label": "positive"
+    },
+    {
+        "id": 168,
+        "sentence": "good creative rolls !",
+        "aspect": "rolls",
+        "label": "positive"
+    },
+    {
+        "id": 169,
+        "sentence": "yamato is an excellent place to go if you re not into sashimi , or if you have friends who does nt like sushi much .",
+        "aspect": "yamato",
+        "label": "positive"
+    },
+    {
+        "id": 170,
+        "sentence": "they have great rolls , the triple color and norwegetan $ t$ , are awesome and filling .",
+        "aspect": "rolls",
+        "label": "positive"
+    },
+    {
+        "id": 171,
+        "sentence": "they have great rolls , the triple color and norwegetan rolls , are awesome and filling .",
+        "aspect": "triple color and norwegetan rolls",
+        "label": "positive"
+    },
+    {
+        "id": 172,
+        "sentence": "one special roll and one regular roll is enough to fill you up , but save room for dessert !",
+        "aspect": "dessert",
+        "label": "positive"
+    },
+    {
+        "id": 172,
+        "sentence": "one special roll and one regular roll is enough to fill you up , but save room for dessert !",
+        "aspect": "special roll",
+        "label": "positive"
+    },
+    {
+        "id": 172,
+        "sentence": "one special roll and one regular roll is enough to fill you up , but save room for dessert !",
+        "aspect": "regular roll",
+        "label": "positive"
+    },
+    {
+        "id": 173,
+        "sentence": "they have a delicious banana chocolate dessert , as well as a great green tea tempura .",
+        "aspect": "banana chocolate dessert",
+        "label": "positive"
+    },
+    {
+        "id": 173,
+        "sentence": "they have a delicious banana chocolate dessert , as well as a great green tea tempura .",
+        "aspect": "green tea tempura",
+        "label": "positive"
+    },
+    {
+        "id": 174,
+        "sentence": "the appetizers are also delicious !",
+        "aspect": "appetizers",
+        "label": "positive"
+    },
+    {
+        "id": 175,
+        "sentence": "amazing food .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 176,
+        "sentence": "mazing interior .",
+        "aspect": "interior",
+        "label": "negative"
+    },
+    {
+        "id": 177,
+        "sentence": "great food !",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 178,
+        "sentence": "i 've had my fair share of modern japanese and this spot delivers .",
+        "aspect": "modern japanese",
+        "label": "positive"
+    },
+    {
+        "id": 179,
+        "sentence": "the atmosphere was pretty nice but had a bit lacking , which it tries to make up for with a crazy scheme of mirrors .",
+        "aspect": "atmosphere",
+        "label": "negative"
+    },
+    {
+        "id": 179,
+        "sentence": "the atmosphere was pretty nice but had a bit lacking , which it tries to make up for with a crazy scheme of mirrors .",
+        "aspect": "scheme of mirrors",
+        "label": "negative"
+    },
+    {
+        "id": 180,
+        "sentence": "despite the confusing mirrors this will likely be my go - to for modern japanese food for the foreseeable future .",
+        "aspect": "modern japanese food",
+        "label": "positive"
+    },
+    {
+        "id": 180,
+        "sentence": "despite the confusing mirrors this will likely be my go - to for modern japanese food for the foreseeable future .",
+        "aspect": "mirrors",
+        "label": "negative"
+    },
+    {
+        "id": 181,
+        "sentence": "indo chinese food , pretty good ...",
+        "aspect": "indo chinese food",
+        "label": "positive"
+    },
+    {
+        "id": 182,
+        "sentence": "not a very fancy place but very good chinese style indian food .",
+        "aspect": "place",
+        "label": "neutral"
+    },
+    {
+        "id": 182,
+        "sentence": "not a very fancy place but very good chinese style indian food .",
+        "aspect": "chinese style indian food",
+        "label": "positive"
+    },
+    {
+        "id": 183,
+        "sentence": "the chicken lollipop is my favorite , most of the dishes ( i have to agree with a previous reviewer ) are quite oily and very spicy , espeically the chilli chicken .",
+        "aspect": "chicken lollipop",
+        "label": "positive"
+    },
+    {
+        "id": 183,
+        "sentence": "the chicken lollipop is my favorite , most of the dishes ( i have to agree with a previous reviewer ) are quite oily and very spicy , espeically the chilli chicken .",
+        "aspect": "dishes",
+        "label": "negative"
+    },
+    {
+        "id": 183,
+        "sentence": "the chicken lollipop is my favorite , most of the dishes ( i have to agree with a previous reviewer ) are quite oily and very spicy , espeically the chilli chicken .",
+        "aspect": "chilli chicken",
+        "label": "negative"
+    },
+    {
+        "id": 184,
+        "sentence": "my mom originally introduced me to this place , but even she ( being indian ) feels the food can be somewhat over the top spicy and far too oily .",
+        "aspect": "food",
+        "label": "negative"
+    },
+    {
+        "id": 185,
+        "sentence": "i was speechless by the horrible food .",
+        "aspect": "food",
+        "label": "negative"
+    },
+    {
+        "id": 186,
+        "sentence": "i attended a holiday dinner at the restaurant , and the food was majorly disappointing .",
+        "aspect": "food",
+        "label": "negative"
+    },
+    {
+        "id": 187,
+        "sentence": "rather than preparing vegetarian dish , the chef presented me with a plate of steamed vegetables ( minus sauce , seasoning , or any form or aesthetic presentation ) .",
+        "aspect": "chef",
+        "label": "negative"
+    },
+    {
+        "id": 187,
+        "sentence": "rather than preparing vegetarian dish , the chef presented me with a plate of steamed vegetables ( minus sauce , seasoning , or any form or aesthetic presentation ) .",
+        "aspect": "vegetarian dish",
+        "label": "negative"
+    },
+    {
+        "id": 188,
+        "sentence": "this place survives on reputation alone .",
+        "aspect": "place",
+        "label": "negative"
+    },
+    {
+        "id": 189,
+        "sentence": "this is the most wonderful restaurant in all of new york city , not just brooklyn ...",
+        "aspect": "restaurant",
+        "label": "positive"
+    },
+    {
+        "id": 190,
+        "sentence": "for 7 years they have put out the most tasty , most delicious food and kept it that way ...",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 191,
+        "sentence": "never swaying , never a bad meal , never bad service ...",
+        "aspect": "meal",
+        "label": "positive"
+    },
+    {
+        "id": 191,
+        "sentence": "never swaying , never a bad meal , never bad service ...",
+        "aspect": "service",
+        "label": "positive"
+    },
+    {
+        "id": 192,
+        "sentence": "great food , great wine list , great service in a great neighborhood ...",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 192,
+        "sentence": "great food , great wine list , great service in a great neighborhood ...",
+        "aspect": "wine list",
+        "label": "positive"
+    },
+    {
+        "id": 192,
+        "sentence": "great food , great wine list , great service in a great neighborhood ...",
+        "aspect": "service",
+        "label": "positive"
+    },
+    {
+        "id": 192,
+        "sentence": "great food , great wine list , great service in a great neighborhood ...",
+        "aspect": "neighborhood",
+        "label": "positive"
+    },
+    {
+        "id": 193,
+        "sentence": "patsy 's pizza = true love",
+        "aspect": "patsy 's pizza",
+        "label": "positive"
+    },
+    {
+        "id": 194,
+        "sentence": "hands down the best pizza on the planet .",
+        "aspect": "pizza",
+        "label": "positive"
+    },
+    {
+        "id": 195,
+        "sentence": "great hot dogs ..",
+        "aspect": "hot dogs",
+        "label": "positive"
+    },
+    {
+        "id": 196,
+        "sentence": "the hot dogs were juicy and tender inside and had plenty of crunch and snap on the outside .",
+        "aspect": "hot dogs",
+        "label": "positive"
+    },
+    {
+        "id": 197,
+        "sentence": "great toppings definitely a place you need to check out for late night munchies or a mid day boost !",
+        "aspect": "toppings",
+        "label": "positive"
+    },
+    {
+        "id": 197,
+        "sentence": "great toppings definitely a place you need to check out for late night munchies or a mid day boost !",
+        "aspect": "place",
+        "label": "positive"
+    },
+    {
+        "id": 198,
+        "sentence": "for me dishes a little oily , but overall dining experience good .",
+        "aspect": "dishes",
+        "label": "negative"
+    },
+    {
+        "id": 199,
+        "sentence": "helpful service and average price per dish $ 10 .",
+        "aspect": "service",
+        "label": "positive"
+    },
+    {
+        "id": 199,
+        "sentence": "helpful service and average price per dish $ 10 .",
+        "aspect": "dish",
+        "label": "neutral"
+    },
+    {
+        "id": 200,
+        "sentence": "the only thing that strikes you is the decor ? ( not very pleasant ) .",
+        "aspect": "decor",
+        "label": "negative"
+    },
+    {
+        "id": 201,
+        "sentence": "great food",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 202,
+        "sentence": "this place has great indian chinese food .",
+        "aspect": "indian chinese food",
+        "label": "positive"
+    },
+    {
+        "id": 203,
+        "sentence": "be prepared to wait , because the place is pretty tiny .",
+        "aspect": "place",
+        "label": "negative"
+    },
+    {
+        "id": 204,
+        "sentence": "even though the place is not beautiful , the food speaks for itself .",
+        "aspect": "place",
+        "label": "negative"
+    },
+    {
+        "id": 204,
+        "sentence": "even though the place is not beautiful , the food speaks for itself .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 205,
+        "sentence": "best indian chinese in the city , by far !",
+        "aspect": "indian chinese",
+        "label": "positive"
+    },
+    {
+        "id": 206,
+        "sentence": "i came across village underground by accident , now i go there all the time .",
+        "aspect": "village underground",
+        "label": "positive"
+    },
+    {
+        "id": 207,
+        "sentence": "the martinis are amazing and very fairly priced .",
+        "aspect": "martinis",
+        "label": "positive"
+    },
+    {
+        "id": 208,
+        "sentence": "the service is amazing , i 've had different waiters and they were all nice , which is a rare thing in nyc .",
+        "aspect": "service",
+        "label": "positive"
+    },
+    {
+        "id": 208,
+        "sentence": "the service is amazing , i 've had different waiters and they were all nice , which is a rare thing in nyc .",
+        "aspect": "waiters",
+        "label": "positive"
+    },
+    {
+        "id": 209,
+        "sentence": "the dj is awesome , i have been there for my birthday and a bunch of other times with friends and i keep going back .",
+        "aspect": "dj",
+        "label": "positive"
+    },
+    {
+        "id": 210,
+        "sentence": "everything on the menu is great .",
+        "aspect": "menu",
+        "label": "positive"
+    },
+    {
+        "id": 211,
+        "sentence": "this establishment is the real deal .",
+        "aspect": "establishment",
+        "label": "positive"
+    },
+    {
+        "id": 212,
+        "sentence": "wish ny had more of these kind of places : intimate , superb food , homey , top notch all the way around , certainly worth the wait .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 213,
+        "sentence": "but $ 500 for a dinner for two that did n't include wine ?",
+        "aspect": "dinner for two",
+        "label": "negative"
+    },
+    {
+        "id": 214,
+        "sentence": "look , the appetizers were really good .",
+        "aspect": "appetizers",
+        "label": "positive"
+    },
+    {
+        "id": 215,
+        "sentence": "the entree was also very good .",
+        "aspect": "entree",
+        "label": "positive"
+    },
+    {
+        "id": 216,
+        "sentence": "what you are paying for is the environment and the name .",
+        "aspect": "environment",
+        "label": "neutral"
+    },
+    {
+        "id": 217,
+        "sentence": "yes , the place is classy and beautiful , but they most certainly target the uber whealthy not the common joe that wants to go all out every once in a while .",
+        "aspect": "place",
+        "label": "positive"
+    },
+    {
+        "id": 218,
+        "sentence": "vanison was good but not amazing .",
+        "aspect": "vanison",
+        "label": "neutral"
+    },
+    {
+        "id": 219,
+        "sentence": "bison was quite excellent however .",
+        "aspect": "bison",
+        "label": "positive"
+    },
+    {
+        "id": 220,
+        "sentence": "dessert : pure disaster .",
+        "aspect": "dessert",
+        "label": "negative"
+    },
+    {
+        "id": 221,
+        "sentence": "i read reviews that called the restaurant too expensive and i thought to myself , but may be it is worth it .",
+        "aspect": "restaurant",
+        "label": "negative"
+    },
+    {
+        "id": 222,
+        "sentence": "the four seasons has history and it is a sort of landmark of new york city restaurants , but trust me , they will charge you through the nose just so that you can say \" i 've been to the four seasons restaurant \" .",
+        "aspect": "the four seasons",
+        "label": "neutral"
+    },
+    {
+        "id": 223,
+        "sentence": "all in all , the food was great ( except for the dessserts ) .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 223,
+        "sentence": "all in all , the food was great ( except for the dessserts ) .",
+        "aspect": "dessserts",
+        "label": "negative"
+    },
+    {
+        "id": 224,
+        "sentence": "the environment is very upscale and you will see a lot of rich guys with trophy wives or just highly paid escorts .",
+        "aspect": "environment",
+        "label": "neutral"
+    },
+    {
+        "id": 225,
+        "sentence": "if you are going for the food , it will not be worth it .",
+        "aspect": "food",
+        "label": "negative"
+    },
+    {
+        "id": 226,
+        "sentence": "you would think they would make up for it with service , sadly , no .",
+        "aspect": "service",
+        "label": "negative"
+    },
+    {
+        "id": 227,
+        "sentence": "service was just ok , it is not what you 'd expect for $ 500 .",
+        "aspect": "service",
+        "label": "negative"
+    },
+    {
+        "id": 228,
+        "sentence": "i agree that dining at casa la femme is like no other dining experience !",
+        "aspect": "casa la femme",
+        "label": "negative"
+    },
+    {
+        "id": 229,
+        "sentence": "i literally just got back home after visiting casa la femme and was so offended by my visit felt it necessary to try and warn other diners who value their money and time .",
+        "aspect": "casa la femme",
+        "label": "negative"
+    },
+    {
+        "id": 230,
+        "sentence": "we did arrive late for our reservation so i can not complain too much about the wait for a table .",
+        "aspect": "wait",
+        "label": "neutral"
+    },
+    {
+        "id": 231,
+        "sentence": "the place is beautiful !",
+        "aspect": "place",
+        "label": "positive"
+    },
+    {
+        "id": 232,
+        "sentence": "the hostess was very pleasant .",
+        "aspect": "hostess",
+        "label": "positive"
+    },
+    {
+        "id": 233,
+        "sentence": "however , our $ 14 drinks were were horrible !",
+        "aspect": "drinks",
+        "label": "negative"
+    },
+    {
+        "id": 234,
+        "sentence": "we also asked for hooka six times and the waiter kept telling us one minute and never returning with the hooka .",
+        "aspect": "waiter",
+        "label": "negative"
+    },
+    {
+        "id": 235,
+        "sentence": "after the 4th time i asked again and the waiter than said after our dinner .",
+        "aspect": "waiter",
+        "label": "negative"
+    },
+    {
+        "id": 236,
+        "sentence": "we asked for sides which the waiter than admitted that he forgot to put in that part of our order .",
+        "aspect": "waiter",
+        "label": "negative"
+    },
+    {
+        "id": 237,
+        "sentence": "my chicken was inedible as there were so many fatty lumps which i had to keep spitting out into my napkin .",
+        "aspect": "chicken",
+        "label": "negative"
+    },
+    {
+        "id": 238,
+        "sentence": "i would not expect this for a $ 55 dinner .",
+        "aspect": "dinner",
+        "label": "negative"
+    },
+    {
+        "id": 239,
+        "sentence": "by the time we left our wallets were empy and so were our stomachs and we missed the show we were supposed to see following our dinner , which would have been acceptable if we got to enjoy the experience of good food and belly dancers !",
+        "aspect": "food",
+        "label": "negative"
+    },
+    {
+        "id": 240,
+        "sentence": "if it seemed possible to do so while there i would have fought my bill since my dinner portion of my meal was inedible !",
+        "aspect": "meal",
+        "label": "negative"
+    },
+    {
+        "id": 241,
+        "sentence": "i have never left a restaurant feeling as if i was abused , and wasted my hard earned money .",
+        "aspect": "restaurant",
+        "label": "negative"
+    },
+    {
+        "id": 242,
+        "sentence": "the menu is fairly simple without much descriptions .",
+        "aspect": "menu",
+        "label": "neutral"
+    },
+    {
+        "id": 243,
+        "sentence": "there was no tap beer that evening , which was a disappointment .",
+        "aspect": "beer",
+        "label": "negative"
+    },
+    {
+        "id": 244,
+        "sentence": "not much of a selection of bottled beer either , we went with brahma .",
+        "aspect": "selection of bottled beer",
+        "label": "negative"
+    },
+    {
+        "id": 245,
+        "sentence": "the appetizers we ordered were served quickly - an order of fried oysters and clams were delicious but a tiny portion ( maybe 3 of each ) .",
+        "aspect": "fried oysters and clams",
+        "label": "positive"
+    },
+    {
+        "id": 246,
+        "sentence": "the lobster knuckles ( special of the day ) were ok , but pretty tasteless .",
+        "aspect": "lobster knuckles",
+        "label": "neutral"
+    },
+    {
+        "id": 247,
+        "sentence": "i believe there were 2 shrimp in the \" salt encrusted shrimp \" appetizer .",
+        "aspect": "\" salt encrusted shrimp \" appetizer",
+        "label": "negative"
+    },
+    {
+        "id": 248,
+        "sentence": "i had the thai style fried sea bass ... which was very good .",
+        "aspect": "thai style fried sea bass",
+        "label": "positive"
+    },
+    {
+        "id": 249,
+        "sentence": "everyone seemed generally happy with their food , except my brother who had the grilled mahi mahi , seemingly drenched in grapfruit juice !",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 249,
+        "sentence": "everyone seemed generally happy with their food , except my brother who had the grilled mahi mahi , seemingly drenched in grapfruit juice !",
+        "aspect": "grilled mahi mahi",
+        "label": "negative"
+    },
+    {
+        "id": 250,
+        "sentence": "i heard the lobster roll was excellent .",
+        "aspect": "lobster roll",
+        "label": "positive"
+    },
+    {
+        "id": 251,
+        "sentence": "all in all the food was good - a little on the expensive side , but fresh .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 252,
+        "sentence": "service not the friendliest to our \" large party \" !",
+        "aspect": "service",
+        "label": "negative"
+    },
+    {
+        "id": 253,
+        "sentence": "great indian food",
+        "aspect": "indian food",
+        "label": "positive"
+    },
+    {
+        "id": 254,
+        "sentence": "food was amazing - i love indian food and eat it quite regularly , but i can say this is one of the best i 've had .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 255,
+        "sentence": "very \" normal indian food \" , but done really well .",
+        "aspect": "indian food",
+        "label": "neutral"
+    },
+    {
+        "id": 256,
+        "sentence": "i have it a 4 instead of 5 because of the price ( just chicken tikka masala - no bread of rice - is $ 25 ) , which i would expect at a upscale indian restaurant but this place does n't have an upscale feel .",
+        "aspect": "place",
+        "label": "positive"
+    },
+    {
+        "id": 256,
+        "sentence": "i have it a 4 instead of 5 because of the price ( just chicken tikka masala - no bread of rice - is $ 25 ) , which i would expect at a upscale indian restaurant but this place does n't have an upscale feel .",
+        "aspect": "chicken tikka masala",
+        "label": "negative"
+    },
+    {
+        "id": 256,
+        "sentence": "i have it a 4 instead of 5 because of the price ( just chicken tikka masala - no bread of rice - is $ 25 ) , which i would expect at a upscale indian restaurant but this place does n't have an upscale feel .",
+        "aspect": "feel",
+        "label": "negative"
+    },
+    {
+        "id": 257,
+        "sentence": "also , waiters try to push more food on you , like suggest things as if they are complimentary when they actually cost $ .",
+        "aspect": "waiters",
+        "label": "negative"
+    },
+    {
+        "id": 258,
+        "sentence": "but if you 're prepared to spend some $ and remember to ask if something they offer is complimentary , then this is the place to go for indian food",
+        "aspect": "indian food",
+        "label": "positive"
+    },
+    {
+        "id": 258,
+        "sentence": "but if you 're prepared to spend some $ and remember to ask if something they offer is complimentary , then this is the place to go for indian food",
+        "aspect": "place",
+        "label": "negative"
+    },
+    {
+        "id": 259,
+        "sentence": "bukhara grill , the tagline says it all .. \" indian spice rave \"",
+        "aspect": "bukhara grill",
+        "label": "positive"
+    },
+    {
+        "id": 260,
+        "sentence": "the lunch buffet is expensive but is deff worth it .",
+        "aspect": "lunch buffet",
+        "label": "negative"
+    },
+    {
+        "id": 261,
+        "sentence": "we have gone for dinner only a few times but the same great quality and service is given .",
+        "aspect": "service",
+        "label": "positive"
+    },
+    {
+        "id": 261,
+        "sentence": "we have gone for dinner only a few times but the same great quality and service is given .",
+        "aspect": "dinner",
+        "label": "positive"
+    },
+    {
+        "id": 262,
+        "sentence": "bukhara is on my top 5 indian places in nyc",
+        "aspect": "bukhara",
+        "label": "positive"
+    },
+    {
+        "id": 263,
+        "sentence": "i have never been so disgusted by both food an service .",
+        "aspect": "food",
+        "label": "negative"
+    },
+    {
+        "id": 263,
+        "sentence": "i have never been so disgusted by both food an service .",
+        "aspect": "service",
+        "label": "negative"
+    },
+    {
+        "id": 264,
+        "sentence": "however , once i received my predictably mediocre order of what dokebi thinks passes as korean fair , ( sometimes you have to settle when it 's your only option ) , i got through about half my kimchee before i found a piece of random lettuce accompanied by a far more disgusting , slimy , clearly bad piece of fish skin .",
+        "aspect": "kimchee",
+        "label": "negative"
+    },
+    {
+        "id": 264,
+        "sentence": "however , once i received my predictably mediocre order of what dokebi thinks passes as korean fair , ( sometimes you have to settle when it 's your only option ) , i got through about half my kimchee before i found a piece of random lettuce accompanied by a far more disgusting , slimy , clearly bad piece of fish skin .",
+        "aspect": "korean fair",
+        "label": "negative"
+    },
+    {
+        "id": 265,
+        "sentence": "my main concern was the sanity of the food that was being sent out to myself and others , but i would be lying is i said that as someone who has worked in restaurants since the age of fifteen i was expecting at least a minimal effort on the part of the restaurant to amend the situation .",
+        "aspect": "food",
+        "label": "negative"
+    },
+    {
+        "id": 266,
+        "sentence": "my girlfriend , being slightly more aggressive , and having been equally disgusted causing her to throw out the remainder of her barely eaten meal , called back only to be informed that i was probably wrong and that it was most likely an oyster , and that we were also blacklisted from their restaurant .",
+        "aspect": "meal",
+        "label": "negative"
+    },
+    {
+        "id": 267,
+        "sentence": "it was n't as if this restaurant had any major bragging points before hand , but now it 's simply repulsive .",
+        "aspect": "restaurant",
+        "label": "negative"
+    },
+    {
+        "id": 268,
+        "sentence": "gorgeous place ideal for a romantic dinner",
+        "aspect": "place",
+        "label": "positive"
+    },
+    {
+        "id": 269,
+        "sentence": "i book a gorgeous white organza tent which included a four course prix fix menu which we enjoyed a lot .",
+        "aspect": "four course prix fix menu",
+        "label": "positive"
+    },
+    {
+        "id": 269,
+        "sentence": "i book a gorgeous white organza tent which included a four course prix fix menu which we enjoyed a lot .",
+        "aspect": "white organza tent",
+        "label": "positive"
+    },
+    {
+        "id": 270,
+        "sentence": "the service was spectacular as the waiter knew everything about the menu and his recommendations were amazing !",
+        "aspect": "service",
+        "label": "positive"
+    },
+    {
+        "id": 270,
+        "sentence": "the service was spectacular as the waiter knew everything about the menu and his recommendations were amazing !",
+        "aspect": "waiter",
+        "label": "positive"
+    },
+    {
+        "id": 271,
+        "sentence": "i completely recommend casa la femme for any special occasion and to really impress your date .",
+        "aspect": "casa la femme",
+        "label": "positive"
+    },
+    {
+        "id": 272,
+        "sentence": "the bibimbap was average , but the stone bowl was n't even close to sizzling .",
+        "aspect": "bibimbap",
+        "label": "neutral"
+    },
+    {
+        "id": 272,
+        "sentence": "the bibimbap was average , but the stone bowl was n't even close to sizzling .",
+        "aspect": "stone bowl",
+        "label": "negative"
+    },
+    {
+        "id": 273,
+        "sentence": "too bad i had paid an extra $ 2 for the stone bowl .",
+        "aspect": "stone bowl",
+        "label": "negative"
+    },
+    {
+        "id": 274,
+        "sentence": "the nakgi - bokum was horrible .",
+        "aspect": "nakgi - bokum",
+        "label": "negative"
+    },
+    {
+        "id": 275,
+        "sentence": "easily the worst stir - fried squid i 've ever tasted .",
+        "aspect": "stir - fried squid",
+        "label": "negative"
+    },
+    {
+        "id": 276,
+        "sentence": "the sauce tasted more like chinese fast food than decent korean .",
+        "aspect": "sauce",
+        "label": "negative"
+    },
+    {
+        "id": 277,
+        "sentence": "the side dishes were passable , and i did get a refill upon request .",
+        "aspect": "side dishes",
+        "label": "neutral"
+    },
+    {
+        "id": 278,
+        "sentence": "the real problem i had with this place was the complete lack of service .",
+        "aspect": "service",
+        "label": "negative"
+    },
+    {
+        "id": 279,
+        "sentence": "my wife had barely touched that mess of a dish .",
+        "aspect": "dish",
+        "label": "negative"
+    },
+    {
+        "id": 280,
+        "sentence": "the wife had the risotto which was amazing .",
+        "aspect": "risotto",
+        "label": "positive"
+    },
+    {
+        "id": 281,
+        "sentence": "the farro salad and the mashed yukon potatoes were also extremely tasty .",
+        "aspect": "farro salad",
+        "label": "positive"
+    },
+    {
+        "id": 281,
+        "sentence": "the farro salad and the mashed yukon potatoes were also extremely tasty .",
+        "aspect": "mashed yukon potatoes",
+        "label": "positive"
+    },
+    {
+        "id": 282,
+        "sentence": "i love margherita pizza \u2013 i looove east village pizza",
+        "aspect": "east village pizza",
+        "label": "positive"
+    },
+    {
+        "id": 282,
+        "sentence": "i love margherita pizza \u2013 i looove east village pizza",
+        "aspect": "margherita pizza",
+        "label": "positive"
+    },
+    {
+        "id": 283,
+        "sentence": "love this place , every time we are in the city this is one of the $ t$s we always go .",
+        "aspect": "place",
+        "label": "positive"
+    },
+    {
+        "id": 284,
+        "sentence": "a quintessential slice of nyc pizza .",
+        "aspect": "slice of nyc pizza",
+        "label": "neutral"
+    },
+    {
+        "id": 285,
+        "sentence": "the crust has a great bite and a good chew , the sauce is light with a nice acidity to it , the salt from the cheese is great , really heightens the flavor of all the other components .",
+        "aspect": "crust",
+        "label": "positive"
+    },
+    {
+        "id": 285,
+        "sentence": "the crust has a great bite and a good chew , the sauce is light with a nice acidity to it , the salt from the cheese is great , really heightens the flavor of all the other components .",
+        "aspect": "sauce",
+        "label": "positive"
+    },
+    {
+        "id": 285,
+        "sentence": "the crust has a great bite and a good chew , the sauce is light with a nice acidity to it , the salt from the cheese is great , really heightens the flavor of all the other components .",
+        "aspect": "cheese",
+        "label": "positive"
+    },
+    {
+        "id": 286,
+        "sentence": "personally i like the margherita pizza better , but they are all good .",
+        "aspect": "margherita pizza",
+        "label": "positive"
+    },
+    {
+        "id": 287,
+        "sentence": "possibly the most romantic restaurant in the city",
+        "aspect": "restaurant",
+        "label": "positive"
+    },
+    {
+        "id": 288,
+        "sentence": "this is undoubtedly my favorite modern japanese brasserie ( that do n\u2019t serve sushi ) , and in my opinion , one of the most romantic restaurants in the city !",
+        "aspect": "modern japanese brasserie",
+        "label": "positive"
+    },
+    {
+        "id": 289,
+        "sentence": "not only is it an adventure getting to this somewhat hidden spot , once you enter the unmarked wooden doors , the zen and intimate d\u00e9cor will make you feel like you \u2019re no longer in the city .",
+        "aspect": "spot",
+        "label": "neutral"
+    },
+    {
+        "id": 289,
+        "sentence": "not only is it an adventure getting to this somewhat hidden spot , once you enter the unmarked wooden doors , the zen and intimate d\u00e9cor will make you feel like you \u2019re no longer in the city .",
+        "aspect": "unmarked wooden doors",
+        "label": "positive"
+    },
+    {
+        "id": 289,
+        "sentence": "not only is it an adventure getting to this somewhat hidden spot , once you enter the unmarked wooden doors , the zen and intimate d\u00e9cor will make you feel like you \u2019re no longer in the city .",
+        "aspect": "d\u00e9cor",
+        "label": "positive"
+    },
+    {
+        "id": 290,
+        "sentence": "if you \u2019re planning to come here , make sure that your date is someone whom you really like since you \u2019ll be ushered to private booths where there will be no people or food watching ( choose the ones on the ground level that have glass ceilings so you may see the stars in the sky ! ) .",
+        "aspect": "private booths",
+        "label": "positive"
+    },
+    {
+        "id": 290,
+        "sentence": "if you \u2019re planning to come here , make sure that your date is someone whom you really like since you \u2019ll be ushered to private booths where there will be no people or food watching ( choose the ones on the ground level that have glass ceilings so you may see the stars in the sky ! ) .",
+        "aspect": "glass ceilings",
+        "label": "positive"
+    },
+    {
+        "id": 291,
+        "sentence": "it \u2019s just you and your date and an occasional cute \u2018 excuse me\u2019 before the waiter opens the little curtain to your booth !",
+        "aspect": "waiter",
+        "label": "positive"
+    },
+    {
+        "id": 292,
+        "sentence": "my party had the bbe $ 29 fixe prix menu , which was such a wonderful deal since it also came with a flight of sake !",
+        "aspect": "bbe $ 29 fixe prix menu",
+        "label": "positive"
+    },
+    {
+        "id": 293,
+        "sentence": "we started off with a delightful sashimi amuse bouche .",
+        "aspect": "sashimi amuse bouche",
+        "label": "positive"
+    },
+    {
+        "id": 294,
+        "sentence": "i picked the grilled black cod as my entree , which i absolutely devoured while someone commented that the grilled salmon dish was better .",
+        "aspect": "grilled black cod",
+        "label": "positive"
+    },
+    {
+        "id": 294,
+        "sentence": "i picked the grilled black cod as my entree , which i absolutely devoured while someone commented that the grilled salmon dish was better .",
+        "aspect": "grilled salmon dish",
+        "label": "positive"
+    },
+    {
+        "id": 295,
+        "sentence": "the entrees were served with miso soup and rice .",
+        "aspect": "entrees",
+        "label": "neutral"
+    },
+    {
+        "id": 296,
+        "sentence": "the sake \u2019s complimented the courses very well and is successfully easing me into the sake world .",
+        "aspect": "sake \u2019s",
+        "label": "positive"
+    },
+    {
+        "id": 297,
+        "sentence": "for desserts , we tried the frozen black sesame mousse ( interesting but not extraordinary ) and matcha ( powdered green tea ) and blueberry cheesecake , which was phenomenal .",
+        "aspect": "frozen black sesame mousse",
+        "label": "neutral"
+    },
+    {
+        "id": 297,
+        "sentence": "for desserts , we tried the frozen black sesame mousse ( interesting but not extraordinary ) and matcha ( powdered green tea ) and blueberry cheesecake , which was phenomenal .",
+        "aspect": "matcha ( powdered green tea ) and blueberry cheesecake",
+        "label": "positive"
+    },
+    {
+        "id": 298,
+        "sentence": "maybe it was the great company ( i had friends visiting from philly \u2013 yes , it was not a date this time ) or the super reasonable price point , but i just ca n\u2019t say enough good things about this brasserie .",
+        "aspect": "brasserie",
+        "label": "positive"
+    },
+    {
+        "id": 299,
+        "sentence": "i do n\u2019t usually visit the same establishment more than once , what more twice , but i \u2019ll come to zenkichi anytime for a quiet , unhurried and memorable dinner .",
+        "aspect": "zenkichi",
+        "label": "positive"
+    },
+    {
+        "id": 300,
+        "sentence": "the service leaves much to be desired , from feeling like you are rushed the place your order , to being ignored the rest of the night .",
+        "aspect": "service",
+        "label": "negative"
+    },
+    {
+        "id": 301,
+        "sentence": "they are extremely rude , not even apologizing for the horrible service we got and handing us a bill well over $ 500 for some drinks adn their pita bread !",
+        "aspect": "service",
+        "label": "negative"
+    },
+    {
+        "id": 301,
+        "sentence": "they are extremely rude , not even apologizing for the horrible service we got and handing us a bill well over $ 500 for some drinks adn their pita bread !",
+        "aspect": "drinks",
+        "label": "negative"
+    },
+    {
+        "id": 301,
+        "sentence": "they are extremely rude , not even apologizing for the horrible service we got and handing us a bill well over $ 500 for some drinks adn their pita bread !",
+        "aspect": "pita bread",
+        "label": "negative"
+    },
+    {
+        "id": 302,
+        "sentence": "great shabu shabu",
+        "aspect": "shabu shabu",
+        "label": "positive"
+    },
+    {
+        "id": 303,
+        "sentence": "i tried a couple other dishes but was n't too impressed .",
+        "aspect": "dishes",
+        "label": "neutral"
+    },
+    {
+        "id": 304,
+        "sentence": "but for the shabu shabu , you wo n't find much better in ny .",
+        "aspect": "shabu shabu",
+        "label": "positive"
+    },
+    {
+        "id": 305,
+        "sentence": "the meat is fresh , the sauces are great , you get kimchi and a salad free with your meal and service is good too .",
+        "aspect": "meat",
+        "label": "positive"
+    },
+    {
+        "id": 305,
+        "sentence": "the meat is fresh , the sauces are great , you get kimchi and a salad free with your meal and service is good too .",
+        "aspect": "sauces",
+        "label": "positive"
+    },
+    {
+        "id": 305,
+        "sentence": "the meat is fresh , the sauces are great , you get kimchi and a salad free with your meal and service is good too .",
+        "aspect": "service",
+        "label": "positive"
+    },
+    {
+        "id": 305,
+        "sentence": "the meat is fresh , the sauces are great , you get kimchi and a salad free with your meal and service is good too .",
+        "aspect": "meal",
+        "label": "positive"
+    },
+    {
+        "id": 305,
+        "sentence": "the meat is fresh , the sauces are great , you get kimchi and a salad free with your meal and service is good too .",
+        "aspect": "kimchi",
+        "label": "positive"
+    },
+    {
+        "id": 305,
+        "sentence": "the meat is fresh , the sauces are great , you get kimchi and a salad free with your meal and service is good too .",
+        "aspect": "salad",
+        "label": "positive"
+    },
+    {
+        "id": 306,
+        "sentence": "dokebi gives williamsburg the right one - two punch of classic korean food and fusion twists like pork belly tacos .",
+        "aspect": "korean food",
+        "label": "positive"
+    },
+    {
+        "id": 306,
+        "sentence": "dokebi gives williamsburg the right one - two punch of classic korean food and fusion twists like pork belly tacos .",
+        "aspect": "fusion twists",
+        "label": "positive"
+    },
+    {
+        "id": 306,
+        "sentence": "dokebi gives williamsburg the right one - two punch of classic korean food and fusion twists like pork belly tacos .",
+        "aspect": "pork belly tacos",
+        "label": "positive"
+    },
+    {
+        "id": 307,
+        "sentence": "the hot dogs are good , yes , but the reason to get over here is the fantastic pork croquette sandwich , perfect on its supermarket squishy bun .",
+        "aspect": "hot dogs",
+        "label": "positive"
+    },
+    {
+        "id": 307,
+        "sentence": "the hot dogs are good , yes , but the reason to get over here is the fantastic pork croquette sandwich , perfect on its supermarket squishy bun .",
+        "aspect": "pork croquette sandwich",
+        "label": "positive"
+    },
+    {
+        "id": 307,
+        "sentence": "the hot dogs are good , yes , but the reason to get over here is the fantastic pork croquette sandwich , perfect on its supermarket squishy bun .",
+        "aspect": "bun",
+        "label": "positive"
+    },
+    {
+        "id": 308,
+        "sentence": "restaurant with a view",
+        "aspect": "view",
+        "label": "neutral"
+    },
+    {
+        "id": 309,
+        "sentence": "the food tasted very good .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 310,
+        "sentence": "the family seafood entree was very good .",
+        "aspect": "family seafood entree",
+        "label": "positive"
+    },
+    {
+        "id": 311,
+        "sentence": "the main entree was also very good .",
+        "aspect": "main entree",
+        "label": "positive"
+    },
+    {
+        "id": 312,
+        "sentence": "price is high but the food is good , so i would come back again .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 313,
+        "sentence": "this place does n't make any sense",
+        "aspect": "place",
+        "label": "negative"
+    },
+    {
+        "id": 314,
+        "sentence": "this place has totally weird decor , stairs going up with mirrored walls - i am surprised how no one yet broke their head or fall off the stairs - mirrored walls make you dizzy and delusional ...",
+        "aspect": "decor",
+        "label": "negative"
+    },
+    {
+        "id": 315,
+        "sentence": "this place has totally weird decor , stairs going up with mirrored walls - i am surprised how no one yet broke their head or fall off the stairs - $ t$ make you dizzy and delusional ...",
+        "aspect": "mirrored walls",
+        "label": "negative"
+    },
+    {
+        "id": 316,
+        "sentence": "this place is not inviting and the food is totally weird .",
+        "aspect": "place",
+        "label": "negative"
+    },
+    {
+        "id": 316,
+        "sentence": "this place is not inviting and the food is totally weird .",
+        "aspect": "food",
+        "label": "negative"
+    },
+    {
+        "id": 317,
+        "sentence": "the concept of japanese tapas is newly created and clearly does n't work .",
+        "aspect": "japanese tapas",
+        "label": "negative"
+    },
+    {
+        "id": 318,
+        "sentence": "the food they serve is not comforting , not appetizing and uncooked .",
+        "aspect": "food",
+        "label": "negative"
+    },
+    {
+        "id": 319,
+        "sentence": "good food",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 320,
+        "sentence": "the food was great and tasty , but the sitting space was too small , i do n't like being cramp in a corner .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 320,
+        "sentence": "the food was great and tasty , but the sitting space was too small , i do n't like being cramp in a corner .",
+        "aspect": "sitting space",
+        "label": "negative"
+    },
+    {
+        "id": 321,
+        "sentence": "over all it was a very nice romantic place .",
+        "aspect": "place",
+        "label": "positive"
+    },
+    {
+        "id": 322,
+        "sentence": "a coworker and i tried pacifico after work a few fridays and loved it .",
+        "aspect": "pacifico",
+        "label": "positive"
+    },
+    {
+        "id": 323,
+        "sentence": "the atmosphere was great .",
+        "aspect": "atmosphere",
+        "label": "positive"
+    },
+    {
+        "id": 324,
+        "sentence": "the food we ordered was excellent , although i would n't say the margaritas were anything to write home about .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 324,
+        "sentence": "the food we ordered was excellent , although i would n't say the margaritas were anything to write home about .",
+        "aspect": "margaritas",
+        "label": "neutral"
+    },
+    {
+        "id": 325,
+        "sentence": "our waitress was n't mean , but not especially warm or attentive either .",
+        "aspect": "waitress",
+        "label": "neutral"
+    },
+    {
+        "id": 326,
+        "sentence": "i must say i am surprised by the bad reviews of the restaurant earlier in the year , though .",
+        "aspect": "restaurant",
+        "label": "positive"
+    },
+    {
+        "id": 327,
+        "sentence": "regardless , we 'll be back and ca n't wait to visit in the summer to take advantage of the patio .",
+        "aspect": "patio",
+        "label": "positive"
+    },
+    {
+        "id": 328,
+        "sentence": "the servers at flatbush farm appear to have perfected that ghastly technique of making you feel guilty and ashamed for deigning to attract their attention .",
+        "aspect": "servers",
+        "label": "negative"
+    },
+    {
+        "id": 329,
+        "sentence": "a different server enhanced the fun , dumping our entrees in front of us halfway through our appetizer ( which was delicious ) .",
+        "aspect": "server",
+        "label": "negative"
+    },
+    {
+        "id": 329,
+        "sentence": "a different server enhanced the fun , dumping our entrees in front of us halfway through our appetizer ( which was delicious ) .",
+        "aspect": "appetizer",
+        "label": "positive"
+    },
+    {
+        "id": 330,
+        "sentence": "overall the food quality was pretty good , though i hear the salmon is much better when it has n't sat cooling in front of the guest .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 331,
+        "sentence": "the place has a nice fit - out , some attractive furnishings and , from what i could tell , a reasonable wine list ( i was given the food menu when i asked for the carte des vins )",
+        "aspect": "fit - out",
+        "label": "positive"
+    },
+    {
+        "id": 331,
+        "sentence": "the place has a nice fit - out , some attractive furnishings and , from what i could tell , a reasonable wine list ( i was given the food menu when i asked for the carte des vins )",
+        "aspect": "furnishings",
+        "label": "positive"
+    },
+    {
+        "id": 331,
+        "sentence": "the place has a nice fit - out , some attractive furnishings and , from what i could tell , a reasonable wine list ( i was given the food menu when i asked for the carte des vins )",
+        "aspect": "wine list",
+        "label": "positive"
+    },
+    {
+        "id": 332,
+        "sentence": "how is this palce still open ?",
+        "aspect": "palce",
+        "label": "negative"
+    },
+    {
+        "id": 333,
+        "sentence": "everything was going good until we got our meals .",
+        "aspect": "meals",
+        "label": "negative"
+    },
+    {
+        "id": 334,
+        "sentence": "i took one look at the chicken and i was appalled .",
+        "aspect": "chicken",
+        "label": "negative"
+    },
+    {
+        "id": 335,
+        "sentence": "it was served with skin , over a bed of extremely undercooked spinach and mashed potatoes .",
+        "aspect": "spinach",
+        "label": "negative"
+    },
+    {
+        "id": 336,
+        "sentence": "i took one bite from the $ 24 salmon , and i have never , in the 17 years i have been going to restaurants tasted $ t$ as fishy , as dry , and as bland as the one in flatbush farms .",
+        "aspect": "salmon",
+        "label": "negative"
+    },
+    {
+        "id": 337,
+        "sentence": "at this point , the waitress comes over and asks us if everything was okay , i was literally so shocked that i was speechless and did n't say anything , and guess what , the $ t$ walked away .",
+        "aspect": "waitress",
+        "label": "negative"
+    },
+    {
+        "id": 338,
+        "sentence": "so , i switch with my boyfriend again to see if maybe i could stomach the meat and spinach again , but the $ t$ was so undercooked that i just could not bite through it .",
+        "aspect": "spinach",
+        "label": "negative"
+    },
+    {
+        "id": 339,
+        "sentence": "this is where it really really gets bad : the manager said , there is absolutely nothing we can do , it 's a matter of taste that she did n't like it , and i can not comp it .",
+        "aspect": "manager",
+        "label": "negative"
+    },
+    {
+        "id": 340,
+        "sentence": "the manager came to the table and said we can do what we want , so we paid for what we did enjoy , the drinks and appetizers , and walked out .",
+        "aspect": "manager",
+        "label": "negative"
+    },
+    {
+        "id": 340,
+        "sentence": "the manager came to the table and said we can do what we want , so we paid for what we did enjoy , the drinks and appetizers , and walked out .",
+        "aspect": "drinks",
+        "label": "positive"
+    },
+    {
+        "id": 340,
+        "sentence": "the manager came to the table and said we can do what we want , so we paid for what we did enjoy , the drinks and appetizers , and walked out .",
+        "aspect": "appetizers",
+        "label": "positive"
+    },
+    {
+        "id": 341,
+        "sentence": "this staff should be fired .",
+        "aspect": "staff",
+        "label": "negative"
+    },
+    {
+        "id": 342,
+        "sentence": "cirspy crust margherita pizza",
+        "aspect": "margherita pizza",
+        "label": "positive"
+    },
+    {
+        "id": 343,
+        "sentence": "it was really good pizza .",
+        "aspect": "pizza",
+        "label": "positive"
+    },
+    {
+        "id": 344,
+        "sentence": "the crust was imazingly cooked well and pizza was fully loaded : ) : ) : )",
+        "aspect": "crust",
+        "label": "positive"
+    },
+    {
+        "id": 344,
+        "sentence": "the crust was imazingly cooked well and pizza was fully loaded : ) : ) : )",
+        "aspect": "pizza",
+        "label": "positive"
+    },
+    {
+        "id": 345,
+        "sentence": "single worst restaurant in manhattan",
+        "aspect": "restaurant",
+        "label": "negative"
+    },
+    {
+        "id": 346,
+        "sentence": "i 'll being with a couple of positives : cool decor , good pita and hummus , and grilled octopus that was actually pretty tasty .",
+        "aspect": "decor",
+        "label": "positive"
+    },
+    {
+        "id": 346,
+        "sentence": "i 'll being with a couple of positives : cool decor , good pita and hummus , and grilled octopus that was actually pretty tasty .",
+        "aspect": "pita",
+        "label": "positive"
+    },
+    {
+        "id": 346,
+        "sentence": "i 'll being with a couple of positives : cool decor , good pita and hummus , and grilled octopus that was actually pretty tasty .",
+        "aspect": "hummus",
+        "label": "positive"
+    },
+    {
+        "id": 346,
+        "sentence": "i 'll being with a couple of positives : cool decor , good pita and hummus , and grilled octopus that was actually pretty tasty .",
+        "aspect": "grilled octopus",
+        "label": "positive"
+    },
+    {
+        "id": 347,
+        "sentence": "if i could give 0 stars i would do so for this place .",
+        "aspect": "place",
+        "label": "negative"
+    },
+    {
+        "id": 348,
+        "sentence": "this place ... god where do i begin .",
+        "aspect": "place",
+        "label": "negative"
+    },
+    {
+        "id": 349,
+        "sentence": "it is quite a spectacular scene i 'll give them that .",
+        "aspect": "scene",
+        "label": "positive"
+    },
+    {
+        "id": 350,
+        "sentence": "the decor however seems to be the distraction so you wo n't notice that you just payed 300 bucks for some cold eggplant that took 2 frickin hours to come ! ! ! !",
+        "aspect": "decor",
+        "label": "neutral"
+    },
+    {
+        "id": 350,
+        "sentence": "the decor however seems to be the distraction so you wo n't notice that you just payed 300 bucks for some cold eggplant that took 2 frickin hours to come ! ! ! !",
+        "aspect": "eggplant",
+        "label": "negative"
+    },
+    {
+        "id": 351,
+        "sentence": "how this place survives the competitive west village market in this economy , or any other for that matter , is beyond me .",
+        "aspect": "place",
+        "label": "negative"
+    },
+    {
+        "id": 352,
+        "sentence": "great hot dogs !",
+        "aspect": "hot dogs",
+        "label": "positive"
+    },
+    {
+        "id": 353,
+        "sentence": "though it 's been crowded most times i 've gone here , bark always delivers on their food .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 353,
+        "sentence": "though it 's been crowded most times i 've gone here , bark always delivers on their food .",
+        "aspect": "bark",
+        "label": "neutral"
+    },
+    {
+        "id": 354,
+        "sentence": "the hot dogs are top notch , and they 're slamwich is amazing !",
+        "aspect": "hot dogs",
+        "label": "positive"
+    },
+    {
+        "id": 354,
+        "sentence": "the hot dogs are top notch , and they 're slamwich is amazing !",
+        "aspect": "slamwich",
+        "label": "positive"
+    },
+    {
+        "id": 355,
+        "sentence": "going to bark is always worth the train ride , and will make your tongue and belly very happy !",
+        "aspect": "bark",
+        "label": "positive"
+    },
+    {
+        "id": 356,
+        "sentence": "only complaint is the pricing -- i believe it would be more reasonable to pay a dollar less on each item listed on the menu .",
+        "aspect": "menu",
+        "label": "negative"
+    },
+    {
+        "id": 357,
+        "sentence": "but nonetheless -- great spot , great food .",
+        "aspect": "spot",
+        "label": "positive"
+    },
+    {
+        "id": 357,
+        "sentence": "but nonetheless -- great spot , great food .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 358,
+        "sentence": "fabulous food - if the front of house staff do n't put you off \u2013",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 358,
+        "sentence": "fabulous food - if the front of house staff do n't put you off \u2013",
+        "aspect": "front of house staff",
+        "label": "negative"
+    },
+    {
+        "id": 359,
+        "sentence": "each time we 've been , the front of house staff ( not the waiters - they 're fantastic - but the people who greet and seat you ) has been so hideous to us that were it not for the exceptional fish dishes i would never return .",
+        "aspect": "waiters",
+        "label": "positive"
+    },
+    {
+        "id": 359,
+        "sentence": "each time we 've been , the front of house staff ( not the waiters - they 're fantastic - but the people who greet and seat you ) has been so hideous to us that were it not for the exceptional fish dishes i would never return .",
+        "aspect": "front of house staff",
+        "label": "negative"
+    },
+    {
+        "id": 359,
+        "sentence": "each time we 've been , the front of house staff ( not the waiters - they 're fantastic - but the people who greet and seat you ) has been so hideous to us that were it not for the exceptional fish dishes i would never return .",
+        "aspect": "fish dishes",
+        "label": "positive"
+    },
+    {
+        "id": 360,
+        "sentence": "as bfc does n't take reservations you almost always have to wait by the bar - and be abused by the front of house staff until you are seated , which can be over an hour later !",
+        "aspect": "bfc",
+        "label": "negative"
+    },
+    {
+        "id": 360,
+        "sentence": "as bfc does n't take reservations you almost always have to wait by the bar - and be abused by the front of house staff until you are seated , which can be over an hour later !",
+        "aspect": "front of house staff",
+        "label": "negative"
+    },
+    {
+        "id": 361,
+        "sentence": "the frizzy retro girl ( with winged/ dame edna glasses ) will yell at you if you try to order a drink .",
+        "aspect": "girl",
+        "label": "negative"
+    },
+    {
+        "id": 362,
+        "sentence": "i 'd be horrified if my staff were turning away customers so early and so rudely !",
+        "aspect": "staff",
+        "label": "negative"
+    },
+    {
+        "id": 363,
+        "sentence": "there 's another girl who i ca n't describe , she is about 5'6 \" with brown hair , who eavesdrops on your conversation and chimes in - except she only hears the last part of what you said , so her uninvited opinions are often out of context and nothing to do with what you 're * really * talking about .",
+        "aspect": "girl",
+        "label": "negative"
+    },
+    {
+        "id": 364,
+        "sentence": "considering you will spend at least $ 60 a head , i expect better service .",
+        "aspect": "service",
+        "label": "negative"
+    },
+    {
+        "id": 365,
+        "sentence": "maitre - d -\"eat and get out \"",
+        "aspect": "maitre - d",
+        "label": "negative"
+    },
+    {
+        "id": 366,
+        "sentence": "the food and service were fine , however the maitre - d was incredibly unwelcoming and arrogant .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 366,
+        "sentence": "the food and service were fine , however the maitre - d was incredibly unwelcoming and arrogant .",
+        "aspect": "service",
+        "label": "positive"
+    },
+    {
+        "id": 366,
+        "sentence": "the food and service were fine , however the maitre - d was incredibly unwelcoming and arrogant .",
+        "aspect": "maitre - d",
+        "label": "negative"
+    },
+    {
+        "id": 367,
+        "sentence": "while finishing our meals which included a high - end bottle of wine , our son 's fiance joined us for a glass of wine and dessert .",
+        "aspect": "bottle of wine",
+        "label": "positive"
+    },
+    {
+        "id": 368,
+        "sentence": "this guy refused to seat her and she left , followed shortly by the four of us , but not before i told him that in my 40 years of world travel , including paris , that i had never seen such a display of bad behavior by a frontman in a restaurant .",
+        "aspect": "frontman",
+        "label": "negative"
+    },
+    {
+        "id": 369,
+        "sentence": "a word to the wise : you ca n't dine here and disturb the maitre - d 's sense of \" table turnover \" , as whacked as it is , or else .",
+        "aspect": "maitre - d",
+        "label": "negative"
+    },
+    {
+        "id": 370,
+        "sentence": "best meal in a long time !",
+        "aspect": "meal",
+        "label": "positive"
+    },
+    {
+        "id": 371,
+        "sentence": "mussles and calamari were superb saturday evening .",
+        "aspect": "mussles",
+        "label": "positive"
+    },
+    {
+        "id": 371,
+        "sentence": "mussles and calamari were superb saturday evening .",
+        "aspect": "calamari",
+        "label": "positive"
+    },
+    {
+        "id": 372,
+        "sentence": "i had the lamb special which was perfect .",
+        "aspect": "lamb special",
+        "label": "positive"
+    },
+    {
+        "id": 373,
+        "sentence": "my father had the flank steak which was very good , and my mother had the swordfish .",
+        "aspect": "flank steak",
+        "label": "positive"
+    },
+    {
+        "id": 374,
+        "sentence": "the four seasons restaurant is a great experience .",
+        "aspect": "the four seasons restaurant",
+        "label": "positive"
+    },
+    {
+        "id": 375,
+        "sentence": "the food is great and the environment is even better .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 375,
+        "sentence": "the food is great and the environment is even better .",
+        "aspect": "environment",
+        "label": "positive"
+    },
+    {
+        "id": 376,
+        "sentence": "taking hot dogs to the next level",
+        "aspect": "hot dogs",
+        "label": "positive"
+    },
+    {
+        "id": 377,
+        "sentence": "at first glance this place seems a bit pricey for a hot dog joint , but at bark you do n't just get your average hot dog .",
+        "aspect": "bark",
+        "label": "negative"
+    },
+    {
+        "id": 378,
+        "sentence": "at first glance this place seems a bit pricey for a hot dog joint , but at bark you do n't just get your average $ t$.",
+        "aspect": "hot dog",
+        "label": "positive"
+    },
+    {
+        "id": 379,
+        "sentence": "here the hot dog is elevated to the level of a real entree with numerous variations available .",
+        "aspect": "hot dog",
+        "label": "positive"
+    },
+    {
+        "id": 380,
+        "sentence": "great atmosphere",
+        "aspect": "atmosphere",
+        "label": "positive"
+    },
+    {
+        "id": 381,
+        "sentence": "i highly recommend the fish tacos , everything else was ok .",
+        "aspect": "fish tacos",
+        "label": "positive"
+    },
+    {
+        "id": 382,
+        "sentence": "cool atmosphere , the fire place in the back really ads to it but needs a bit more heat throughout on a cold night .",
+        "aspect": "atmosphere",
+        "label": "positive"
+    },
+    {
+        "id": 382,
+        "sentence": "cool atmosphere , the fire place in the back really ads to it but needs a bit more heat throughout on a cold night .",
+        "aspect": "fire place",
+        "label": "positive"
+    },
+    {
+        "id": 383,
+        "sentence": "poor service and management",
+        "aspect": "service",
+        "label": "negative"
+    },
+    {
+        "id": 383,
+        "sentence": "poor service and management",
+        "aspect": "management",
+        "label": "negative"
+    },
+    {
+        "id": 384,
+        "sentence": "do n\u2019t go to this place !",
+        "aspect": "place",
+        "label": "negative"
+    },
+    {
+        "id": 385,
+        "sentence": "had an awful experience at casa la femme on a saturday dinner .",
+        "aspect": "casa la femme",
+        "label": "negative"
+    },
+    {
+        "id": 386,
+        "sentence": "the manager was rude and handled the situation extremely poorly .",
+        "aspect": "manager",
+        "label": "negative"
+    },
+    {
+        "id": 387,
+        "sentence": "ca n\u2019t believe how an expensive nyc restaurant can be so disrespectful to its clients .",
+        "aspect": "restaurant",
+        "label": "negative"
+    },
+    {
+        "id": 388,
+        "sentence": "the food is very good , but not outstanding .",
+        "aspect": "food",
+        "label": "neutral"
+    },
+    {
+        "id": 389,
+        "sentence": "there is no way it justifies the accolades it receives , the attitude of the staff or the wait for a table .",
+        "aspect": "staff",
+        "label": "negative"
+    },
+    {
+        "id": 389,
+        "sentence": "there is no way it justifies the accolades it receives , the attitude of the staff or the wait for a table .",
+        "aspect": "wait",
+        "label": "negative"
+    },
+    {
+        "id": 390,
+        "sentence": "mistakes happen , but they are usually accompanied by an apology , perhaps even a glass of wine ... but not the grunt that we received from the al di la staff .",
+        "aspect": "staff",
+        "label": "negative"
+    },
+    {
+        "id": 391,
+        "sentence": "the bread was stale , the salad was overpriced and empty .",
+        "aspect": "bread",
+        "label": "negative"
+    },
+    {
+        "id": 391,
+        "sentence": "the bread was stale , the salad was overpriced and empty .",
+        "aspect": "salad",
+        "label": "negative"
+    },
+    {
+        "id": 392,
+        "sentence": "the pasta was well cooked , did n't have enough sauce though or flavor .",
+        "aspect": "pasta",
+        "label": "positive"
+    },
+    {
+        "id": 393,
+        "sentence": "the hostess was rude and i got a distinct feeling that they did not want to serve us .",
+        "aspect": "hostess",
+        "label": "negative"
+    },
+    {
+        "id": 394,
+        "sentence": "the only thing that my friend left out is that when we sat down at the bar the bartender disappeared .",
+        "aspect": "bartender",
+        "label": "negative"
+    },
+    {
+        "id": 395,
+        "sentence": "i asked for a menu and the same waitress looked at my like i was insane .",
+        "aspect": "waitress",
+        "label": "negative"
+    },
+    {
+        "id": 396,
+        "sentence": "i was shocked that my friends wanted to stay after the waitress said , \" can i help you \" and \" how many are in your party . \"",
+        "aspect": "waitress",
+        "label": "negative"
+    },
+    {
+        "id": 397,
+        "sentence": "shame on this place for the horrible rude staff and non - existent customer service .",
+        "aspect": "staff",
+        "label": "negative"
+    },
+    {
+        "id": 397,
+        "sentence": "shame on this place for the horrible rude staff and non - existent customer service .",
+        "aspect": "customer service",
+        "label": "negative"
+    },
+    {
+        "id": 398,
+        "sentence": "bad staff",
+        "aspect": "staff",
+        "label": "negative"
+    },
+    {
+        "id": 399,
+        "sentence": "i generally like this place .",
+        "aspect": "place",
+        "label": "positive"
+    },
+    {
+        "id": 400,
+        "sentence": "the food is good .",
+        "aspect": "food",
+        "label": "positive"
+    },
+    {
+        "id": 401,
+        "sentence": "the design of the space is good .",
+        "aspect": "space",
+        "label": "positive"
+    },
+    {
+        "id": 402,
+        "sentence": "but the service is horrid !",
+        "aspect": "service",
+        "label": "negative"
+    },
+    {
+        "id": 403,
+        "sentence": "i was there for brunch recently , and we were tag teamed by a waitress and a waiter .",
+        "aspect": "waitress",
+        "label": "negative"
+    },
+    {
+        "id": 403,
+        "sentence": "i was there for brunch recently , and we were tag teamed by a waitress and a waiter .",
+        "aspect": "waiter",
+        "label": "negative"
+    },
+    {
+        "id": 404,
+        "sentence": "the waiter delivered our food while holding what appeared to be a plastic bag of garbage in one hand .",
+        "aspect": "waiter",
+        "label": "negative"
+    },
+    {
+        "id": 405,
+        "sentence": "the waitress came to check in on us every few minutes , and began to clear the plates while half of us were still eating ( a big pet peeve of mine that happens almost everywhere , so i try to ignore it ) .",
+        "aspect": "waitress",
+        "label": "negative"
+    },
+    {
+        "id": 406,
+        "sentence": "i wish i could like this place more , and i wish someone would retrain the staff .",
+        "aspect": "place",
+        "label": "negative"
+    },
+    {
+        "id": 406,
+        "sentence": "i wish i could like this place more , and i wish someone would retrain the staff .",
+        "aspect": "staff",
+        "label": "negative"
+    }
+]
