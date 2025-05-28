@@ -33,7 +33,7 @@ log_dir = Path(__file__).resolve().parent / 'logs'
 log_dir.mkdir(parents=True, exist_ok=True)
 
 # Define the log file path
-log_file = log_dir / 'unit_test.log'
+log_file = log_dir / 'unit_test_1.log'
 logging.basicConfig(filename=log_file, filemode='w', level=logging.INFO, format="%(asctime)s = %(message)s")
     
 
