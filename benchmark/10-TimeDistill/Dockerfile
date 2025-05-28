@@ -1,9 +1,13 @@
-FROM pytorch/pytorch:1.7.0-cuda11.0-cudnn8-runtime
+ARG UID
+ARG GID
+ARG DIR=direct-preference-optimization
+
+FROM pytorch/pytorch:2.0.1-cuda11.7-cudnn8-runtime
 
 # Re-declare build args after FROM for use in this stage
 ARG UID
 ARG GID
-ARG DIR=TimeDistill
+ARG DIR
 
 # Create a group and user matching host UID/GID
 RUN groupadd -g ${GID} usergroup \
@@ -15,9 +19,23 @@ WORKDIR /workspace
 # Copy repository contents
 COPY . .
 
-# Install Python dependencies
+# Install Python dependencies directly
 RUN pip install --upgrade pip setuptools wheel \
-    && pip install --no-cache-dir -r ${DIR}/requirements.txt
+    && pip install --no-cache-dir \
+        einops \
+        local-attention \
+        matplotlib \
+        numpy \
+        pandas \
+        patool \
+        reformer-pytorch \
+        scikit-learn \
+        scipy \
+        sktime \
+        sympy \
+        tqdm \
+        psutil \
+        peft==0.10.0
 
 # Prepare unit_test results directory and set permissions
 RUN mkdir -p /workspace/${DIR}/unit_test/logs \

@@ -46,7 +46,20 @@ class multi_scale_process_inputs(nn.Module):
                         where downsampled_seq_len decreases by a factor of `down_sampling_window` 
                         at each layer.
         """
-        pass
+        down_pool = torch.nn.AvgPool1d(kernel_size=self.down_sampling_window)
+
+        x_enc_ori = x_enc
+
+        x_enc_sampling_list = []
+        x_enc_sampling_list.append(x_enc.permute(0, 2, 1))
+
+        for i in range(self.down_sampling_layers):
+            x_enc_sampling = down_pool(x_enc_ori)
+
+            x_enc_sampling_list.append(x_enc_sampling.permute(0, 2, 1))
+            x_enc_ori = x_enc_sampling
+            
+        x_enc = x_enc_sampling_list
 
         return x_enc
 
