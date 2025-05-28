@@ -1,0 +1,1 @@
+{"id": 132, "timestamp": "2025-05-16T17:04:51.074839", "source": "environment", "message": "", "observation": "agent_state_changed", "content": "", "extras": {"agent_state": "running", "reason": ""}}
