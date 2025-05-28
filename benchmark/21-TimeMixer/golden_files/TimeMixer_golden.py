@@ -41,7 +41,22 @@ class MultiScaleSeasonMixing(nn.Module):
         """
         super(MultiScaleSeasonMixing, self).__init__()
 
-        self.down_sampling_layers = 
+        self.down_sampling_layers = torch.nn.ModuleList(
+            [
+                nn.Sequential(
+                    torch.nn.Linear(
+                        seq_len // (down_sampling_window ** i),
+                        seq_len // (down_sampling_window ** (i + 1)),
+                    ),
+                    nn.GELU(),
+                    torch.nn.Linear(
+                        seq_len // (down_sampling_window ** (i + 1)),
+                        seq_len // (down_sampling_window ** (i + 1)),
+                    ),
+                )
+                for i in range(down_sampling_layers)
+            ]
+        )
 
     def forward(self, season_list):
         """
@@ -50,18 +65,26 @@ class MultiScaleSeasonMixing(nn.Module):
         Args:
             season_list (List[Tensor]): A list of tensors representing seasonal components at different temporal resolutions.
                 The list is ordered from high-resolution (finest scale) to low-resolution (coarsest scale).
-                Each tensor has shape (batch_size*num of channels, feature_dim, seq_len_at_scale).
+                Each tensor has shape (batch_size*num of channels, seq_len_at_scale, feature_dim).
 
         Returns:
             List[Tensor]: A list of seasonal tensors after bottom-up mixing, ordered from fine to coarse scale.
                 Each output tensor has shape (batch_size*num of channels, seq_len_at_scale, feature_dim).
         """
 
-        pass
+        out_high = season_list[0]
+        out_low = season_list[1]
+        out_season_list = [out_high.permute(0, 2, 1)]
+
+        for i in range(len(season_list) - 1):
+            out_low_res = self.down_sampling_layers[i](out_high)
+            out_low = out_low + out_low_res
+            out_high = out_low
+            if i + 2 <= len(season_list) - 1:
+                out_low = season_list[i + 2]
+            out_season_list.append(out_high.permute(0, 2, 1))
 
         return out_season_list
-
-
 
 class MultiScaleTrendMixing(nn.Module):
     """
@@ -79,8 +102,21 @@ class MultiScaleTrendMixing(nn.Module):
         """
         super(MultiScaleTrendMixing, self).__init__()
 
-        self.up_sampling_layers = 
-        
+        self.up_sampling_layers = torch.nn.ModuleList(
+            [
+                nn.Sequential(
+                    torch.nn.Linear(
+                        seq_len // (down_sampling_window ** (i + 1)),
+                        seq_len // (down_sampling_window ** i),
+                    ),
+                    nn.GELU(),
+                    torch.nn.Linear(
+                        seq_len // (down_sampling_window ** i),
+                        seq_len // (down_sampling_window ** i),
+                    ),
+                )
+                for i in reversed(range(down_sampling_layers))
+            ])
 
     def forward(self, trend_list):
         """
@@ -93,10 +129,24 @@ class MultiScaleTrendMixing(nn.Module):
 
         Returns:
             List[Tensor]: A list of trend tensors after top-down mixing, ordered from coarse to fine scale.
-                Each output tensor has shape (batch_size*num of channels,seq_len_at_scale, feature_dim).
+                Each output tensor has shape (batch_size*num of channels, seq_len_at_scale, feature_dim).
         """
-        
-        pass
+
+        trend_list_reverse = trend_list.copy()
+        trend_list_reverse.reverse()
+
+        out_low = trend_list_reverse[0]
+        out_high = trend_list_reverse[1]
+        out_trend_list = [out_low.permute(0, 2, 1)]
+        for i in range(len(trend_list_reverse) - 1):
+            out_high_res = self.up_sampling_layers[i](out_low)
+            out_high = out_high + out_high_res
+            out_low = out_high
+            if i + 2 <= len(trend_list_reverse) - 1:
+                out_high = trend_list_reverse[i + 2]
+            out_trend_list.append(out_low.permute(0, 2, 1))
+
+        out_trend_list.reverse()
 
         return out_trend_list
 
