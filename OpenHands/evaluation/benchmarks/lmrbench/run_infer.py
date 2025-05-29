@@ -6,6 +6,7 @@ import pandas as pd
 from datasets import load_dataset, Dataset
 from tqdm import tqdm
 import json
+import pathlib, shutil
 
 from evaluation.utils.shared import (
     EvalMetadata,
@@ -39,6 +40,10 @@ AGENT_CLS_TO_FAKE_USER_RESPONSE_FN = {
 LOCAL_DATASET_PATH = os.path.join(os.path.dirname(__file__), 'benchmark')
 
 
+
+
+
+
 def format_task_dict(example):
     task = {
         'instance_id': example['instance_id'],
@@ -60,6 +65,7 @@ def get_config(
     sandbox_config.base_container_image = (
         'docker.io/xingyaoww/openhands-eval-scienceagentbench'
     )
+    cache_path = "/home/sxy240002/research_agent/OpenHands/evaluation/benchmarks/nlpbench/outputs/gpt4.1"
     config = AppConfig(
         default_agent=metadata.agent_class,
         run_as_openhands=False,
@@ -73,9 +79,9 @@ def get_config(
         # workspace_mount_path_in_sandbox="/workspace/benchmark/datasets",
         workspace_base=None,
         workspace_mount_path=None,
-        file_store_path="/home/sxy240002/research_agent/OpenHands/evaluation/benchmarks/nlpbench/output/file_store",
+        file_store_path=cache_path + "/file_store",
         cache_dir="/home/sxy240002/research_agent/OpenHands/evaluation/benchmarks/nlpbench/cache",
-        save_trajectory_path="/home/sxy240002/research_agent/OpenHands/evaluation/benchmarks/nlpbench/output/save_trajectory"
+        save_trajectory_path= cache_path + "/save_trajectory/"
     )
     config.set_llm_config(
         update_llm_config_for_completions_logging(
@@ -150,6 +156,17 @@ def complete_runtime(
 
     assert obs.exit_code == 0
 
+
+    zip_path = runtime.copy_from("/workspace/benchmark/datasets")
+
+    dest = pathlib.Path("/home/sxy240002/research_agent/NLPAgentBench/outputs/OpenHands/gpt4.1")
+    dest.mkdir(parents=True, exist_ok=True)
+    shutil.unpack_archive(zip_path, dest)
+
+    os.remove(zip_path)
+
+    logger.info(f"{'-'*50} END Runtime Completion Fn {'-'*50}")
+
     # action = CmdRunAction(command=f'cat pred_programs/{instance.pred_program_name}')
     # logger.info(action, extra={'msg_type': 'ACTION'})
     # obs = runtime.run_action(action)
@@ -191,7 +208,7 @@ def process_instance(
     
     The user's tasks include the following:"""
     instruction_2 = """ 
-    You are required to directly revise the python file mentioned in the instruction.
+    You are required to directly revise the python file mentioned in the instruction. You can only revise the function you need to implement. Do not revise unrelated part of the file.
 
     Please do NOT run the program in the background.
     If the program uses some packages that are incompatible, please figure out alternative implementations and do NOT restart the environment.
@@ -249,7 +266,7 @@ if __name__ == '__main__':
     args, _ = parser.parse_known_args()
 
 
-    dataset = load_dataset("Shinyy/NLPBench", split="train")
+    dataset = load_dataset("Shinyy/NLPBench", split="train", download_mode="force_redownload")
 
     dataset_processed = []
     for example in tqdm(dataset):
@@ -270,7 +287,7 @@ if __name__ == '__main__':
 
     metadata = make_metadata(
         llm_config,
-        'NLPBench',
+        'LMRBench',
         args.agent_cls,
         args.max_iterations,
         args.eval_note,

@@ -1,6 +1,6 @@
 ARG UID
 ARG GID
-ARG DIR=Lion
+ARG DIR=Sophia
 
 FROM pytorch/pytorch:2.0.1-cuda11.7-cudnn8-runtime
 

@@ -41,9 +41,9 @@ class TestGenerateTasksLogging(unittest.TestCase):
         PASS = 'True'
         for i in range(len(dataset_x)):
             if not np.allclose(dataset_x[i], dataset_x[i], rtol=0.01):
-                PASS = 'Flase'
+                PASS = 'False'
             if not np.allclose(dataset_y[i], dataset_y[i], rtol=0.01):
-                PASS = 'Flase'
+                PASS = 'False'
 
         if PASS == 'True':
             logging.info("Test Passed")

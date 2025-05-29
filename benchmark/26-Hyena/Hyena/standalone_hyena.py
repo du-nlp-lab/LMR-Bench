@@ -228,26 +228,8 @@ class HyenaOperator(nn.Module):
         ) 
 
     def forward(self, u, *args, **kwargs):
-        l = u.size(-2)
-        l_filter = min(l, self.l_max)
-        u = self.in_proj(u)
-        u = rearrange(u, 'b l d -> b d l')
-        
-        uc = self.short_filter(u)[...,:l_filter] 
-        *x, v = uc.split(self.d_model, dim=1)
-        
-        k = self.filter_fn.filter(l_filter)[0]
-        k = rearrange(k, 'l (o d) -> o d l', o=self.order - 1)
-        bias = rearrange(self.filter_fn.bias, '(o d) -> o d', o=self.order - 1)
-        
-        for o, x_i in enumerate(reversed(x[1:])):
-            v = self.dropout(v * x_i)
-            v = self.filter_fn(v, l_filter, k=k[o], bias=bias[o])
-
-        y = rearrange(v * x[0], 'b d l -> b l d')
-
-        y = self.out_proj(y)
-        return y
+        # TODO: Implement code here
+        pass
 
     
     

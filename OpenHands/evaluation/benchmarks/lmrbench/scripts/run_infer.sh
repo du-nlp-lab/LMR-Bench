@@ -11,6 +11,8 @@ AGENT=$3
 EVAL_LIMIT=$4
 NUM_WORKERS=$5
 EVAL_OUTPUT_DIR=$6
+# CACHE_PATH=$7
+# OUTPUT_PATH=$8
 
 
 if [ -z "$NUM_WORKERS" ]; then
@@ -31,13 +33,24 @@ echo "AGENT: $AGENT"
 echo "OPENHANDS_VERSION: $OPENHANDS_VERSION"
 echo "MODEL_CONFIG: $MODEL_CONFIG"
 
+# COMMAND="poetry run python evaluation/benchmarks/nlpbench/run_infer.py \
+#   --agent-cls $AGENT \
+#   --llm-config $MODEL_CONFIG \
+#   --max-iterations 50 \
+#   --eval-num-workers $NUM_WORKERS \
+#   --eval-note $OPENHANDS_VERSION \
+#   --eval-output-dir $EVAL_OUTPUT_DIR \
+#   --cache-path $CACHE_PATH \
+#   --output-path $OUTPUT_PATH"
+
 COMMAND="poetry run python evaluation/benchmarks/nlpbench/run_infer.py \
   --agent-cls $AGENT \
   --llm-config $MODEL_CONFIG \
   --max-iterations 50 \
   --eval-num-workers $NUM_WORKERS \
   --eval-note $OPENHANDS_VERSION \
-  --eval-output-dir $EVAL_OUTPUT_DIR" 
+  --eval-output-dir $EVAL_OUTPUT_DIR" \
+
 
 if [ -n "$EVAL_LIMIT" ]; then
   echo "EVAL_LIMIT: $EVAL_LIMIT"

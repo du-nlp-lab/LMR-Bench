@@ -1,0 +1,21 @@
+{
+    "instance_id": "29",
+    "paper_name": "Sophia: A Scalable Stochastic Second-order Optimizer for Language Model Pre-training",
+    "folder_name": "29-Sophia",
+    "repo_folder_name": "Sophia-main",
+    "paper_url": "https://arxiv.org/abs/2305.14342",
+    "year": 2023,
+    "repo_url": "https://github.com/Liuhong99/Sophia/",
+    "implementations": [
+        {
+            "instruction": "Implement the SophiaG class step() function in the unit_test/unit_test_1.py based on the paper and pass the test.",
+            "index": 1,
+            "goal_file": "sophia.py",
+            "goal_function": "step",
+            "class_name": "SophiaG",
+            "golden_file": "golden_files/sophia_golden.py",
+            "retrieval_context": [],
+            "unit_test_file": "unit_test/unit_test_1.py"
+        }
+    ]
+}
