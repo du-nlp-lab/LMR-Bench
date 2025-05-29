@@ -53,34 +53,5 @@ class Lion(Optimizer):
       the loss.
     """
     loss = None
-    if closure is not None:
-      with torch.enable_grad():
-        loss = closure()
-
-    for group in self.param_groups:
-      for p in group['params']:
-        if p.grad is None:
-          continue
-
-        # Perform stepweight decay
-        p.data.mul_(1 - group['lr'] * group['weight_decay'])
-
-        grad = p.grad
-        state = self.state[p]
-        # State initialization
-        if len(state) == 0:
-          # Exponential moving average of gradient values
-          state['exp_avg'] = torch.zeros_like(p)
-
-        exp_avg = state['exp_avg']
-        beta1, beta2 = group['betas']
-
-        # Weight update
-        update = exp_avg * beta1 + grad * (1 - beta1)
-
-        p.add_(update.sign_(), alpha=-group['lr'])
-
-        # Decay the momentum running average coefficient
-        exp_avg.mul_(beta2).add_(grad, alpha=1 - beta2)
-
+ 
     return loss
