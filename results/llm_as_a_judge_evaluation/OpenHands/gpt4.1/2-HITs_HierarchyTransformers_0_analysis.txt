@@ -1,0 +1,8 @@
+{
+  "category": "1",
+  "rationale": [
+    "The forward methods of both HyperbolicClusteringLoss and HyperbolicCentripetalLoss are not implemented (they only contain 'pass'), so the core loss computation logic is missing.",
+    "As a result, the HierarchyTransformerLoss class in the agent implementation will not compute the correct loss values, since it relies on these unimplemented methods.",
+    "This is a fundamental deviation from the specification, which requires the correct calculation of the hyperbolic clustering and centripetal losses as described in the paper and shown in the golden reference."
+  ]
+}

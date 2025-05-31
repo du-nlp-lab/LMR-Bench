@@ -1,0 +1,9 @@
+{
+  "category": "3",
+  "rationale": [
+    "The agent's generate_tasks implementation matches the golden reference in logic, including per-task seeding, argument passing, and output shapes.",
+    "All relevant parameters (num_tasks, num_samples_per_task, num_dimensions, seed, data_type, factor, class_sep) are handled identically.",
+    "The stacking of X and y into arrays of the correct shape is performed as in the reference, and there are no missing checks or off-by-one errors.",
+    "No edge cases or error conditions are mishandled; the function is fully faithful to the specification."
+  ]
+}

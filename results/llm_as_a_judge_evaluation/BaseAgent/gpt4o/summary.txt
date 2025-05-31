@@ -1,0 +1,42 @@
+Total cases: 21
+Category 1 count: 14 (66.67%)
+Category 2 count: 3 (14.29%)
+Category 3 count: 4 (19.05%)
+
+Detailed cases by category:
+
+Category 1:
+- Subfolder: 11-moverscore, Repo: moverscore, Index: 0
+- Subfolder: 16-KnowProb, Repo: KnowProb-main, Index: 0
+- Subfolder: 16-KnowProb, Repo: KnowProb-main, Index: 2
+- Subfolder: 16-KnowProb, Repo: KnowProb-main, Index: 3
+- Subfolder: 16-KnowProb, Repo: KnowProb-main, Index: 4
+- Subfolder: 2-HITs, Repo: HierarchyTransformers, Index: 0
+- Subfolder: 20-CAD, Repo: context-aware-decoding-main, Index: 0
+- Subfolder: 23-SimCLR, Repo: SimCLR-main, Index: 0
+- Subfolder: 3-DoLa, Repo: DoLa-main, Index: 0
+- Subfolder: 30-ERGO, Repo: ERGO, Index: 0
+- Subfolder: 4-CD, Repo: CD-main, Index: 0
+- Subfolder: 5-SimPO, Repo: SimPO, Index: 0
+- Subfolder: 6-RepE, Repo: representation-engineering-main, Index: 0
+- Subfolder: 7-bertscore, Repo: bert_score, Index: 0
+
+Category 2:
+- Subfolder: 15-EmpathyBias, Repo: EmpathyBias-main, Index: 1
+- Subfolder: 18-MassActiv, Repo: MassActiv-main, Index: 0
+- Subfolder: 31-Syn-Chain, Repo: Syn-Chain-ABSA, Index: 0
+
+Category 3:
+- Subfolder: 13-DecBound, Repo: DecBound-main, Index: 0
+- Subfolder: 14-EmojiCrypt, Repo: EmojiCrypt-main, Index: 0
+- Subfolder: 15-EmpathyBias, Repo: EmpathyBias-main, Index: 0
+- Subfolder: 16-KnowProb, Repo: KnowProb-main, Index: 1
+
+Errors encountered during processing:
+- JSON parse error for 1-DPO, idx 0: Expecting value: line 1 column 1 (char 0)
+- JSON parse error for 19-Native-Sparse-Attention, idx 0: Expecting value: line 1 column 1 (char 0)
+- JSON parse error for 22-TokenDPO, idx 0: Expecting value: line 1 column 1 (char 0)
+- JSON parse error for 25-AdaLora, idx 0: Expecting value: line 1 column 1 (char 0)
+- JSON parse error for 28-SPIN, idx 0: Expecting value: line 1 column 1 (char 0)
+- JSON parse error for 8-StepLength, idx 0: Expecting value: line 1 column 1 (char 0)
+- JSON parse error for 9-GDPZero, idx 0: Expecting value: line 1 column 1 (char 0)

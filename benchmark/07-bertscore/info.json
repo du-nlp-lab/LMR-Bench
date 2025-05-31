@@ -1,0 +1,23 @@
+{
+  "instance_id": 7,
+  "paper_name": "BERTScore: Evaluating Text Generation with BERT",
+  "folder_name": "07-bertscore",
+  "paper_url":"https://openreview.net/pdf?id=SkeHuCVFDr",
+  "year": 2020,
+  "repo_url":"https://github.com/Tiiiger/bert_score/tree/master", 
+  "repo_folder_name": "bert_score",
+  "implementations": 
+  [
+    {
+      "instruction": "You need to implement the greedy_cos_idf function in bert_score_goal.py based on paper.pdf, which calculates a similarity score between two sentences by using BERT embeddings and performing a greedy matching between all reference and candidate words, with cosine similarity between vector representations as the scoring",
+      "index": 1,
+      "category": "Evaluation Metrics",
+      "goal_file": "bert_score_goal.py",
+      "goal_function": "greedy_cos_idf",
+      "class_name": "",
+      "golden_file": "golden_files/bert_score_golden.py",
+      "retrieval_content": [],
+      "unit_test_file": "unit_test/unit_test_1.py"
+    }
+  ]
+}

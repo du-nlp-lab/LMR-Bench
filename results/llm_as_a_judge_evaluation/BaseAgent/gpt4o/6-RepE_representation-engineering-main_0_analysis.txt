@@ -1,0 +1,9 @@
+{
+  "category": "1",
+  "rationale": [
+    "The agent implementation only returns the first principal component (pca.components_[0]) for each layer, while the golden reference returns all n_components (pca_model.components_) as a matrix.",
+    "The agent implementation sets self.H_train_means[layer] after fitting PCA, but uses torch.mean(h_state, axis=0, keepdim=True), which is not consistent with the golden reference (which uses keepdims=True and sets before recentering).",
+    "The agent implementation does not ensure the recentered_state is on CPU and as a numpy array before passing to PCA, which may cause device/type errors (golden reference explicitly moves to CPU and uses np.vstack).",
+    "The agent implementation does not update self.n_components after fitting PCA, while the golden reference does (self.n_components = pca_model.n_components_)."
+  ]
+}

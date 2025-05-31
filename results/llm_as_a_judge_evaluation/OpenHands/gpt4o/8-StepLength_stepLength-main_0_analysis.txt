@@ -1,0 +1,8 @@
+{
+  "category": "1",
+  "rationale": [
+    "The get_sentence function in run_inference.py is not implemented; it simply returns k, which is undefined, resulting in a NameError at runtime.",
+    "The function does not contain any logic to construct the input string k based on the prompting method, as required by the specification and as shown in the golden reference.",
+    "This is a core logic error: the function will not work at all and cannot produce correct results for any input."
+  ]
+}

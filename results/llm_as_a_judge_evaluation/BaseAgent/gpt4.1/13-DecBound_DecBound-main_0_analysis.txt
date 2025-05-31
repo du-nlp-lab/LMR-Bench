@@ -1,0 +1,12 @@
+The implementation logic of the coding agent's function is incorrect compared to the standard implementation.
+
+Key issues:
+- The agent's generate_tasks uses a different randomization scheme: it creates a RandomState with the given seed and then, for each task, samples a new random seed and (for 'circle', 'moon', 'linear') randomizes factor, noise, or class_sep per task. The golden implementation simply uses seed + i for each task and uses the same factor/class_sep for all tasks.
+- The agent's approach results in tasks that are not reproducible in the same way as the golden file, and the per-task data distributions are not consistent with the paper's likely intent (as inferred from the golden file and the docstring).
+- The agent's implementation produces tasks with potentially different data distributions (e.g., different class_sep/factor/noise per task), while the golden file keeps these fixed across all tasks.
+- The agent's code also initializes X_data and Y_data as lists and then converts to arrays, while the golden file pre-allocates arrays, but this is a minor difference.
+- The rest of the code (generate_x_y, generate_context_prompt, generate_dataset) is essentially the same, but the core logic of generate_tasks is not equivalent.
+
+Therefore, the implementation logic is incorrect.
+
+1

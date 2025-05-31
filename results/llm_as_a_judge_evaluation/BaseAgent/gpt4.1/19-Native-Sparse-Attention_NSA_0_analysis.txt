@@ -1,0 +1,31 @@
+The function implemented by the coding agent in NSA.py cannot fully replace the standard implementation for the following reasons:
+
+**Major logic differences and errors:**
+
+1. **Block Gathering and Masking Logic:**  
+   - The golden implementation gathers the selected key/value vectors for each query token by using the block indices, and applies masking based on block_counts and the position of the query (e.g., not attending to future tokens, masking out invalid blocks). The agent's code attempts to gather blocks using a for-loop over S (number of selected blocks), but the masking logic is not equivalent: it uses a mask of shape [B, T, S] and repeats/interleaves it, but does not properly mask out future tokens or invalid blocks as in the golden file.
+   - The golden file uses a per-token, per-head, per-block gather and masking, with careful handling of variable-length sequences and block_counts. The agent's code does not handle this correctly, especially for masking out blocks that are not valid for a given token.
+
+2. **Variable-Length Sequence Support:**  
+   - The golden implementation supports variable-length sequences via cu_seqlens, with careful indexing and per-sequence processing. The agent's code does not support this at all (it only asserts batch size 1 if cu_seqlens is provided, but does not implement the logic).
+
+3. **Head Grouping and GQA Handling:**  
+   - The golden file repeats k, v, and block_indices along the head dimension to match the number of query heads (GQA), ensuring that each query head is matched with the correct key/value head. The agent's code slices q, k, v by head group, but does not repeat k, v, block_indices as required for GQA, which will lead to incorrect attention computation when HQ > H.
+
+4. **Sliding Window Attention:**  
+   - The golden file computes sliding window attention per token, per head, with correct windowing and masking. The agent's code uses a for-loop over t (time), but the attention computation is not equivalent: it uses einsum with possibly incorrect dimensions, and does not handle masking or variable-length sequences as in the golden file.
+
+5. **Output Accumulation:**  
+   - The golden file accumulates outputs per token, per head, and sums the selected and sliding window outputs at the end. The agent's code does this, but due to the above logic errors, the outputs will not match.
+
+6. **Data Type Handling:**  
+   - The golden file casts q, k, v to float for computation and casts the output back to the original dtype. The agent's code does not do this, which may cause numerical issues.
+
+7. **Other Subtle Differences:**  
+   - The golden file uses rearrange/repeat from einops to handle head-first/head-last formats and GQA, while the agent's code uses permute and manual slicing, which is not equivalent.
+   - The golden file uses masked_fill and logical operations to mask out invalid attention scores, while the agent's code uses a large negative value for masking, which is less robust and may not be equivalent.
+
+**Conclusion:**  
+The agent's implementation does not correctly implement the natively trainable sparse attention mechanism as described in the golden file. The logic for block selection, masking, GQA, variable-length support, and sliding window attention is not equivalent and will produce incorrect results.
+
+1

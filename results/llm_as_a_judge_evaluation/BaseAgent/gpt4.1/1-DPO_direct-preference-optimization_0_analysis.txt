@@ -1,0 +1,61 @@
+Let's compare the function preference_loss in both files.
+
+**Agent's implementation:**
+```python
+def preference_loss(policy_chosen_logps: torch.FloatTensor, policy_rejected_logps: torch.FloatTensor, reference_chosen_logps: torch.FloatTensor, reference_rejected_logps: torch.FloatTensor, beta: float, label_smoothing: float=0.0, ipo: bool=False, reference_free: bool=False) -> Tuple[torch.FloatTensor, torch.FloatTensor, torch.FloatTensor]:
+    """
+    Compute the DPO loss for a batch of policy and reference model log probabilities.
+    """
+    policy_logratios = policy_chosen_logps - policy_rejected_logps
+    reference_logratios = reference_chosen_logps - reference_rejected_logps
+    logits = beta * (policy_logratios - reference_logratios)
+    losses = -F.logsigmoid(logits)
+    chosen_rewards = beta * (policy_chosen_logps - reference_chosen_logps).detach()
+    rejected_rewards = beta * (policy_rejected_logps - reference_rejected_logps).detach()
+    return (losses, chosen_rewards, rejected_rewards)
+```
+
+**Golden implementation:**
+```python
+def preference_loss(policy_chosen_logps: torch.FloatTensor,
+                    policy_rejected_logps: torch.FloatTensor,
+                    reference_chosen_logps: torch.FloatTensor,
+                    reference_rejected_logps: torch.FloatTensor,
+                    beta: float,
+                    label_smoothing: float = 0.0,
+                    ipo: bool = False,
+                    reference_free: bool = False) -> Tuple[torch.FloatTensor, torch.FloatTensor, torch.FloatTensor]:
+    """Compute the DPO loss for a batch of policy and reference model log probabilities.
+    ...
+    """
+    pi_logratios = policy_chosen_logps - policy_rejected_logps
+    ref_logratios = reference_chosen_logps - reference_rejected_logps
+
+    if reference_free:
+        ref_logratios = 0
+
+    logits = pi_logratios - ref_logratios  # also known as h_{\pi_\theta}^{y_w,y_l}
+
+    if ipo:
+        losses = (logits - 1/(2 * beta)) ** 2  # Eq. 17 of https://arxiv.org/pdf/2310.12036v2.pdf
+    else:
+        # Eq. 3 https://ericmitchell.ai/cdpo.pdf; label_smoothing=0 gives original DPO (Eq. 7 of https://arxiv.org/pdf/2305.18290.pdf)
+        losses = -F.logsigmoid(beta * logits) * (1 - label_smoothing) - F.logsigmoid(-beta * logits) * label_smoothing
+
+    chosen_rewards = beta * (policy_chosen_logps - reference_chosen_logps).detach()
+    rejected_rewards = beta * (policy_rejected_logps - reference_rejected_logps).detach()
+
+    return losses, chosen_rewards, rejected_rewards
+```
+
+**Key differences:**
+- The agent's code computes `logits = beta * (policy_logratios - reference_logratios)` and then `losses = -F.logsigmoid(logits)`. The golden code computes `logits = pi_logratios - ref_logratios` (no beta), and then applies `-F.logsigmoid(beta * logits) * (1 - label_smoothing) - F.logsigmoid(-beta * logits) * label_smoothing`.
+- The agent's code does not handle `reference_free` at all (should set `ref_logratios = 0` if `reference_free`).
+- The agent's code does not handle `ipo` at all (should use a different loss if `ipo`).
+- The agent's code does not handle `label_smoothing` at all (should use a weighted sum of positive and negative log-sigmoid).
+- The agent multiplies beta in the wrong place: it multiplies the logits before the logsigmoid, but the correct formula is to multiply beta * logits inside logsigmoid, not outside.
+- The agent's code always uses the same loss, regardless of `ipo` or `label_smoothing`.
+
+**Conclusion:** The agent's implementation does not correctly implement the DPO loss as described in the paper and the golden file. It is missing key logic for `reference_free`, `ipo`, and `label_smoothing`, and applies beta incorrectly.
+
+1

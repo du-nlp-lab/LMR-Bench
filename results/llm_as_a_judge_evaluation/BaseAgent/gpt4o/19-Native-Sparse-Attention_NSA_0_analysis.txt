@@ -1,0 +1,11 @@
+```json
+{
+  "category": "1",
+  "rationale": [
+    "The agent implementation does not follow the blockwise sparse attention mechanism described in the golden reference. Instead, it attempts to flatten and repeat tensors in a way that does not correspond to the block selection and masking logic required by NSA.",
+    "The handling of block_indices and block_counts is incorrect: the agent simply repeats block_indices and gathers along the wrong dimensions, rather than using them to select and mask specific blocks of keys/values for each query token.",
+    "The sliding window attention (window_size > 0) is not implemented according to the specification. The agent pads and repeats tensors in a way that does not correspond to the intended sliding window computation, and does not properly handle the per-token windowed attention.",
+    "Critical logic such as masking out invalid positions, handling variable-length sequences (cu_seqlens), and the correct application of gate scores (g_slc, g_swa) is missing or incorrect, leading to fundamentally wrong results."
+  ]
+}
+```

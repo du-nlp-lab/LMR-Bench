@@ -1,0 +1,9 @@
+{
+  "category": "2",
+  "rationale": [
+    "The agent implementation omits the header row present in the golden reference, which may be required for some downstream uses or for strict format compliance.",
+    "The agent implementation uses the actual morphological features (token.morph) for the FEATS column, whereas the golden reference always outputs '_'. This is a subtle but important difference in output format.",
+    "The agent implementation lowercases the dependency relation (deprel), while the golden reference preserves the original casing (token.dep_).",
+    "The agent implementation sets HEAD to 0 for ROOT tokens (CoNLL-U standard), while the golden reference sets it to token.head.i + 1 for all tokens, which may not be correct for ROOT (should be 0)."
+  ]
+}

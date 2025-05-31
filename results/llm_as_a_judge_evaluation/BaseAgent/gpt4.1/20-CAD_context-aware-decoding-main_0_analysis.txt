@@ -1,0 +1,41 @@
+Let's analyze the agent's implementation of context_aware_sampling compared to the golden implementation.
+
+**Key points in the golden implementation:**
+- At each step, generate logits for the current sequence (with context).
+- Also generate logits for the sequence with only the question (i.e., after context).
+- Adjust logits: (1 + alpha) * full_context_logits - alpha * question_only_logits.
+- Apply softmax (with temperature) to get probabilities.
+- Sample next token using torch.multinomial.
+- Append next token, repeat until EOS or max_length.
+
+**Key points in the agent's implementation:**
+- At each step, generate logits for the current sequence (with context).
+- For "without context", if generated.shape[-1] > context_len, use generated[:, context_len:], else use a pad token.
+- Adjust logits: (1 + alpha) * logits_with_context - alpha * logits_without_context.
+- Select next token using torch.argmax (greedy), not sampling.
+- Append next token, repeat until EOS or max_length.
+
+**Differences and issues:**
+1. **Sampling vs. Greedy:**  
+   - Golden: Uses torch.multinomial to sample from the adjusted probability distribution.
+   - Agent: Uses torch.argmax, which is greedy decoding. This is a significant difference and can affect output diversity and correctness.
+
+2. **Temperature:**  
+   - Golden: Applies softmax with temperature (even though temperature is set very low).
+   - Agent: Does not apply softmax or temperature at all; just uses logits directly for argmax.
+
+3. **Input for "without context":**  
+   - Golden: Always uses generated_tokens[:, len(context_ids):] as the "question only" input.
+   - Agent: If generated.shape[-1] > context_len, uses generated[:, context_len:], else uses a pad token. This is a subtle difference, but in practice, for the first step, the agent may feed only a pad token, which is not the same as the golden implementation.
+
+4. **Break condition:**  
+   - Golden: Breaks if next_token.item() == tokenizer.eos_token_id.
+   - Agent: Breaks if all next_token == eos_token_id (for batch), which is fine for batch size 1.
+
+5. **Other differences:**  
+   - The agent's implementation includes logging and some extra code, but that's not relevant to the core logic.
+
+**Conclusion:**  
+The agent's implementation is not equivalent to the golden implementation due to the use of greedy decoding instead of sampling, lack of softmax/temperature, and a subtle difference in how the "question only" input is constructed. These are not just subtle implementation errors; the core logic (sampling vs. greedy, softmax application) is incorrect.
+
+1

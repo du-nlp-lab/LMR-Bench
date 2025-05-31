@@ -1,0 +1,33 @@
+1-DPO/unit_test_1.log: FAIL (found 4 failure lines)
+11-moverscore/unit_test_1.log: FAIL (found 0 failure lines)
+13-DecBound/unit_test_1.log: PASS
+14-EmojiCrypt/unit_test_1.log: FAIL (found 0 failure lines)
+15-EmpathyBias/unit_test_1.log: FAIL (found 0 failure lines)
+15-EmpathyBias/unit_test_2.log: FAIL (found 0 failure lines)
+16-KnowProb/unit_test_1.log: FAIL (found 0 failure lines)
+16-KnowProb/unit_test_2.log: FAIL (found 1 failure lines)
+16-KnowProb/unit_test_3.log: FAIL (found 1 failure lines)
+16-KnowProb/unit_test_4.log: PASS
+16-KnowProb/unit_test_5.log: FAIL (found 0 failure lines)
+18-MassActiv/unit_test.log: PASS
+19-Native-Sparse-Attention/unit_test_1.log: FAIL (found 0 failure lines)
+2-HITs/unit_test_1.log: PASS
+20-CAD/unit_test_1.log: FAIL (found 3 failure lines)
+22-TokenDPO/unit_test_1.log: FAIL (found 2 failure lines)
+23-SimCLR/unit_test_1.log: PASS
+25-AdaLora/unit_test_1.log: FAIL (found 0 failure lines)
+28-SPIN/unit_test_1.log: PASS
+3-DoLa/unit_test_1.log: FAIL (found 0 failure lines)
+30-ERGO/unit_test_1.log: FAIL (found 0 failure lines)
+31-Syn-Chain/unit_test_1.log: FAIL (found 0 failure lines)
+4-CD/unit_test_1.log: FAIL (found 0 failure lines)
+5-SimPO/unit_test_1.log: FAIL (found 1 failure lines)
+6-RepE/unit_test_1.log: FAIL (found 0 failure lines)
+7-bertscore/unit_test_1.log: FAIL (found 0 failure lines)
+8-StepLength/unit_test_1.log: PASS
+9-GDPZero/unit_test_1.log: FAIL (found 1 failure lines)
+
+Total log files: 28
+Passed files:    7
+Failed files:    21
+Overall pass rate: 25.00%

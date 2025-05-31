@@ -1,0 +1,1 @@
+{"id": 46, "timestamp": "2025-05-16T19:10:10.317887", "source": "environment", "message": "", "observation": "agent_state_changed", "content": "", "extras": {"agent_state": "error", "reason": "AgentStuckInLoopError: Agent got stuck in a loop"}}

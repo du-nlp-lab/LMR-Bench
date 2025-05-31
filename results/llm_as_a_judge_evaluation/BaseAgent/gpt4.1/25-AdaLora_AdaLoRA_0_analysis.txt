@@ -1,0 +1,43 @@
+The main difference between the two implementations is in the forward function of the SVDLinear class.
+
+In the golden file, the forward function for the SVD-based adaptation is:
+```python
+if self.r > 0 and not self.merged:
+    result = F.linear(x, T(self.weight), bias=self.bias)
+    if self.r > 0:
+        result += (
+            self.lora_dropout(x) @ (self.lora_A * self.lora_E).T @ self.lora_B.T
+        ) * self.scaling / (self.ranknum+1e-5)
+    return result
+else:
+    return F.linear(x, T(self.weight), bias=self.bias)
+```
+This means the SVD update is computed as:
+- Apply dropout to x
+- Multiply by (lora_A * lora_E).T
+- Multiply by lora_B.T
+- Scale
+
+In the coding agent's implementation, the forward function is:
+```python
+if self.r > 0 and (not self.merged):
+    result = F.linear(x, T(self.weight), self.bias)
+    svd_update = F.linear(x, T(self.lora_B @ (self.lora_A * self.lora_E)) * self.scaling / (self.ranknum + 1e-05))
+    result = result + svd_update
+    return result
+else:
+    return F.linear(x, T(self.weight), self.bias)
+```
+This computes the SVD update as:
+- Compute lora_B @ (lora_A * lora_E)
+- Transpose if needed
+- Use F.linear(x, ...)
+
+Key issues:
+- The agent's code does not apply lora_dropout to x before the SVD update.
+- The agent's code computes the SVD update as a single linear layer with weight lora_B @ (lora_A * lora_E), which is mathematically different from the intended (lora_dropout(x) @ (lora_A * lora_E).T @ lora_B.T).
+- The golden file's SVD update is: (lora_dropout(x) @ (lora_A * lora_E).T @ lora_B.T), which is not equivalent to F.linear(x, T(lora_B @ (lora_A * lora_E))).
+
+Therefore, the implementation logic is incorrect.
+
+1

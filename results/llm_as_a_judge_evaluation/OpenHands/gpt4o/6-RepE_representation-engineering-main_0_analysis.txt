@@ -1,0 +1,9 @@
+{
+  "category": "1",
+  "rationale": [
+    "The agent implementation does not store the mean of the hidden states for each layer in self.H_train_means[layer], which is required for later recentering and is present in the golden reference.",
+    "The agent implementation always recenters using the default mean (computed from the data), but the golden reference explicitly computes and stores the mean, then uses it for recentering, ensuring consistency between training and inference.",
+    "The agent implementation only returns the first PCA component (pca.components_[0]), while the golden reference returns all n_components (pca_model.components_), which is necessary for downstream code expecting a matrix of directions.",
+    "The agent implementation does not update self.n_components to the fitted PCA's n_components_ as in the golden reference, which could cause inconsistencies if the number of components changes."
+  ]
+}

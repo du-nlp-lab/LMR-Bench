@@ -1,0 +1,7 @@
+{
+  "category": "1",
+  "rationale": [
+    "The agent implementation is incomplete and does not contain any logic for the greedy cosine similarity calculation or any other part of the algorithm.",
+    "None of the required steps (normalization, similarity computation, masking, IDF weighting, F1 calculation) are present, so it cannot produce any result, let alone a correct one."
+  ]
+}

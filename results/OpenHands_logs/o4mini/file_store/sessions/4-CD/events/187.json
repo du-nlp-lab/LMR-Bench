@@ -1,0 +1,1 @@
+{"id": 187, "timestamp": "2025-05-16T16:42:25.148576", "source": "agent", "message": "Missing required parameters for function 'finish': {'message', 'task_completed'}", "observation": "error", "content": "Missing required parameters for function 'finish': {'message', 'task_completed'}", "extras": {"error_id": ""}}

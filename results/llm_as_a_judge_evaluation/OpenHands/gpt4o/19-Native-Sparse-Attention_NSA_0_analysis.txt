@@ -1,0 +1,9 @@
+{
+  "category": "1",
+  "rationale": [
+    "The agent implementation ignores the core sparse attention mechanism described in the golden reference, such as block-based selection, block_indices, block_counts, and windowed attention. Instead, it computes dense attention over all tokens.",
+    "It does not use block_indices or block_counts at all, which are essential for the natively trainable sparse attention mechanism described in the paper and implemented in the golden reference.",
+    "The agent implementation applies gate scores directly to the queries and then computes attention over the entire sequence, rather than restricting attention to selected blocks or sliding windows as required.",
+    "Edge cases such as variable-length sequences (cu_seqlens), head_first format, and masking for invalid positions are not handled at all, leading to incorrect results in many scenarios."
+  ]
+}

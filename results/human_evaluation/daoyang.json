@@ -1,0 +1,542 @@
+[
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 13,
+        "function_index": 0,
+        "human_judge_result": 2,
+        "comment": "Random function was called incorrectly"
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "gpt4o",
+        "paper_index": 13,
+        "function_index": 0,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "o4mini",
+        "paper_index": 13,
+        "function_index": 0,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 13,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": "Nothing was generated"
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4o",
+        "paper_index": 13,
+        "function_index": 0,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "o4mini",
+        "paper_index": 13,
+        "function_index": 0,
+        "human_judge_result": 2,
+        "comment": "content duplicated, but the logic is correct."
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 14,
+        "function_index": 0,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "gpt4o",
+        "paper_index": 14,
+        "function_index": 0,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "o4mini",
+        "paper_index": 14,
+        "function_index": 0,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 14,
+        "function_index": 0,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4o",
+        "paper_index": 14,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": "Nothing was generated."
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "o4mini",
+        "paper_index": 14,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": "Nothing was generated."
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 15,
+        "function_index": 0,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "gpt4o",
+        "paper_index": 15,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": "Nothing was generated."
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "o4mini",
+        "paper_index": 15,
+        "function_index": 0,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 15,
+        "function_index": 0,
+        "human_judge_result": 2,
+        "comment": "format and index problem"
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4o",
+        "paper_index": 15,
+        "function_index": 0,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "o4mini",
+        "paper_index": 15,
+        "function_index": 0,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 15,
+        "function_index": 1,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "gpt4o",
+        "paper_index": 15,
+        "function_index": 1,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "o4mini",
+        "paper_index": 15,
+        "function_index": 1,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 15,
+        "function_index": 1,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4o",
+        "paper_index": 15,
+        "function_index": 1,
+        "human_judge_result": 1,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "o4mini",
+        "paper_index": 15,
+        "function_index": 1,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 16,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": "some required functions were not called."
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "gpt4o",
+        "paper_index": 16,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": "Nothing was generated."
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "o4mini",
+        "paper_index": 16,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": "Some required functions were not called."
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 16,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": "Some required functions were not called."
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4o",
+        "paper_index": 16,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": "get wrong workflow of the function."
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "o4mini",
+        "paper_index": 16,
+        "function_index": 0,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 16,
+        "function_index": 1,
+        "human_judge_result": 2,
+        "comment": "using different method to detect the overlap."
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "gpt4o",
+        "paper_index": 16,
+        "function_index": 1,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "o4mini",
+        "paper_index": 16,
+        "function_index": 1,
+        "human_judge_result": 2,
+        "comment": "missing one required function"
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 16,
+        "function_index": 1,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4o",
+        "paper_index": 16,
+        "function_index": 1,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "o4mini",
+        "paper_index": 16,
+        "function_index": 1,
+        "human_judge_result": 1,
+        "comment": "missing some required fuctions"
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 16,
+        "function_index": 2,
+        "human_judge_result": 2,
+        "comment": "miss understand some part of the instruction"
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "gpt4o",
+        "paper_index": 16,
+        "function_index": 2,
+        "human_judge_result": 1,
+        "comment": "missing some functions"
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "o4mini",
+        "paper_index": 16,
+        "function_index": 2,
+        "human_judge_result": 1,
+        "comment": "miss understand the instruction"
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 16,
+        "function_index": 2,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4o",
+        "paper_index": 16,
+        "function_index": 2,
+        "human_judge_result": 1,
+        "comment": "miss understand the instruction"
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "o4mini",
+        "paper_index": 16,
+        "function_index": 2,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 16,
+        "function_index": 3,
+        "human_judge_result": 1,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "gpt4o",
+        "paper_index": 16,
+        "function_index": 3,
+        "human_judge_result": 1,
+        "comment": "nothing was generated"
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "o4mini",
+        "paper_index": 16,
+        "function_index": 3,
+        "human_judge_result": 1,
+        "comment": "missing some required functions"
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 16,
+        "function_index": 3,
+        "human_judge_result": 1,
+        "comment": "double count overlap"
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4o",
+        "paper_index": 16,
+        "function_index": 3,
+        "human_judge_result": 1,
+        "comment": "skip some required function"
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "o4mini",
+        "paper_index": 16,
+        "function_index": 3,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 16,
+        "function_index": 4,
+        "human_judge_result": 1,
+        "comment": "wrong logic"
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "gpt4o",
+        "paper_index": 16,
+        "function_index": 4,
+        "human_judge_result": 1,
+        "comment": "missing required functions"
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "o4mini",
+        "paper_index": 16,
+        "function_index": 4,
+        "human_judge_result": 1,
+        "comment": "missing required function"
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 16,
+        "function_index": 4,
+        "human_judge_result": 1,
+        "comment": "missing required function"
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4o",
+        "paper_index": 16,
+        "function_index": 4,
+        "human_judge_result": 1,
+        "comment": "miss required function"
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "o4mini",
+        "paper_index": 16,
+        "function_index": 4,
+        "human_judge_result": 1,
+        "comment": "nothing was generated."
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 18,
+        "function_index": 0,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "gpt4o",
+        "paper_index": 18,
+        "function_index": 0,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "no_agent",
+        "model_name": "o4mini",
+        "paper_index": 18,
+        "function_index": 0,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 18,
+        "function_index": 0,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4o",
+        "paper_index": 18,
+        "function_index": 0,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "daoyang",
+        "agent_type": "openhands_agent",
+        "model_name": "o4mini",
+        "paper_index": 18,
+        "function_index": 0,
+        "human_judge_result": 3,
+        "comment": ""
+    }
+]

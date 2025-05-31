@@ -1,0 +1,75 @@
+Let's compare the agent's implementation of get_rep_directions_agent to the golden implementation.
+
+**Golden implementation:**
+```python
+def get_rep_directions_agent(self, 
+                             model,  
+                             tokenizer,  
+                             hidden_states,  
+                             hidden_layers,  
+                             **kwargs):
+    directions = {} 
+    for layer in hidden_layers:
+        H_train = hidden_states[layer]
+        H_train_mean = H_train.mean(axis=0, keepdims=True)
+        self.H_train_means[layer] = H_train_mean
+        H_train = recenter(H_train, mean=H_train_mean).cpu()
+        H_train = np.vstack(H_train)
+        pca_model = PCA(n_components=self.n_components, whiten=False).fit(H_train)
+        directions[layer] = pca_model.components_ # shape (n_components, n_features)
+        self.n_components = pca_model.n_components_
+    return directions
+```
+
+**Agent implementation:**
+```python
+def get_rep_directions_agent(self, model, tokenizer, hidden_states, hidden_layers, **kwargs):
+    directions = {}
+    for layer in hidden_layers:
+        H = hidden_states[layer]
+        mean = np.mean(H, axis=0, keepdims=True)
+        self.H_train_means[layer] = mean
+        H_centered = H - mean
+        pca = PCA(n_components=self.n_components)
+        pca.fit(H_centered)
+        directions[layer] = pca.components_[0]
+    return directions
+```
+
+**Key differences and issues:**
+
+1. **Mean calculation and storage:**
+   - Golden: Uses H_train_mean = H_train.mean(axis=0, keepdims=True) and stores it in self.H_train_means[layer].
+   - Agent: Uses mean = np.mean(H, axis=0, keepdims=True) and stores it in self.H_train_means[layer].
+   - This is equivalent.
+
+2. **Recentering:**
+   - Golden: Uses the recenter function, which converts to torch.Tensor, moves to CUDA, subtracts mean, then moves to CPU and stacks with np.vstack.
+   - Agent: Does H_centered = H - mean directly (likely both are numpy arrays).
+   - The golden implementation ensures the data is a torch tensor on CUDA, then moves to CPU and stacks. The agent's version skips this, which may cause device/type mismatches.
+
+3. **PCA input:**
+   - Golden: After recentering and stacking, passes H_train (now a numpy array) to PCA.
+   - Agent: Passes H_centered (numpy array) to PCA. If H is already 2D, this is fine, but if H is a list of arrays, np.vstack is needed.
+
+4. **PCA output:**
+   - Golden: Stores all components: directions[layer] = pca_model.components_ (shape: (n_components, n_features))
+   - Agent: Stores only the first component: directions[layer] = pca.components_[0] (shape: (n_features,))
+   - This is a significant difference. The golden code expects all components, not just the first.
+
+5. **self.n_components update:**
+   - Golden: Updates self.n_components = pca_model.n_components_ after fitting.
+   - Agent: Does not update self.n_components.
+
+6. **Return value:**
+   - Golden: Returns a dict mapping layer to all PCA components (as a 2D array).
+   - Agent: Returns a dict mapping layer to only the first PCA component (as a 1D array).
+
+**Conclusion:**
+- The agent's implementation does not match the golden implementation in terms of output shape and content (returns only the first component, not all).
+- The agent's implementation also skips the recenter function, which may cause device/type issues.
+- The agent does not update self.n_components after fitting.
+- These are not just subtle errors; the logic of what is returned is different and will break downstream code expecting a 2D array of components.
+
+**Classification:**  
+1

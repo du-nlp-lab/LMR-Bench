@@ -1,0 +1,8 @@
+{
+  "category": "1",
+  "rationale": [
+    "The agent implementation only checks the Jaro-Winkler similarity between subject and parametric object, but omits the substring containment check (i.e., whether one string is contained in the other, case-insensitive), which is required by the specification and present in the golden reference.",
+    "This omission means that cases where the subject is a substring of the object (or vice versa) but the Jaro-Winkler similarity is below the threshold will not be filtered out, leading to incorrect results.",
+    "The golden reference uses a helper function that first checks for substring containment and only falls back to the similarity threshold if there is no containment, ensuring all intended overlaps are caught."
+  ]
+}

@@ -1,0 +1,9 @@
+Total cases: 0
+Category 1 count: 0 (0.00%)
+Category 2 count: 0 (0.00%)
+Category 3 count: 0 (0.00%)
+
+Detailed cases by category:
+
+Errors encountered during processing:
+- JSON parse error for 19-Native-Sparse-Attention, idx 0: Expecting value: line 1 column 1 (char 0)
