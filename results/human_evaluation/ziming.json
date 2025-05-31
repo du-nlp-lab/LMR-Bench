@@ -1,0 +1,332 @@
+[
+    {
+        "annotator": "ziming",
+        "agent_type": "no_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 19,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": ""
+    },
+    {
+        "annotator": "ziming",
+        "agent_type": "no_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 20,
+        "function_index": 0,
+        "human_judge_result": 0,
+        "comment": ""
+    },
+    {
+        "annotator": "ziming",
+        "agent_type": "no_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 22,
+        "function_index": 0,
+        "human_judge_result": 0,
+        "comment": ""
+    },
+    {
+        "annotator": "ziming",
+        "agent_type": "no_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 23,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": ""
+    },
+    {
+        "annotator": "ziming",
+        "agent_type": "no_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 25,
+        "function_index": 0,
+        "human_judge_result": 2,
+        "comment": ""
+    },
+        {
+        "annotator": "ziming",
+        "agent_type": "no_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 28,
+        "function_index": 0,
+        "human_judge_result": 2,
+        "comment": ""
+    },
+    {
+        "annotator": "ziming",
+        "agent_type": "no_agent",
+        "model_name": "gpt4o",
+        "paper_index": 19,
+        "function_index": 0,
+        "human_judge_result": 0,
+        "comment": ""
+    },
+    {
+        "annotator": "ziming",
+        "agent_type": "no_agent",
+        "model_name": "gpt4o",
+        "paper_index": 20,
+        "function_index": 0,
+        "human_judge_result": 0,
+        "comment": ""
+    },
+    {
+        "annotator": "ziming",
+        "agent_type": "no_agent",
+        "model_name": "gpt4o",
+        "paper_index": 22,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": "The calculation of loss is correct, but returns wrong values"
+    },
+    {
+        "annotator": "ziming",
+        "agent_type": "no_agent",
+        "model_name": "gpt4o",
+        "paper_index": 23,
+        "function_index": 0,
+        "human_judge_result": 0,
+        "comment": "No implementation"
+    },
+    {
+        "annotator": "ziming",
+        "agent_type": "no_agent",
+        "model_name": "gpt4o",
+        "paper_index": 25,
+        "function_index": 0,
+        "human_judge_result": 0,
+        "comment": "No implementation"
+    },
+        {
+        "annotator": "ziming",
+        "agent_type": "no_agent",
+        "model_name": "gpt4o",
+        "paper_index": 28,
+        "function_index": 0,
+        "human_judge_result": 0,
+        "comment": ""
+    },
+    {
+        "annotator": "ziming",
+        "agent_type": "no_agent",
+        "model_name": "o4mini",
+        "paper_index": 19,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": ""
+    },
+    {
+        "annotator": "ziming",
+        "agent_type": "no_agent",
+        "model_name": "o4mini",
+        "paper_index": 20,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": "Shortcut solution"
+    },
+    {
+        "annotator": "ziming",
+        "agent_type": "no_agent",
+        "model_name": "o4mini",
+        "paper_index": 22,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": "The calculation of loss is correct, but returns wrong values"
+    },
+    {
+        "annotator": "ziming",
+        "agent_type": "no_agent",
+        "model_name": "o4mini",
+        "paper_index": 23,
+        "function_index": 0,
+        "human_judge_result": 2,
+        "comment": ""
+    },
+    {
+        "annotator": "ziming",
+        "agent_type": "no_agent",
+        "model_name": "o4mini",
+        "paper_index": 25,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": "Lack of consideration of all cases."
+    },
+        {
+        "annotator": "ziming",
+        "agent_type": "no_agent",
+        "model_name": "o4mini",
+        "paper_index": 28,
+        "function_index": 0,
+        "human_judge_result": 0,
+        "comment": ""
+    },
+
+
+
+    
+    
+    
+    {
+        "annotator": "ziming",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 19,
+        "function_index": 0,
+        "human_judge_result": 0,
+        "comment": ""
+    },
+    {
+        "annotator": "ziming",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 20,
+        "function_index": 0,
+        "human_judge_result": 0,
+        "comment": ""
+    },
+    {
+        "annotator": "ziming",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 22,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": ""
+    },
+    {
+        "annotator": "ziming",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 23,
+        "function_index": 0,
+        "human_judge_result": 2,
+        "comment": ""
+    },
+    {
+        "annotator": "ziming",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 25,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": ""
+    },
+        {
+        "annotator": "ziming",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 28,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": "Lack of consideration of all cases"
+    },
+    {
+        "annotator": "ziming",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4o",
+        "paper_index": 19,
+        "function_index": 0,
+        "human_judge_result": 0,
+        "comment": ""
+    },
+    {
+        "annotator": "ziming",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4o",
+        "paper_index": 20,
+        "function_index": 0,
+        "human_judge_result": 0,
+        "comment": ""
+    },
+    {
+        "annotator": "ziming",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4o",
+        "paper_index": 22,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": "Lack of consideration of all cases"
+    },
+    {
+        "annotator": "ziming",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4o",
+        "paper_index": 23,
+        "function_index": 0,
+        "human_judge_result": 2,
+        "comment": ""
+    },
+    {
+        "annotator": "ziming",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4o",
+        "paper_index": 25,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": ""
+    },
+        {
+        "annotator": "ziming",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4o",
+        "paper_index": 28,
+        "function_index": 0,
+        "human_judge_result": 2,
+        "comment": ""
+    },
+    {
+        "annotator": "ziming",
+        "agent_type": "openhands_agent",
+        "model_name": "o4mini",
+        "paper_index": 19,
+        "function_index": 0,
+        "human_judge_result": 0,
+        "comment": "IndentationError"
+    },
+    {
+        "annotator": "ziming",
+        "agent_type": "openhands_agent",
+        "model_name": "o4mini",
+        "paper_index": 20,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": "local variable 'generated_tokens' referenced before assignment"
+    },
+    {
+        "annotator": "ziming",
+        "agent_type": "openhands_agent",
+        "model_name": "o4mini",
+        "paper_index": 22,
+        "function_index": 0,
+        "human_judge_result": 0,
+        "comment": ""
+    },
+    {
+        "annotator": "ziming",
+        "agent_type": "openhands_agent",
+        "model_name": "o4mini",
+        "paper_index": 23,
+        "function_index": 0,
+        "human_judge_result": 0,
+        "comment": "No implementation"
+    },
+    {
+        "annotator": "ziming",
+        "agent_type": "openhands_agent",
+        "model_name": "o4mini",
+        "paper_index": 25,
+        "function_index": 0,
+        "human_judge_result": 2,
+        "comment": ""
+    },
+        {
+        "annotator": "ziming",
+        "agent_type": "openhands_agent",
+        "model_name": "o4mini",
+        "paper_index": 28,
+        "function_index": 0,
+        "human_judge_result": 2,
+        "comment": ""
+    }
+]

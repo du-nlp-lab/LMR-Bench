@@ -1,0 +1,9 @@
+{
+  "category": "1",
+  "rationale": [
+    "The agent implementation omits the crucial step of aggregating BERT embeddings across the last 5 layers using min, mean, and max, and concatenating them, as done in the golden reference. Instead, it simply averages across all layers or uses the embeddings as-is, which changes the representation and thus the computed distances.",
+    "The agent implementation computes the distance matrix only between reference and hypothesis tokens, while the golden reference concatenates both sets of embeddings and computes a full pairwise distance matrix, which is required for the correct application of the Word Mover's Distance.",
+    "The agent implementation normalizes idf weights for each sentence, but the golden reference constructs a combined weight vector (c1 and c2) for the concatenated embeddings, which is necessary for the correct EMD computation.",
+    "These deviations result in a fundamentally different and incorrect computation of the Word Mover's Score compared to the specification and the golden reference."
+  ]
+}

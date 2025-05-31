@@ -1,0 +1,8 @@
+{
+  "category": "1",
+  "rationale": [
+    "The function uses 'or' to combine the two checks, meaning it returns True if the parametric_object is missing from either the object or subject columns, not both.",
+    "According to the intent (and typical use-case), the function should only return True if the parametric_object is not present in both columns (i.e., use 'and'), otherwise it may incorrectly allow objects that are present in one column.",
+    "This logic error can lead to false positives, where the function claims the object is not in the prompt even if it is present in one of the one-shot examples."
+  ]
+}

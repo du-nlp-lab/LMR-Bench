@@ -1,0 +1,9 @@
+{
+  "category": "1",
+  "rationale": [
+    "The agent implementation computes the distance matrix C using the mean of all reference and hypothesis embeddings, resulting in a single vector for each, and then computes the norm between these means, which is not the correct way to compute the word mover's distance between sets of word embeddings.",
+    "The golden reference constructs n-gram (here, unigram) representations, applies IDF weighting, and uses the full set of (possibly filtered) word embeddings for both reference and hypothesis, then computes a full pairwise distance matrix between all these embeddings, as required by the WMD algorithm.",
+    "The agent implementation's approach collapses all tokens into a single mean vector per sentence, which loses the token-level granularity required for WMD, and thus the emd call is not meaningful in this context.",
+    "The agent implementation omits the normalization and concatenation of min/avg/max BERT layers, as well as the stride-trick n-gram construction and IDF scaling, all of which are present in the golden reference and are essential for correct metric computation."
+  ]
+}

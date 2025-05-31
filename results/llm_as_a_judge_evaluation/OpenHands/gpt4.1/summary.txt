@@ -1,0 +1,36 @@
+Total cases: 28
+Category 1 count: 19 (62.50%)
+Category 2 count: 4 (16.67%)
+Category 3 count: 5 (20.83%)
+
+Detailed cases by category:
+
+Category 1:
+- Subfolder: 1-DPO, Repo: direct-preference-optimization, Index: 0
+- Subfolder: 11-moverscore, Repo: moverscore, Index: 0
+- Subfolder: 13-DecBound, Repo: DecBound-main, Index: 0
+- Subfolder: 15-EmpathyBias, Repo: EmpathyBias-main, Index: 1
+- Subfolder: 16-KnowProb, Repo: KnowProb-main, Index: 0
+- Subfolder: 16-KnowProb, Repo: KnowProb-main, Index: 1
+- Subfolder: 16-KnowProb, Repo: KnowProb-main, Index: 2
+- Subfolder: 16-KnowProb, Repo: KnowProb-main, Index: 3
+- Subfolder: 16-KnowProb, Repo: KnowProb-main, Index: 4
+- Subfolder: 19-Native-Sparse-Attention, Repo: NSA, Index: 0
+- Subfolder: 2-HITs, Repo: HierarchyTransformers, Index: 0
+- Subfolder: 20-CAD, Repo: context-aware-decoding-main, Index: 0
+- Subfolder: 25-AdaLora, Repo: AdaLoRA, Index: 0
+- Subfolder: 5-SimPO, Repo: SimPO, Index: 0
+- Subfolder: 7-bertscore, Repo: bert_score, Index: 0
+
+Category 2:
+- Subfolder: 18-MassActiv, Repo: MassActiv-main, Index: 0
+- Subfolder: 31-Syn-Chain, Repo: Syn-Chain-ABSA, Index: 0
+- Subfolder: 4-CD, Repo: CD-main, Index: 0
+- Subfolder: 6-RepE, Repo: representation-engineering-main, Index: 0
+
+Category 3:
+- Subfolder: 14-EmojiCrypt, Repo: EmojiCrypt-main, Index: 0
+- Subfolder: 15-EmpathyBias, Repo: EmpathyBias-main, Index: 0
+- Subfolder: 23-SimCLR, Repo: SimCLR-main, Index: 0
+- Subfolder: 30-ERGO, Repo: ERGO, Index: 0
+- Subfolder: 8-StepLength, Repo: stepLength-main, Index: 0

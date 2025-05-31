@@ -1,0 +1,32 @@
+The function implemented by the coding agent cannot fully replace the standard implementation. Here are the key differences and issues:
+
+1. **Embedding Aggregation**:
+   - **Golden file**: For each sentence, the embeddings from the last 5 layers are aggregated in three ways: min, mean, and max, and then concatenated along the last dimension. This results in a richer representation for each token.
+   - **Agent file**: Only the mean of the last 5 layers is used, and no min/max/concat is performed. This loses information and does not match the paper's method.
+
+2. **N-gram Embedding Construction**:
+   - **Golden file**: For each n-gram (default n=1), the code constructs new embeddings and idf weights by sliding a window and weighting by idf, as described in the paper.
+   - **Agent file**: This step is missing. The agent simply selects the embeddings for the filtered tokens, without constructing n-gram representations or idf-weighted sums.
+
+3. **Distance Matrix Construction**:
+   - **Golden file**: The distance matrix is constructed by concatenating the reference and hypothesis embeddings, normalizing, and then computing pairwise squared Euclidean distances.
+   - **Agent file**: The distance matrix is computed as the L2 norm between reference and hypothesis embeddings, but only between the two sets, not the concatenated set as in the golden file.
+
+4. **IDF Vector Construction**:
+   - **Golden file**: The idf vectors are constructed for the concatenated set, with zeros for the other side, as required by the emd function.
+   - **Agent file**: The idf vectors are not concatenated or padded in the same way; instead, they are just normalized separately and padded to match dimensions if needed.
+
+5. **Normalization**:
+   - **Golden file**: Embeddings are normalized before use.
+   - **Agent file**: No normalization of embeddings is performed before distance calculation.
+
+6. **Return Type**:
+   - **Golden file**: Returns a list of scores.
+   - **Agent file**: Also returns a list, so this is fine.
+
+7. **Other Subtleties**:
+   - The agent's code does not implement the n-gram sliding window or the idf-weighted sum for n-grams, which is a core part of the method.
+
+**Conclusion**: The agent's implementation does not follow the correct logic as described in the paper and as implemented in the golden file. It omits key steps (embedding aggregation, n-gram/idf weighting, correct distance matrix construction), so the logic is incorrect.
+
+1

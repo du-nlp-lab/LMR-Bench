@@ -1,0 +1,68 @@
+Let's compare the two implementations step by step.
+
+**1. Layer Indexing and Custom Block Enabling**
+- Both files convert the 1-based `layer_id` to 0-based index for internal use.
+- Both enable the custom block via `mp.enable_vit_custom_block(layer, layer_idx)` (agent) or `mp.enable_vit_custom_block(layer, layer_id)` (golden). The variable names differ, but the value is the same.
+
+**2. Image Loading and Preprocessing**
+- Both load the image from `assets/bird.png`, apply `val_transform`, add batch dimension, and move to CUDA.
+
+**3. Model Forward Pass**
+- Both use `with torch.no_grad(): output = model(img)` (golden) or `with torch.no_grad(): _ = model(img)` (agent). The output variable is unused, so this is fine.
+
+**4. Feature Extraction**
+- Golden: `feat_abs = layers[layer_id].feat.abs()`
+- Agent: `feat_abs = layer.feat.abs().cpu()`
+- The agent version moves the tensor to CPU immediately, the golden version does not (but does so before pickling).
+
+**5. Saving Inputs**
+- Golden: 
+  ```python
+  inputs = {
+      'layer_id': layer_id + 1,
+      'model_family': model_family,
+      'model_size': model_size,
+      'savedir': savedir
+  }
+  with open(os.path.join(savedir, f"run_exp1_inputs_layer_{layer_id+1}.pkl"), "wb") as f:
+      pickle.dump(inputs, f)
+  ```
+- Agent:
+  ```python
+  inputs_dict = {'layer_id': layer_id, 'model_family': model_family, 'model_size': model_size, 'img_path': img_path, 'savedir': savedir}
+  with open(os.path.join(savedir, f'run_exp1_inputs_layer_{layer_id}.pkl'), 'wb') as f:
+      pickle.dump(inputs_dict, f)
+  ```
+- Differences:
+  - The agent saves `layer_id` as the 0-based index, while the golden saves as 1-based (original input).
+  - The agent includes `img_path` in the dict, the golden does not.
+  - The agent's filename uses `{layer_id}` (0-based), the golden uses `{layer_id+1}` (1-based).
+
+**6. Saving Feature Activations**
+- Golden: 
+  ```python
+  with open(os.path.join(savedir, f"feat_abs_layer_{layer_id+1}.pkl"), "wb") as f:
+      pickle.dump(feat_abs.cpu().numpy(), f)
+  ```
+- Agent:
+  ```python
+  with open(os.path.join(savedir, f'feat_abs_layer_{layer_id}.pkl'), 'wb') as f:
+      pickle.dump(feat_abs, f)
+  ```
+- Differences:
+  - The agent saves the tensor (on CPU), the golden saves the numpy array.
+  - The agent's filename uses `{layer_id}` (0-based), the golden uses `{layer_id+1}` (1-based).
+
+**7. Visualization**
+- Both call `lib.plot_3d_feat_vit(feat_abs, layer_id, model_family, model_size, savedir)`. The golden passes the tensor (on CUDA), the agent passes the tensor (on CPU). This may or may not matter depending on the implementation of `plot_3d_feat_vit`.
+
+**Summary of Issues:**
+- The agent's implementation uses 0-based indexing for filenames and saved `layer_id`, while the golden uses 1-based (matching the input argument).
+- The agent saves the feature tensor as a torch tensor, the golden saves as a numpy array.
+- The agent includes `img_path` in the input dict, the golden does not.
+- The agent's `inputs_dict` and file naming are inconsistent with the golden file, which could break downstream reproducibility or analysis scripts expecting the golden format.
+
+**Conclusion:**
+The implementation logic is correct (the right steps are performed), but there are subtle implementation errors regarding file naming, index conventions, and data formats.
+
+2

@@ -1,0 +1,33 @@
+/home/sxy240002/research_agent/NLPAgentBench/outputs/OpenHands/o4mini/1-DPO/direct-preference-optimization/unit_test/logs is not a directory
+11-moverscore/unit_test_1.log: FAIL (found 2 failure lines)
+/home/sxy240002/research_agent/NLPAgentBench/outputs/OpenHands/o4mini/13-DecBound/DecBound-main/unit_test/logs is not a directory
+14-EmojiCrypt/unit_test_1.log: FAIL (found 0 failure lines)
+15-EmpathyBias/unit_test_1.log: FAIL (found 0 failure lines)
+15-EmpathyBias/unit_test_2.log: FAIL (found 0 failure lines)
+16-KnowProb/unit_test_1.log: PASS fail_count: 0
+16-KnowProb/unit_test_2.log: PASS fail_count: 0
+16-KnowProb/unit_test_3.log: PASS fail_count: 0
+16-KnowProb/unit_test_4.log: PASS fail_count: 0
+16-KnowProb/unit_test_5.log: FAIL (found 0 failure lines)
+18-MassActiv/unit_test_1.log: PASS fail_count: 0
+/home/sxy240002/research_agent/NLPAgentBench/outputs/OpenHands/o4mini/19-Native-Sparse-Attention/NSA/unit_test/logs is not a directory
+2-HITs/unit_test_1.log: PASS fail_count: 0
+20-CAD/unit_test_1.log: FAIL (found 0 failure lines)
+22-TokenDPO/unit_test_1.log: FAIL (found 0 failure lines)
+23-SimCLR/unit_test_1.log: FAIL (found 0 failure lines)
+25-AdaLora/unit_test_1.log: PASS fail_count: 0
+28-SPIN/unit_test_1.log: FAIL (found 1 failure lines)
+/home/sxy240002/research_agent/NLPAgentBench/outputs/OpenHands/o4mini/3-DoLa/DoLa-main/unit_test/logs is not a directory
+30-ERGO/unit_test_1.log: PASS fail_count: 0
+31-Syn-Chain/unit_test_1.log: FAIL (found 0 failure lines)
+4-CD/unit_test_1.log: PASS fail_count: 0
+/home/sxy240002/research_agent/NLPAgentBench/outputs/OpenHands/o4mini/5-SimPO/SimPO/unit_test/logs is not a directory
+6-RepE/unit_test_1.log: FAIL (found 0 failure lines)
+7-bertscore/unit_test_1.log: FAIL (found 0 failure lines)
+8-StepLength/unit_test_1.log: PASS fail_count: 0
+/home/sxy240002/research_agent/NLPAgentBench/outputs/OpenHands/o4mini/9-GDPZero/GDPZero/unit_test/logs is not a directory
+
+Total log files: 28
+Passed files:    10
+Failed files:    18
+Overall pass rate: 35.71%

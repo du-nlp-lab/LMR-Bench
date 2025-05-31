@@ -1,0 +1,9 @@
+{
+  "category": "1",
+  "rationale": [
+    "The agent implementation does not use the 'alpha' parameter in the context-aware adjustment, whereas the golden reference uses adjusted_logits = (1 + alpha) * full_context_logits - alpha * question_only_logits.",
+    "The agent implementation uses adjusted_logits = logits_ctx - logits_q, which is equivalent to alpha=1, not the provided alpha (e.g., 0.5 in the test).",
+    "The agent implementation always uses argmax for next token selection, while the golden reference uses softmax with temperature and multinomial sampling, which is crucial for correct output especially with very low temperature.",
+    "The agent implementation uses past_key_values and incremental decoding, but the golden reference recomputes logits for the full sequence each step; this can lead to mismatches in output due to differences in model state and context window."
+  ]
+}

@@ -1,0 +1,326 @@
+[
+    {
+        "annotator": "Shuo",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 7,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": "unimplemented"
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 8,
+        "function_index": 0,
+        "human_judge_result": 3,
+        "comment": "totally same so may have data leakage"
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 11,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": "information may not be enough"
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 9,
+        "function_index": 0,
+        "human_judge_result": 2,
+        "comment": "Miss extreme case(divided by 0)"
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 30,
+        "function_index": 0,
+        "human_judge_result": 2,
+        "comment": "Miss data processing so corner cases may not work"
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 31,
+        "function_index": 0,
+        "human_judge_result": 3,
+        "comment": "Too simple"
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4o",
+        "paper_index": 7,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": "unimplemented"
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4o",
+        "paper_index": 8,
+        "function_index": 0,
+        "human_judge_result": 2,
+        "comment": "Corner case may not work"
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4o",
+        "paper_index": 9,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": "need to retrieval but annoation does not mention it"
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4o",
+        "paper_index": 11,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": ""
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4o",
+        "paper_index": 30,
+        "function_index": 0,
+        "human_judge_result": 2,
+        "comment": ""
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "openhands_agent",
+        "model_name": "gpt4o",
+        "paper_index": 31,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": "not implemented"
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "openhands_agent",
+        "model_name": "o4mini",
+        "paper_index": 7,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": "not implemented"
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "openhands_agent",
+        "model_name": "o4mini",
+        "paper_index": 8,
+        "function_index": 0,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "openhands_agent",
+        "model_name": "o4mini",
+        "paper_index": 9,
+        "function_index": 0,
+        "human_judge_result": 2,
+        "comment": ""
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "openhands_agent",
+        "model_name": "o4mini",
+        "paper_index": 11,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": "too difficult, maybe lack of necessary information"
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "openhands_agent",
+        "model_name": "o4mini",
+        "paper_index": 30,
+        "function_index": 0,
+        "human_judge_result": 2,
+        "comment": ""
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "openhands_agent",
+        "model_name": "o4mini",
+        "paper_index": 31,
+        "function_index": 0,
+        "human_judge_result": 3,
+        "comment": "may have data leakage"
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "no_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 7,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": ""
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "no_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 8,
+        "function_index": 0,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "no_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 9,
+        "function_index": 0,
+        "human_judge_result": 2,
+        "comment": ""
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "no_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 11,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": "Too hard"
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "no_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 30,
+        "function_index": 0,
+        "human_judge_result": 2,
+        "comment": ""
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "no_agent",
+        "model_name": "gpt4.1",
+        "paper_index": 31,
+        "function_index": 0,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "no_agent",
+        "model_name": "gpt4o",
+        "paper_index": 7,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": ""
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "no_agent",
+        "model_name": "gpt4o",
+        "paper_index": 8,
+        "function_index": 0,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "no_agent",
+        "model_name": "gpt4o",
+        "paper_index": 9,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": "no implementation"
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "no_agent",
+        "model_name": "gpt4o",
+        "paper_index": 11,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": ""
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "no_agent",
+        "model_name": "gpt4o",
+        "paper_index": 30,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": "no implementation"
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "no_agent",
+        "model_name": "gpt4o",
+        "paper_index": 31,
+        "function_index": 0,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "no_agent",
+        "model_name": "o4mini",
+        "paper_index": 7,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": ""
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "no_agent",
+        "model_name": "o4mini",
+        "paper_index": 8,
+        "function_index": 0,
+        "human_judge_result": 3,
+        "comment": ""
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "no_agent",
+        "model_name": "o4mini",
+        "paper_index": 9,
+        "function_index": 0,
+        "human_judge_result": 2,
+        "comment": ""
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "no_agent",
+        "model_name": "o4mini",
+        "paper_index": 11,
+        "function_index": 0,
+        "human_judge_result": 1,
+        "comment": ""
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "no_agent",
+        "model_name": "o4mini",
+        "paper_index": 30,
+        "function_index": 0,
+        "human_judge_result": 2,
+        "comment": ""
+    },
+    {
+        "annotator": "Shuo",
+        "agent_type": "no_agent",
+        "model_name": "o4mini",
+        "paper_index": 31,
+        "function_index": 0,
+        "human_judge_result": 3,
+        "comment": ""
+    }
+]

@@ -1,0 +1,7 @@
+{
+  "category": "1",
+  "rationale": [
+    "The function is_parametric_object_not_in_the_prompt is missing entirely from the agent implementation (src/parametric_knowledge.py).",
+    "Without this function, the required logic to check for parametric object presence in the one-shot prompt examples is not implemented, leading to incorrect or missing behavior."
+  ]
+}

@@ -1,0 +1,11 @@
+```json
+{
+  "category": "1",
+  "rationale": [
+    "The agent implementation does not handle variable-length sequences (cu_seqlens) at all, whereas the reference implementation has explicit logic for this, including per-sequence iteration and indexing.",
+    "The agent implementation does not mask out invalid or padded positions in the selected blocks (e.g., when block_indices < 0 or > i_q, or when c >= s_i for block_counts), which is crucial for correct sparse attention computation as per the paper and the reference.",
+    "The agent implementation computes all attention in a fully batched way, but the reference does per-token, per-head masking and selection, which is necessary for correct block-wise sparse attention.",
+    "The agent implementation does not handle the case where block_counts is an int or None (it assumes it's always a tensor), and does not default block_counts to S if not provided, as the reference does."
+  ]
+}
+```

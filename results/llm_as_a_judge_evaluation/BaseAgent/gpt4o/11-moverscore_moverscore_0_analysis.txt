@@ -1,0 +1,9 @@
+{
+  "category": "1",
+  "rationale": [
+    "The agent implementation does not perform the required BERT embedding pooling (min, avg, max over the last 5 layers and concatenation) as in the golden reference; it uses only the input embedding slice for each token.",
+    "The agent implementation does not construct n-grams or perform the sliding window aggregation with IDF weighting as in the golden reference; it simply uses the filtered tokens and their embeddings directly.",
+    "The cost matrix in the agent code is computed only between filtered reference and hypothesis tokens, not over the concatenated n-gram-pooled embeddings as in the golden reference.",
+    "These deviations mean the agent's output will not match the intended metric described in the specification and golden reference."
+  ]
+}

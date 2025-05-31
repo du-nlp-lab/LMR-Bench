@@ -1,0 +1,84 @@
+The function implemented by the coding agent for `tdpo_loss` is as follows:
+
+```python
+def tdpo_loss(chosen_logps_margin: torch.FloatTensor, rejected_logps_margin: torch.FloatTensor, chosen_position_kl: torch.FloatTensor, rejected_position_kl: torch.FloatTensor, beta: float, alpha: float=0.5, if_tdpo2: bool=True) -> Tuple[torch.FloatTensor, torch.FloatTensor, torch.FloatTensor]:
+    """
+    Compute the TDPO loss for a batch of policy and reference model log probabilities.
+    See: https://arxiv.org/abs/2404.11999 and Appendix B for PyTorch implementation.
+    """
+    chosen_position_kl_detached = chosen_position_kl.detach()
+    margin = chosen_logps_margin - rejected_logps_margin
+    kl_diff = rejected_position_kl - chosen_position_kl_detached
+    values = margin - alpha * kl_diff
+    losses = -F.logsigmoid(beta * values)
+    chosen_rewards = chosen_logps_margin
+    rejected_rewards = rejected_logps_margin
+    return (losses, chosen_rewards, rejected_rewards)
+```
+
+The golden implementation is:
+
+```python
+def tdpo_loss(chosen_logps_margin: torch.FloatTensor,
+              rejected_logps_margin: torch.FloatTensor,
+              chosen_position_kl: torch.FloatTensor,
+              rejected_position_kl: torch.FloatTensor,
+              beta: float, alpha: float = 0.5, if_tdpo2: bool = True) -> Tuple[torch.FloatTensor, torch.FloatTensor, torch.FloatTensor]:
+    """Compute the TDPO loss for a batch of policy and reference model log probabilities.
+
+    Args:
+        chosen_logps_margin: The difference of log probabilities between the policy model and the reference model for the chosen responses. Shape: (batch_size,)
+        rejected_logps_margin: The difference of log probabilities between the policy model and the reference model for the rejected responses. Shape: (batch_size,)
+        chosen_position_kl: The difference of sequential kl divergence between the policy model and the reference model for the chosen responses. Shape: (batch_size,)
+        rejected_position_kl: The difference of sequential kl divergence between the policy model and the reference model for the rejected responses. Shape: (batch_size,)
+        beta: Temperature parameter for the TDPO loss, typically something in the range of 0.1 to 0.5. We ignore the reference model as beta -> 0.
+        alpha: Temperature parameter for the TDPO loss, used to adjust the impact of sequential kl divergence.
+        if_tdpo2: Determine whether to use method TDPO2, default is True; if False, then use method TDPO1.
+
+    Returns:
+        A tuple of two tensors: (losses, rewards).
+        The losses tensor contains the TDPO loss for each example in the batch.
+        The rewards tensors contain the rewards for response pair.
+    """
+
+    chosen_values = chosen_logps_margin + chosen_position_kl
+    rejected_values = rejected_logps_margin + rejected_position_kl
+
+    chosen_rejected_logps_margin = chosen_logps_margin - rejected_logps_margin
+
+    if not if_tdpo2:
+        logits = chosen_rejected_logps_margin - (rejected_position_kl - chosen_position_kl)    # tdpo1
+    else:
+        logits = chosen_rejected_logps_margin - alpha * (rejected_position_kl - chosen_position_kl.detach())  # tdpo2
+    losses = -F.logsigmoid(beta * logits)
+
+    chosen_rewards = beta * chosen_values.detach()
+    rejected_rewards = beta * rejected_values.detach()
+
+    return losses, chosen_rewards, rejected_rewards
+```
+
+Key differences and analysis:
+
+1. **Reward Calculation**:
+   - Agent: `chosen_rewards = chosen_logps_margin`, `rejected_rewards = rejected_logps_margin`
+   - Golden: `chosen_rewards = beta * (chosen_logps_margin + chosen_position_kl).detach()`, `rejected_rewards = beta * (rejected_logps_margin + rejected_position_kl).detach()`
+   - The agent's implementation does not include the KL term in the reward and does not multiply by beta or detach, which is a significant deviation.
+
+2. **Loss Calculation**:
+   - Agent: `values = margin - alpha * kl_diff` where `margin = chosen_logps_margin - rejected_logps_margin`, `kl_diff = rejected_position_kl - chosen_position_kl_detached`
+   - Golden: `logits = chosen_rejected_logps_margin - alpha * (rejected_position_kl - chosen_position_kl.detach())`
+   - This part is similar, but the agent always uses the TDPO2 formula and ignores the `if_tdpo2` parameter (which is allowed per the instructions). The main difference is in the reward calculation.
+
+3. **Detachment**:
+   - The agent detaches only `chosen_position_kl` in the loss, but not in the reward. The golden implementation detaches the sum for the reward.
+
+4. **Multiplication by Beta**:
+   - The agent does not multiply the rewards by beta, which is required by the golden implementation.
+
+5. **Return Values**:
+   - The agent returns the wrong reward tensors, which will affect downstream metrics and training.
+
+**Conclusion**: The implementation logic is incorrect because the reward calculation is fundamentally wrong and does not match the intended algorithm, which will break the training and evaluation.
+
+1

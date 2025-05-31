@@ -1,0 +1,9 @@
+{
+  "category": "1",
+  "rationale": [
+    "The agent implementation computes the final score as 1/(1+emd), whereas the golden reference uses 1-emd, which is a fundamental difference and will produce different results.",
+    "The agent only uses the last BERT layer for embeddings, while the golden reference combines min, avg, and max over the last 5 layers, concatenating them, which is a significant deviation from the intended representation.",
+    "The agent does not implement n-gram pooling or the stride trick for n-gram aggregation as in the golden reference, which affects the granularity and weighting of the embeddings.",
+    "The agent's distance matrix uses sqrt of squared distances (Euclidean), while the golden reference uses squared Euclidean distances directly, which may further alter the results."
+  ]
+}

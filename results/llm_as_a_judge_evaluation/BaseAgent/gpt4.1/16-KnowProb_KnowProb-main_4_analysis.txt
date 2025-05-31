@@ -1,0 +1,44 @@
+The function in question is `generate_counter_parametric_knowledge_dataset`.
+
+Let's compare the two implementations:
+
+**Golden implementation:**
+- Calls `get_objects_to_first_token_id_dict(parametric_knowledge)` to get `object_to_first_token_id`.
+- Iterates over each row in `parametric_knowledge` and for each, calls `build_counter_parametric_knowledge` with:
+    - statement_subject
+    - rel_lemma
+    - statement_object
+    - relation_group_id
+    - parametric_object
+    - statement
+    - parametric_object_first_token_log_probas_distribution (from `log_probability_parametric_object_first_token`)
+    - nb_counter_parametric_knowledge
+    - all_dataset_objects_to_their_first_token_id (from `object_to_first_token_id`)
+    - parametric_knowledge_rel (the subset of parametric_knowledge with the same rel_lemma)
+- Collects all results into a list, then creates a DataFrame.
+
+**Agent implementation:**
+- Does not call `get_objects_to_first_token_id_dict`.
+- Instead, it builds several dictionaries mapping rel_lemma to lists of various columns.
+- For each row, it:
+    - Gets the rel_lemma, subject, correct_object.
+    - Builds a list of possible counter objects by filtering out the correct object and the subject.
+    - Further filters out objects that are too similar to the subject.
+    - Randomly selects up to `nb_counter_parametric_knowledge` counter objects.
+    - For each, finds the corresponding row in the DataFrame and builds a dictionary with a large number of fields, including both the original and counter fields.
+- Returns a DataFrame of these rows.
+
+**Key differences:**
+- The golden implementation delegates the logic of building counter-parametric knowledge to `build_counter_parametric_knowledge`, which is likely to encapsulate the correct logic and structure, and passes the full parametric_knowledge subset for the relation.
+- The agent implementation reimplements the logic for selecting counter objects, and manually builds the output rows, including both original and counter fields.
+- The agent implementation does not use `get_objects_to_first_token_id_dict`, and does not pass the correct `parametric_object_first_token_log_probas_distribution` (it uses `row['parametric_object_first_token_log_probas_distribution']` if present, but the golden implementation expects `log_probability_parametric_object_first_token`).
+- The agent implementation's output DataFrame has a different structure: it includes both original and counter fields, while the golden implementation's output is determined by `build_counter_parametric_knowledge`.
+
+**Conclusion:**
+- The agent's implementation does not follow the intended logic of the golden implementation, as it does not use the core function (`build_counter_parametric_knowledge`) and does not pass the correct arguments.
+- The output structure is different.
+- The logic for selecting counter objects is reimplemented and may not match the intended behavior.
+
+Therefore, the implementation logic is incorrect.
+
+1

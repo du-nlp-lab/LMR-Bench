@@ -1,0 +1,11 @@
+```json
+{
+  "category": "1",
+  "rationale": [
+    "The agent implementation of tdpo_loss uses a Bradley-Terry style loss (softmax over exponentiated scores) instead of the margin-based log-sigmoid loss described in the golden reference and the paper.",
+    "The correct TDPO loss (per the reference) is -logsigmoid(beta * (chosen_logps_margin - rejected_logps_margin - alpha * (rejected_position_kl - chosen_position_kl.detach()))), but the agent computes -log(p) where p is a softmax probability, which is not equivalent.",
+    "The rewards in the agent are the exponentiated scores, while the reference uses beta * (chosen_logps_margin + chosen_position_kl). This changes the scale and meaning of the rewards.",
+    "The agent implementation ignores the if_tdpo2 logic, which is required for correct TDPO1/TDPO2 switching, and does not handle the .detach() on chosen_position_kl as in the reference."
+  ]
+}
+```

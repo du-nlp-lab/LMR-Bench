@@ -19,6 +19,7 @@ pip install -r requirements.txt
 
 ### Generation
 #### OpenHands
+cp -r benchmark OpenHands/evaluation/benchmarks/lmrbench/benchmark/datasets
 cd OpenHands
 ./evaluation/benchmarks/lmrbench/scripts/run_infer.sh llm.eval_gpt41 "" "" "" "" "output_path"
 
@@ -54,3 +55,10 @@ example:
 ```
 sh scripts/llm_as_a_judge_evaluation.sh /home/sxy240002/research_agent/NLPBench/outputs/BaseAgent/gpt4o /home/sxy240002/research_agent/NLPAgentBench/llm_as_a_judge_evaluation_results/BaseAgent/gpt4o
 ```
+
+
+### Analysis
+
+#### Data contamination
+For performance of each sample, it is saved in the unit_test_evaluation and llm_as_a_judge folder.
+To calculate the similarity score, we compute a model’s familiarity with a given document as the mean probability a model assigns to each token in that document, conditional on all preceding tokens(MLE-Bench). We calculate the familarity with the goal file(file path is info.json for each paper).

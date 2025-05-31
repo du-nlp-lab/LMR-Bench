@@ -1,0 +1,10 @@
+```json
+{
+  "category": "1",
+  "rationale": [
+    "The agent implementation contains a duplicated block of the entire function body after the return statement, which is unreachable and indicates a copy-paste or editing error.",
+    "The function is not properly indented at the top level: the main body of the function is not indented under the def line, which will cause a syntax error and prevent the function from running.",
+    "These issues mean the code will not execute at all, regardless of the correctness of the core logic, and thus it cannot produce correct results."
+  ]
+}
+```

@@ -1,0 +1,8 @@
+{
+  "category": "3",
+  "rationale": [
+    "The agent's implementation of get_filtered_matrix matches the golden reference in logic: it computes the mean intensity for each persona/experiencer pair, filters out excluded IDs, and standardizes the resulting matrix.",
+    "The function iterates over the correct group list, applies the exclusion filter, computes the mean, and standardizes the matrix using mean and std, just as in the reference.",
+    "No off-by-one, missing checks, or edge case errors are present; the implementation is faithful to the reference and the described requirements."
+  ]
+}

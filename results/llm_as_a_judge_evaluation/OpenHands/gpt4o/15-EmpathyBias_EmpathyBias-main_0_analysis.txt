@@ -1,0 +1,8 @@
+{
+  "category": "1",
+  "rationale": [
+    "The agent implementation of get_delta is missing the actual logic: it only contains 'return delta' without any computation, so it will raise a NameError or always return None.",
+    "The golden reference computes the difference between the mean of in-group and out-group matrix entries, using check_in_group to determine group membership, which is completely absent in the agent's stub.",
+    "This is a clear case of missing core algorithm, so the function will not produce any meaningful or correct result."
+  ]
+}

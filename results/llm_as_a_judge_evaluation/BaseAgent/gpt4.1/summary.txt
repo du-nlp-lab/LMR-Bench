@@ -1,0 +1,11 @@
+Total cases: 1
+Category 1 count: 19 (0.00%)
+Category 2 count: 8 (0.00%)
+Category 3 count: 2 (100.00%)
+
+Detailed cases by category:
+
+Category 3:
+- Subfolder: 8-StepLength, Repo: stepLength-main, Index: 0
+
+

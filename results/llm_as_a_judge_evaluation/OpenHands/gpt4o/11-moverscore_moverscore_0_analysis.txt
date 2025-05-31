@@ -1,0 +1,9 @@
+{
+  "category": "1",
+  "rationale": [
+    "The agent implementation does not perform the required pooling over the last 5 BERT layers (min, avg, max) as in the golden reference, which is crucial for the correct representation of token embeddings.",
+    "The agent implementation computes the distance matrix directly between reference and hypothesis embeddings, whereas the golden reference concatenates n-gram representations and computes a larger distance matrix, which is essential for the correct application of EMD.",
+    "The agent implementation does not handle n-gram sliding windows or the associated idf-weighted pooling, which is a core part of the golden reference's logic.",
+    "The normalization and construction of the cost vectors for EMD are handled differently, leading to a fundamentally different (and incorrect) calculation of the MoverScore."
+  ]
+}

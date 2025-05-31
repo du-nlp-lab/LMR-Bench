@@ -1,0 +1,8 @@
+{
+  "category": "1",
+  "rationale": [
+    "The agent's implementation of info_nce_loss is completely missing; it only contains the function signature and docstring, with an immediate return of undefined variables logits and labels.",
+    "No logic is present to compute the similarity matrix, mask out the diagonal, select positives/negatives, or normalize/logits as required by the InfoNCE loss.",
+    "As a result, the function will raise a NameError at runtime and does not fulfill any part of the required algorithm."
+  ]
+}
