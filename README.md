@@ -1,7 +1,7 @@
 # LMR-BENCH: Evaluating LLM Agent’s Ability on Reproducing Language Modeling Research
 
 
-# Datasets & Scripts.
+## Datasets & Scripts.
 Repo to be revised. Coming soon.
 
 ### Abstract: 
@@ -10,15 +10,49 @@ We conduct extensive experiments in standalone and agent-based settings on state
 Experimental results reveal that even the most advanced models still exhibit persistent limitations in scientific reasoning and code synthesis, highlighting critical gaps in LLMs’ ability to autonomously reproduce scientific research. We will release our benchmark and code after publication.
 
 
-### Environment
+## Environment
 python $\geq$ 3.12
 ```
 pip install -r requirements.txt
 ```
 
+## Benchmark access
+The benchmark used in our paper can be downloaded in https://drive.google.com/drive/folders/1bkSx0ml4VobEV2bDfcrFdvi51yC5vSfu?usp=drive_link.
 
-### Generation
-#### OpenHands
+The full benchmark will be updated in https://drive.google.com/drive/folders/1bkSx0ml4VobEV2bDfcrFdvi51yC5vSfu?usp=drive_link.
+
+After downloading the benchmark under the main folder, the structure of the directory should be like the following:
+|-- LMR-Bench/
+|---- benchmark/
+|------ project_folder_1/
+|-------- repository_folder_1/
+|---------- ...
+|---------- unit_test/
+|------------ unit_test_1.py/
+|-------- info.json
+|-------- Dockerfile
+|-------- golden_files/
+|---------- ... 
+|---- scripts/
+|------ ...
+
+
+
+
+## Generation
+### OpenHands
+#### Setup Environment and LLM Configuration
+Please follow instruction [here](https://github.com/All-Hands-AI/OpenHands/blob/main/evaluation/README.md#setup) to setup your local development environment and LLM. 
+
+We have not integrated our benchmark into OpenHands. So after finishing set up the develop environment, copy the downloaded benchmark before into the folder lmrbench/benchmark and then copy the folder lmrbench under OpenHands/evaluation/benchmark/datasets.
+
+#### Run Inference on LMR-Bench
+./evaluation/benchmarks/lmrbench/scripts/run_infer.sh [model_config] [git-version] [agent] [eval_limit] [num_workers] [eval_output_dir]
+
+##### Example
+./evaluation/benchmarks/lmrbench/scripts/run_infer.sh llm.eval_gpt4o "" "" "" "" "logs_path"
+
+
 cp -r benchmark OpenHands/evaluation/benchmarks/lmrbench/benchmark/datasets
 cd OpenHands
 ./evaluation/benchmarks/lmrbench/scripts/run_infer.sh llm.eval_gpt41 "" "" "" "" "output_path"
@@ -31,7 +65,7 @@ example:
 ./evaluation/benchmarks/nlpbench/scripts/run_infer.sh llm.eval_claude35 "" "" "" "" /home/sxy240002/research_agent/OpenHands/evaluation/benchmarks/nlpbench/outputs/claude3.5
 ```
 
-#### No Agent
+### No Agent
 sh scripts/base_agent_generation.sh "datasets_folder" "output_repository_path"
 
 example:
@@ -39,8 +73,8 @@ example:
 sh scripts/base_agent_generation.sh /home/sxy240002/research_agent/NLPBench/benchmark/datasets_final /home/sxy240002/research_agent/NLPBench/outputs/BaseAgent/gpt4o
 ```
 
-### Evaluation
-#### Unit test evaluation
+## Evaluation
+### Unit test evaluation
 sh scripts/unit_test_evaluation.sh "output_repository_path" "unit_test_evaluation_path"
 
 example:
@@ -48,7 +82,7 @@ example:
 sh scripts/base_agent_generation.sh /home/sxy240002/research_agent/NLPBench/benchmark/datasets_final /home/sxy240002/research_agent/NLPBench/outputs/BaseAgent/gpt4o
 ```
 
-#### LLM-as-a-judge evaluation
+### LLM-as-a-judge evaluation
 sh scripts/llm_as_a_judge_evaluation.sh "output_repository_path" "unit_test_evaluation_path"
 
 example:
@@ -57,8 +91,8 @@ sh scripts/llm_as_a_judge_evaluation.sh /home/sxy240002/research_agent/NLPBench/
 ```
 
 
-### Analysis
+## Analysis
 
-#### Data contamination
+### Data contamination
 For performance of each sample, it is saved in the unit_test_evaluation and llm_as_a_judge folder.
 To calculate the similarity score, we compute a model’s familiarity with a given document as the mean probability a model assigns to each token in that document, conditional on all preceding tokens(MLE-Bench). We calculate the familarity with the goal file(file path is info.json for each paper).
