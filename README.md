@@ -73,7 +73,7 @@ pip install -r requirements.txt
 ```
 
 **3. Download the benchmark:**
-The benchmark data used in our paper can be downloaded from [this link](https://drive.google.com/file/d/1jg5ZS69VHZrwcPD7PaMnJHw-YIa0Sg46/view?usp=sharing). 
+The benchmark data used in our paper can be downloaded from [this link](https://drive.google.com/drive/folders/1bkSx0ml4VobEV2bDfcrFdvi51yC5vSfu?usp=sharing). 
 After downloading the zip file, unzip the file into the main folder.
 
 **4. Test your installation**:
