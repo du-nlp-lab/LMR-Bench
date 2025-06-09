@@ -72,9 +72,11 @@ LMR-Bench/
 pip install -r requirements.txt
 ```
 
-3. **Download the benchmark:** The benchmark data used in our paper can be downloaded from [this link](https://drive.google.com/drive/folders/1bkSx0ml4VobEV2bDfcrFdvi51yC5vSfu?usp=drive_link). After downloading the zip file, unzip the file into the main folder.
+**3. Download the benchmark:**
+The benchmark data used in our paper can be downloaded from [this link](https://drive.google.com/drive/folders/1bkSx0ml4VobEV2bDfcrFdvi51yC5vSfu?usp=drive_link). 
+After downloading the zip file, unzip the file into the main folder.
 
-**3. Test your installation**:
+**4. Test your installation**:
 Run a sample evaluation script to ensure everything works:
 
 ```
