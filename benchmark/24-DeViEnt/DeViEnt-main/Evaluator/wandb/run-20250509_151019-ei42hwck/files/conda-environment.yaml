@@ -1,5 +1,0 @@
-name: dve
-channels:
-  - conda-forge
-  - defaults
-prefix: /home/yxz230014/.conda/envs/dve

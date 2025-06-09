@@ -1,3 +1,0 @@
-_name_: lm
-# loss: cross_entropy # Handled by task: cross entropy loss
-metrics: ppl
