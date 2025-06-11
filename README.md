@@ -20,7 +20,7 @@ We recommend using a virtual environment to avoid dependency conflicts.
 
 **1. Clone the repository**:
 ```
-git clone git@github.com:du-nlp-lab/LMR-Bench.git
+git clone https://github.com/du-nlp-lab/LMR-Bench.git
 cd LMR-Bench
 ```
 
@@ -53,7 +53,6 @@ LMR-Bench/
 │   ├── no_agent_generation_claude.sh
 │   ├── llm_as_a_judge_evaluation.sh
 │   ├── unit_test_evaluation.sh
-│   └── unit_test_evaluation_golden.sh
 ├── utils/                            # Utility modules
 │   └── ...
 └── requirements.txt
