@@ -163,10 +163,11 @@ The revised repositories will be saved in the folder written in line 162. -->
 To run code generation without an agent, use the following command:
 
 ```bash
-sh scripts/no_agent_generation.sh [DATA_FOLDER] [DEST_PATH]
+sh scripts/no_agent_generation.sh [DATA_FOLDER] [DEST_PATH] [MODEL]
 ```
-- **DATA_FOLDER**: Path to your dataset folder (e.g., benchmark/)
-- **DEST_PATH**: Directory to store the generated repositories
+- **DATA_FOLDER:** Path to your dataset folder (e.g., benchmark/)
+- **DEST_PATH:** Directory to store the generated repositories
+- **MODEL:** Model used to generate code.
 
 
 ## 🧾 Evaluation
