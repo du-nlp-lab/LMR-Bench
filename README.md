@@ -28,7 +28,7 @@ The structure of the directory of LMR-Bench should be like the following:
 ```text
 LMR-Bench/
 ├── benchmark/                        # Contains all datasets. Each project has a subfolder.
-│   └── dataset
+│   └── datasets
 │       └── project_folder_1/
 │           ├── repository_folder_1/
 │           │   ├── ...                   # Masked code repo (Rewrite & Mask)
@@ -75,11 +75,11 @@ pip install -r requirements.txt
 ```
 
 **3. Download the benchmark:**
-The benchmark data used in our paper can be downloaded from [this link](https://drive.google.com/drive/folders/1TSl5Y2mxG8LOfG1Q_y1b4dxE5Ym9BK72?usp=sharing). 
+The benchmark data used in our paper can be downloaded from [this link](https://drive.google.com/drive/folders/13k1NtiSXd_mypXWmbvn0jjd0tFtHbiou?usp=sharing). 
 Download the data under the folder benchmark/ and then unzip
 ```
 cd benchmark
-unzip dataset.zip
+unzip datasets.zip
 ```
 
 <!-- **4. Test your installation**:
@@ -114,7 +114,7 @@ Make sure you set the models in config.toml.
 > 1. **Copy code:**  
 >    - Copy the folder `LMR-Bench/generation/OpenHands/evaluation/benchmarks/lmr_bench` into the corresponding path inside your OpenHands repository.
 > 2. **Copy benchmark data:**  
->    - Copy the folder benchmark/ downloaded before under `OpenHands/evaluation/benchmarks/lmr_bench/` for generation.
+>    - Copy the folder `datasets/` downloaded before under `OpenHands/evaluation/benchmarks/lmr_bench/benchmark/` for generation.
 >
 > Your final structure in OpenHands should look like:
 > ```
@@ -123,7 +123,7 @@ Make sure you set the models in config.toml.
 >     └── benchmarks/
 >         └── lmr_bench/
 >             └── benchmark
->                 └── dataset 
+>                 └── datasets
 >                     ├── project_folder_1/
 >             └── <code and scripts>
 > ```
@@ -134,8 +134,7 @@ Make sure you set the models in config.toml.
 cd OpenHands
 
 ./evaluation/benchmarks/lmrbench/scripts/run_infer.sh \
-    [MODEL_CONFIG] [GIT_VERSION] [AGENT] [EVAL_LIMIT] [NUM_WORKERS] \
-    [EVAL_OUTPUT_DIR] [CACHE_PATH] [DEST_PATH]
+    [MODEL_CONFIG] [GIT_VERSION] [AGENT] [EVAL_LIMIT] [NUM_WORKERS] [EVAL_OUTPUT_DIR] [CACHE_PATH] [DEST_PATH]
 ```
 
 - **MODEL_CONFIG:** LLM model configuration file
