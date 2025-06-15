@@ -6,7 +6,23 @@ import os
 from pathlib import Path
 from openai import OpenAI
 
+# Initialize OpenAI client with API key from environment
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+def strip_code_fences(text: str) -> str:
+    """
+    If the text begins with ```json or ``` and ends with ```,
+    remove these markers and return the raw JSON string.
+    """
+    # Remove leading ```json or ``` markers
+    if text.startswith("```json"):
+        text = text[len("```json"):].lstrip("\n")
+    elif text.startswith("```"):
+        text = text[len("```"):].lstrip("\n")
+    # Remove trailing ``` marker
+    if text.endswith("```"):
+        text = text[:-len("```")].rstrip("\n")
+    return text
 
 
 def main():
@@ -30,11 +46,11 @@ def main():
         sys.exit(f"Error: evaluation directory not found: {eval_root}")
     output_root.mkdir(parents=True, exist_ok=True)
 
-    # Initialize counters for three categories
+    # Initialize counters for the three categories
     category_counts = {'1': 0, '2': 0, '3': 0}
     category_cases = {'1': [], '2': [], '3': []}
     total = 0
-    parse_errors = []  # Collect JSON parse/logging errors
+    parse_errors = []  # Collect JSON parsing and logging errors
 
     for subfolder in sorted(eval_root.iterdir()):
         if not subfolder.is_dir():
@@ -70,7 +86,7 @@ def main():
                 parse_errors.append(f"File read error for {subfolder.name}, idx {idx}: {e}")
                 continue
 
-            # Construct prompt with output format constraint
+            # Construct prompt with JSON output format constraint
             prompt = (
                 f"Instruction: {instruction}\n\n"
                 "You are an expert NLP software engineer tasked with evaluating the correctness of a function implementation by comparing two code artifacts:\n"
@@ -88,11 +104,11 @@ def main():
                 "3. For your chosen category, provide a concise rationale (2-4 bullet points) illustrating the key discrepancies or confirmations.\n\n"
                 "Output Format (JSON):\n"
                 "{\n"
-                '  "category": "<1 | 2 | 3>",\n'
-                '  "rationale": [\n'
-                '    "First key point…",\n'
-                '    "Second key point…"\n'
-                '  ]\n'
+                "  \"category\": \"<1 | 2 | 3>\",\n"
+                "  \"rationale\": [\n"
+                "    \"First key point…\",\n"
+                "    \"Second key point…\"\n"
+                "  ]\n"
                 "}\n"
             )
 
@@ -112,14 +128,26 @@ def main():
             output_path.write_text(answer, encoding='utf-8')
             print(f"[INFO] Saved analysis to {output_path}")
 
-            # ---- NEW: parse JSON response ----
-            try:
-                result = json.loads(answer)
-                category = str(result["category"]).strip()
-                rationale = result.get("rationale", [])
-            except (json.JSONDecodeError, KeyError) as e:
-                print(f"[WARNING] Failed to parse JSON for {subfolder.name}, idx {idx}: {e}")
-                parse_errors.append(f"JSON parse error for {subfolder.name}, idx {idx}: {e}")
+            # Attempt to parse JSON response, with fallback for fenced code
+            parsed_successfully = False
+            for attempt in range(2):
+                try:
+                    if attempt == 1:
+                        stripped_answer = strip_code_fences(answer)
+                        result = json.loads(stripped_answer)
+                    else:
+                        result = json.loads(answer)
+                    parsed_successfully = True
+                    category = str(result["category"]).strip()
+                    rationale = result.get("rationale", [])
+                    break
+                except (json.JSONDecodeError, KeyError) as e:
+                    if attempt == 0:
+                        continue
+                    else:
+                        print(f"[WARNING] Failed to parse JSON for {subfolder.name}, idx {idx} after stripping fences: {e}")
+                        parse_errors.append(f"JSON parse error for {subfolder.name}, idx {idx}: {e}")
+            if not parsed_successfully:
                 continue
 
             if category in category_counts:
@@ -135,13 +163,13 @@ def main():
                 print(f"[WARNING] Unexpected category '{category}' in response for {subfolder.name}, idx {idx}")
                 parse_errors.append(f"Unexpected category '{category}' for {subfolder.name}, idx {idx}")
 
-    # ---- rewrite your summary to include counts only (rationales saved in category_cases) ----
+    # Write summary of results
     summary_path = output_root / 'summary.txt'
     with summary_path.open('w', encoding='utf-8') as summary_file:
         summary_file.write(f"Total cases: {total}\n")
         for cat in ['1', '2', '3']:
             count = category_counts[cat]
-            pct   = count / total * 100 if total > 0 else 0
+            pct = count / total * 100 if total > 0 else 0
             summary_file.write(f"Category {cat} count: {count} ({pct:.2f}%)\n")
         summary_file.write("\nDetailed cases by category:\n")
         for cat in ['1', '2', '3']:
@@ -153,12 +181,10 @@ def main():
                 summary_file.write(
                     f"- Subfolder: {c['subfolder']}, Repo: {c['repo']}, Index: {c['index']}\n"
                 )
-        # Include JSON/File/API errors in summary
         if parse_errors:
             summary_file.write("\nErrors encountered during processing:\n")
             for err in parse_errors:
                 summary_file.write(f"- {err}\n")
-
 
 if __name__ == '__main__':
     main()

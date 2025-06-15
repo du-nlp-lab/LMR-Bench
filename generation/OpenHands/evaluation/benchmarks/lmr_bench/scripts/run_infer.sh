@@ -43,7 +43,7 @@ echo "AGENT: $AGENT"
 echo "OPENHANDS_VERSION: $OPENHANDS_VERSION"
 echo "MODEL_CONFIG: $MODEL_CONFIG"
 
-COMMAND="poetry run python evaluation/benchmarks/lmrbench/run_infer.py \
+COMMAND="poetry run python evaluation/benchmarks/lmr_bench/run_infer.py \
   --agent-cls $AGENT \
   --llm-config $MODEL_CONFIG \
   --max-iterations 50 \

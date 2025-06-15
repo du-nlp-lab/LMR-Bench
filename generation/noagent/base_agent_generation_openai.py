@@ -77,6 +77,7 @@ def main():
     )
     parser.add_argument("--input_dir", required=True, help="Source projects directory")
     parser.add_argument("--output_dir", required=True, help="Destination directory for modified projects")
+    parser.add_argument("--model", default="gpt-4o-2024-08-06", help="openai model name")
     parser.add_argument("--api_base",
                         default=os.getenv("OPENAI_API_BASE", "https://api.openai.com/v1"),
                         help="Base URL for the OpenAI API")
@@ -157,7 +158,7 @@ def main():
                     new_code = lg.read().strip()
             else:
                 resp = client.chat.completions.create(
-                    model="gpt-4o-2024-08-06",
+                    model=args.model,
                     messages=[{"role": "user", "content": prompt}]
                 )
                 new_code = resp.choices[0].message.content.strip()

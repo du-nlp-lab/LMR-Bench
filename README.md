@@ -28,15 +28,16 @@ The structure of the directory of LMR-Bench should be like the following:
 ```text
 LMR-Bench/
 ├── benchmark/                        # Contains all datasets. Each project has a subfolder.
-│   └── project_folder_1/
-│       ├── repository_folder_1/
-│       │   ├── ...                   # Masked code repo (Rewrite & Mask)
-│       │   └── unit_test/
-│       │       └── unit_test_1.py    # Unit test file (Annotated)
-│       ├── info.json                 # Metadata for this benchmark task. (Annotated)
-│       ├── Dockerfile                # Docker ENV for reproducibility. We've built and pushed Docker Images for each project to DOCKER HUB for faster evaluation.
-│       └── golden_files/
-│           └── ...                   # Reference solutions or golden outputs
+│   └── dataset
+│       └── project_folder_1/
+│           ├── repository_folder_1/
+│           │   ├── ...                   # Masked code repo (Rewrite & Mask)
+│           │   └── unit_test/
+│           │       └── unit_test_1.py    # Unit test file (Annotated)
+│           ├── info.json                 # Metadata for this benchmark task. (Annotated)
+│           ├── Dockerfile                # Docker ENV for reproducibility. We've built and pushed Docker Images for each project to DOCKER HUB for faster evaluation.
+│           └── golden_files/
+│               └── ...                   # Reference solutions or golden outputs
 │
 ├── evaluation/                       # Evaluation
 │   ├── ...                 
@@ -59,7 +60,7 @@ LMR-Bench/
 
 ```
 
-- `benchmark/`: Contains all benchmark tasks. Each project is a subdirectory with its repository, metadata, unit tests, and golden/reference files.
+- `benchmark/dataset`: Contains all benchmark tasks. Each project is a subdirectory with its repository, metadata, unit tests, and golden/reference files.
 - `evaluation/`: Main Python evaluation logic.
 - `generation/`: Code for generation/inference (with or without agents), organized by method category. Add your agent under this folder if you want to test your performance. 
 - `results/`: Output/results directories.
@@ -68,21 +69,27 @@ LMR-Bench/
 
 **2. Install dependencies**:
 ```
+conda create -n lmrbench python=3.12
+conda activate lmrbench
 pip install -r requirements.txt
 ```
 
 **3. Download the benchmark:**
-The benchmark data used in our paper can be downloaded from [this link](https://drive.google.com/drive/folders/1bkSx0ml4VobEV2bDfcrFdvi51yC5vSfu?usp=sharing). 
-After downloading the zip file, unzip the file into the main folder.
+The benchmark data used in our paper can be downloaded from [this link](https://drive.google.com/drive/folders/1TSl5Y2mxG8LOfG1Q_y1b4dxE5Ym9BK72?usp=sharing). 
+Download the data under the folder benchmark/ and then unzip
+```
+cd benchmark
+unzip dataset.zip
+```
 
-**4. Test your installation**:
+<!-- **4. Test your installation**:
 Run a sample evaluation script to ensure everything works:
 
 ```
 python evaluation/unit_test_evaluation.py \
-    --output_repository_path generation/noagent/sample_repo \
+    --output_repository_path outputs/noagent/sample_repo \
     --unit_test_evaluation_path results/unit_test_evaluation/sample_result
-```
+``` -->
 
 
 
@@ -92,7 +99,14 @@ python evaluation/unit_test_evaluation.py \
 
 #### Environment and LLM Setup
 
-Please follow the official setup instructions in the [OpenHands repository](https://github.com/All-Hands-AI/OpenHands/blob/main/evaluation/README.md#setup) to configure your local development environment and LLM.
+Please follow the official setup instructions in the [OpenHands repository](https://github.com/All-Hands-AI/OpenHands/blob/main/evaluation/README.md#setup) to configure your local development environment and LLM. We use version 0.33.0 in our experiments. One way to download OpenHands repo is:
+```
+git clone https://github.com/All-Hands-AI/OpenHands.git
+cd OpenHands
+git checkout 0.33.0
+```
+
+Make sure you set the models in config.toml.
 
 #### Preparing LMR-Bench for OpenHands
 
@@ -100,7 +114,7 @@ Please follow the official setup instructions in the [OpenHands repository](http
 > 1. **Copy code:**  
 >    - Copy the folder `LMR-Bench/generation/OpenHands/evaluation/benchmarks/lmr_bench` into the corresponding path inside your OpenHands repository.
 > 2. **Copy benchmark data:**  
->    - Copy `LMR-Bench/benchmark` under `OpenHands/evaluation/benchmarks/lmr_bench/` for evaluation.
+>    - Copy the folder benchmark/ downloaded before under `OpenHands/evaluation/benchmarks/lmr_bench/` for generation.
 >
 > Your final structure in OpenHands should look like:
 > ```
@@ -108,19 +122,26 @@ Please follow the official setup instructions in the [OpenHands repository](http
 > └── evaluation/
 >     └── benchmarks/
 >         └── lmr_bench/
->             ├── <copied benchmark data>
+>             └── benchmark
+>                 └── dataset 
+>                     ├── project_folder_1/
 >             └── <code and scripts>
 > ```
 
 #### Run Inference on LMR-Bench
 
 ```bash
+cd OpenHands
+
 ./evaluation/benchmarks/lmrbench/scripts/run_infer.sh \
     [MODEL_CONFIG] [GIT_VERSION] [AGENT] [EVAL_LIMIT] [NUM_WORKERS] \
     [EVAL_OUTPUT_DIR] [CACHE_PATH] [DEST_PATH]
 ```
 
 - **MODEL_CONFIG:** LLM model configuration file
+- **GIT_VERSION:** e.g. `HEAD`, is the git commit hash of the OpenHands version you would like to evaluate. It could also be a release tag like `0.6.2`.
+- **AGENT:** e.g. `CodeActAgent`, is the name of the agent for benchmarks, defaulting to `CodeActAgent`.
+- **EVAL_LIMIT:** e.g. `10`, limits the evaluation to the first `eval_limit` instances. By default, the script evaluates the entire SWE-bench_Lite test set (300 issues). Note: in order to use `eval_limit`, you must also set `agent`.
 - **EVAL_OUTPUT_DIR:** Path to store OpenHands Agent's generation logs
 - **CACHE_PATH:** Path for OpenHands agent’s events and cache (this can be the same as EVAL_OUTPUT_DIR)
 - **DEST_PATH:** Path to store the repositories after OpenHands Agent's revision
@@ -129,8 +150,8 @@ Please follow the official setup instructions in the [OpenHands repository](http
 
 ##### Example
 ```
-./evaluation/benchmarks/lmrbench/scripts/run_infer.sh \
-    llm.eval_gpt4o "" "" "" "" [LOG_DIR] [LOG_DIR] [DEST_PATH]
+./evaluation/benchmarks/lmr_bench/scripts/run_infer.sh \
+    llm.eval_gpt4o "" "" "" "" [EVAL_OUTPUT_DIR] [CACHE_PATH] [DEST_PATH]
 ```
 
 

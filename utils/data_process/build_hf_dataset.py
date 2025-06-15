@@ -4,7 +4,7 @@ import pandas as pd
 from datasets import Dataset
 
 
-def build_dataset(root_directory = "benchmark/datasets"):
+def build_dataset(root_directory = "benchmark"):
 
 
     data_rows = []

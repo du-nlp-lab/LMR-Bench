@@ -7,78 +7,90 @@ import json
 
 def analyze_log(log_file):
     """
+    Analyze a single test log file.
+
     Returns:
-        is_passed (bool): True if log contains no 'Failed' and at least one 'Passed'
-        fail_count (int): number of 'Failed' occurrences
+        is_passed (bool): True if there are no 'Failed' entries and at least one 'Passed' entry.
+        fail_count (int): Number of 'Failed' occurrences.
     """
     try:
         content = open(log_file, 'r', encoding='utf-8').read()
         fail_count = len(re.findall(r'Failed', content))
         pass_count = len(re.findall(r'Passed', content))
     except Exception:
-        # on any error, consider it a failure with one failure count
+        # If any error occurs reading or parsing the file, treat it as a failed test
         return False, 1
 
-    # only count as passed if there are no 'Failed' AND at least one 'Passed'
+    # Only consider the log as passed if there are zero failures and at least one pass
     is_passed = (fail_count == 0 and pass_count > 0)
     return is_passed, fail_count
 
 
 def main():
-    parser = argparse.ArgumentParser(description="统计 unit_test 的通过/失败情况（只看 FAIL）")
-    parser.add_argument('--eval_dir',  required=True, help="测试结果输出目录，各子目录的repo_name下应有 unit_test/logs/*.log")
-    parser.add_argument('--output_dir', required=True, help="输出目录，results.txt 将写入此目录")
+    parser = argparse.ArgumentParser(
+        description="Summarize unit test pass/fail results (only 'FAIL' lines are counted)."
+    )
+    parser.add_argument(
+        '--eval_dir', required=True,
+        help="Root directory of test outputs. Each subdirectory should contain info.json and a 'unit_test/logs' folder."
+    )
+    parser.add_argument(
+        '--output_dir', required=True,
+        help="Directory where 'results.txt' will be created."
+    )
     args = parser.parse_args()
 
-    eval_dir   = Path(args.eval_dir)
+    eval_dir = Path(args.eval_dir)
     output_dir = Path(args.output_dir)
-    os.makedirs(output_dir, exist_ok=True)
-    output_path = output_dir / 'results.txt'
+    output_dir.mkdir(parents=True, exist_ok=True)
+    results_path = output_dir / 'results.txt'
 
     total_files = 0
     passed_files = 0
 
-    with open(output_path, 'w', encoding='utf-8') as out:
-        for sub in sorted(eval_dir.iterdir()):
-            info_file = sub / 'info.json'
-            if not info_file.is_file():
-                out.write(f"[WARN] skip {sub.name} due to lack of info.json")
-                total_files += 1
-                continue
-            # 提取子目录名，用于前缀文件名
-            folder_name = sub.name
-
-            info = json.loads(info_file.read_text(encoding='utf-8'))
-            repo_name = info.get('repo_folder_name')
-            repo_res = eval_dir / sub.name / repo_name / 'unit_test' / 'logs'
-            if not repo_res.is_dir():
-                out.write(f"{repo_res} is not a directory\n")
-                total_files += 1
+    with open(results_path, 'w', encoding='utf-8') as out:
+        for case_dir in sorted(eval_dir.iterdir()):
+            info_path = case_dir / 'info.json'
+            if not info_path.is_file():
+                out.write(f"[WARNING] Skipping '{case_dir.name}': info.json not found\n")
+                # total_files += 1
                 continue
 
-            for fname in sorted(os.listdir(repo_res)):
+            # Load repository folder name from metadata
+            metadata = json.loads(info_path.read_text(encoding='utf-8'))
+            repo_folder = metadata.get('repo_folder_name')
+            logs_dir = case_dir / repo_folder / 'unit_test' / 'logs'
+
+            if not logs_dir.is_dir():
+                out.write(f"{logs_dir} is not a directory\n")
+                total_files += 1
+                continue
+
+            for fname in sorted(os.listdir(logs_dir)):
                 if not fname.endswith('.log'):
                     out.write(f"{fname} is not a log file\n")
                     continue
-                total_files += 1
-                fpath = repo_res / fname
 
-                is_passed, fail_count = analyze_log(fpath)
-                # 在文件名前加入子目录名
+                total_files += 1
+                log_path = logs_dir / fname
+                is_passed, fail_count = analyze_log(log_path)
+                prefix = case_dir.name
+
                 if is_passed:
-                    out.write(f"{folder_name}/{fname}: PASS fail_count: {fail_count}\n")
+                    out.write(f"{prefix}/{fname}: PASS (fail_count={fail_count})\n")
                     passed_files += 1
                 else:
-                    out.write(f"{folder_name}/{fname}: FAIL (found {fail_count} failure lines)\n")
+                    out.write(f"{prefix}/{fname}: FAIL (found {fail_count} failure lines)\n")
 
-        # 汇总
+        # Write summary
         out.write("\n")
         out.write(f"Total log files: {total_files}\n")
         out.write(f"Passed files:    {passed_files}\n")
         out.write(f"Failed files:    {total_files - passed_files}\n")
         if total_files > 0:
-            rate = passed_files / total_files * 100
-            out.write(f"Overall pass rate: {rate:.2f}%\n")
+            pass_rate = passed_files / total_files * 100
+            out.write(f"Overall pass rate: {pass_rate:.2f}%\n")
+
 
 if __name__ == '__main__':
     main()
