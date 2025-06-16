@@ -95,8 +95,6 @@ def main():
             '-e', f"HUGGINGFACE_HUB_TOKEN={os.environ.get('HUGGINGFACE_HUB_TOKEN', '')}",
             '-e', f"HF_TOKEN={os.environ.get('HUGGINGFACE_HUB_TOKEN', '')}",
             '-v', f"{subfolder.resolve()}:/workspace",
-            '-v', "/home/sxy240002/tmp:/tmp",
-            '-v', "/home/sxy240002/transformers_cache:/home/user/.cache",
             image_tag,
             'bash', '-lc',
             (

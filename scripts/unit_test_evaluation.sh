@@ -1,9 +1,5 @@
 #!/bin/bash
 
-export TMPDIR=""
-export TMP=""
-export TEMPDIR=""
-export TRANSFORMERS_CACHE=""
 export HUGGINGFACE_HUB_TOKEN=""
 
 

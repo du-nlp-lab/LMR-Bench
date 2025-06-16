@@ -1,5 +1,3 @@
-export OPENAI_API_KEY=""
-
 if [ $# -ne 2 ]; then
   echo "Usage: $0 EVALUATION_DIR $1 EVALUATION_OUTPUT_DIR"
   exit 1

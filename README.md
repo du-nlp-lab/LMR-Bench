@@ -82,6 +82,11 @@ cd benchmark
 unzip datasets.zip
 ```
 
+**4. Set your openai api key:**
+```
+export OPENAI_API_KEY=""
+```
+
 <!-- **4. Test your installation**:
 Run a sample evaluation script to ensure everything works:
 
@@ -187,6 +192,8 @@ sh scripts/unit_test_evaluation.sh [DEST_PATH] [EVAL_RESULT_PATH]
 sh scripts/base_agent_generation.sh /home/sxy240002/research_agent/NLPBench/benchmark/datasets_final /home/sxy240002/research_agent/NLPBench/outputs/BaseAgent/gpt4o
 ``` -->
 
+Hint: If there are issues accessing Hugging Face models or datasets during evaluation, you can add your Hugging Face token to the shell script.
+
 ### 🤖 LLM-as-a-Judge Evaluation
 To run LLM-as-a-judge evaluation on the generated repositories:
 
@@ -202,19 +209,16 @@ sh scripts/llm_as_a_judge_evaluation.sh /home/sxy240002/research_agent/NLPBench/
 - **EVAL_RESULT_PATH**: Directory to store LLM-as-a-judge evaluation results
 
 
-## 📊 Analysis
+<!-- ## 📊 Analysis
 
 ### 🧬 Data Contamination
 
 - For each sample, performance results are saved in the `results/unit_test_evaluation/` and `results/llm_as_a_judge_evaluation/` directories.
 - To assess data contamination, we compute a similarity score following the MLE-Bench approach:  
   The model’s familiarity with a document is measured as the **mean probability assigned to each token**, conditioned on all preceding tokens.
-- Familiarity is calculated using the `info.json` file (the goal file) for each benchmark task.
+- Familiarity is calculated using the `info.json` file (the goal file) for each benchmark task. -->
 
-## ⬇️ Downloads
 
-The benchmark data used in our paper can be downloaded from [🔗 this link](https://drive.google.com/drive/folders/1bkSx0ml4VobEV2bDfcrFdvi51yC5vSfu?usp=drive_link).
-<!-- [💿 LMR-Bench](https://drive.google.com/drive/folders/1bkSx0ml4VobEV2bDfcrFdvi51yC5vSfu?usp=drive_link)-->
 
 ## 💫 Contributions
 We would love to hear from the broader NLP, Machine Learning, and Software Engineering research communities, and we welcome any contributions, pull requests, or issues!
@@ -239,3 +243,6 @@ If you find our work helpful, please use the following citations.
   <a href="-"><img src="-" alt="sb-cli" height="120px"></a>
    &nbsp;&nbsp;
 </div>
+
+## Acknowledge
+We refer to the implementation of [ScienceAgentBench](https://github.com/OSU-NLP-Group/ScienceAgentBench)
