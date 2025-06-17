@@ -98,7 +98,7 @@ python evaluation/unit_test_evaluation.py \
 
 
 
-## ⚡ Generation of Baseline Results
+##  Generation of Baseline Results
 
 ###  OpenHands
 
@@ -175,7 +175,7 @@ sh scripts/no_agent_generation.sh [DATA_FOLDER] [DEST_PATH] [MODEL]
 - **MODEL:** Model used to generate code.
 
 
-## 🧾 Evaluation
+##  Evaluation
 
 ### Unit Test Evaluation
 
