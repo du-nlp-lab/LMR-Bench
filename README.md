@@ -98,9 +98,9 @@ python evaluation/unit_test_evaluation.py \
 
 
 
-## ⚡ Generation
+## ⚡ Generation of Baseline Results
 
-### 🔧 OpenHands
+###  OpenHands
 
 #### Environment and LLM Setup
 
@@ -163,7 +163,7 @@ cd OpenHands
 The revised repositories will be saved in the folder written in line 162. -->
 
 
-### 🤖 No Agent
+### No Agent
 
 To run code generation without an agent, use the following command:
 
@@ -177,7 +177,7 @@ sh scripts/no_agent_generation.sh [DATA_FOLDER] [DEST_PATH] [MODEL]
 
 ## 🧾 Evaluation
 
-### ✅ Unit Test Evaluation
+### Unit Test Evaluation
 
 To run unit test evaluation on the generated repositories:
 
@@ -194,7 +194,7 @@ sh scripts/base_agent_generation.sh /home/sxy240002/research_agent/NLPBench/benc
 
 Hint: If there are issues accessing Hugging Face models or datasets during evaluation, you can add your Hugging Face token to the shell script.
 
-### 🤖 LLM-as-a-Judge Evaluation
+### LLM-as-a-Judge Evaluation
 To run LLM-as-a-judge evaluation on the generated repositories:
 
 ```
@@ -211,7 +211,7 @@ sh scripts/llm_as_a_judge_evaluation.sh /home/sxy240002/research_agent/NLPBench/
 
 <!-- ## 📊 Analysis
 
-### 🧬 Data Contamination
+###  Data Contamination
 
 - For each sample, performance results are saved in the `results/unit_test_evaluation/` and `results/llm_as_a_judge_evaluation/` directories.
 - To assess data contamination, we compute a similarity score following the MLE-Bench approach:  
@@ -220,13 +220,13 @@ sh scripts/llm_as_a_judge_evaluation.sh /home/sxy240002/research_agent/NLPBench/
 
 
 
-## 💫 Contributions
+##  Contributions
 We would love to hear from the broader NLP, Machine Learning, and Software Engineering research communities, and we welcome any contributions, pull requests, or issues!
 To do so, please either file a new pull request or issue and fill in the corresponding templates accordingly. We'll be sure to follow up shortly!
 
 Contact person: [Zimu Wang] and [Ruochen Li] Email: zimu.wang@utdallas.edu, ruochen.li@utdallas.edu).
 
-## ✍️ Citation & license
+## Citation & license
 MIT license. Check `LICENSE.md`.
 
 If you find our work helpful, please use the following citations.
