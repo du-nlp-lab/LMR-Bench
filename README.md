@@ -246,7 +246,7 @@ If you find our work helpful, please use the following citations.
 ## Related projects
 
 <div align="center">
-  <a href="https://github.com/du-nlp-lab/MLR-Copilot"><img src="-" alt="mlr-copilot" height="120px"></a>
+  <a href="https://github.com/du-nlp-lab/MLR-Copilot"><alt="mlr-copilot" height="120px"></a>
    &nbsp;&nbsp;
 </div>
 
