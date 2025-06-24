@@ -232,15 +232,21 @@ MIT license. Check `LICENSE.md`.
 If you find our work helpful, please use the following citations.
 
 ```bibtex
-@inproceedings{
-    
+@misc{yan2025lmrbenchevaluatingllmagents,
+      title={LMR-BENCH: Evaluating LLM Agent's Ability on Reproducing Language Modeling Research}, 
+      author={Shuo Yan and Ruochen Li and Ziming Luo and Zimu Wang and Daoyang Li and Liqiang Jing and Kaiyu He and Peilin Wu and George Michalopoulos and Yue Zhang and Ziyang Zhang and Mian Zhang and Zhiyu Chen and Xinya Du},
+      year={2025},
+      eprint={2506.17335},
+      archivePrefix={arXiv},
+      primaryClass={cs.SE},
+      url={https://arxiv.org/abs/2506.17335}, 
 }
 ```
 
 ## Related projects
 
 <div align="center">
-  <a href="-"><img src="-" alt="sb-cli" height="120px"></a>
+  <a href="https://github.com/du-nlp-lab/MLR-Copilot"><img src="-" alt="mlr-copilot" height="120px"></a>
    &nbsp;&nbsp;
 </div>
 
