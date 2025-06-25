@@ -1,5 +1,6 @@
 # LMR-BENCH: Evaluating LLM Agent’s Ability on Reproducing Language Modeling Research
 
+[arXiv link](https://www.arxiv.org/abs/2506.17335)
 
 ## Overview
 *LMR-Bench* is a benchmark for evaluating large language model (LLM) agents on their ability to reproduce code from *NLP research papers*.
