@@ -233,15 +233,14 @@ MIT license. Check `LICENSE.md`.
 If you find our work helpful, please use the following citations.
 
 ```bibtex
-@misc{yan2025lmrbenchevaluatingllmagents,
-      title={LMR-BENCH: Evaluating LLM Agent's Ability on Reproducing Language Modeling Research}, 
-      author={Shuo Yan and Ruochen Li and Ziming Luo and Zimu Wang and Daoyang Li and Liqiang Jing and Kaiyu He and Peilin Wu and George Michalopoulos and Yue Zhang and Ziyang Zhang and Mian Zhang and Zhiyu Chen and Xinya Du},
-      year={2025},
-      eprint={2506.17335},
-      archivePrefix={arXiv},
-      primaryClass={cs.SE},
-      url={https://arxiv.org/abs/2506.17335}, 
+@inproceedings{yan2025lmrbench,
+  title        = {LMR-BENCH: Evaluating LLM Agent’s Ability on Reproducing Language Modeling Research},
+  author       = {Yan, Shuo and Li, Ruochen and Luo, Ziming and Wang, Zimu and Li, Daoyang and Jing, Liqiang and He, Kaiyu and Wu, Peilin and Michalopoulos, George and Zhang, Yue and Zhang, Ziyang and Zhang, Mian and Chen, Zhiyu and Du, Xinya},
+  booktitle    = {Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  year         = {2025},
+  publisher    = {Association for Computational Linguistics},
 }
+
 ```
 
 ## Related projects
